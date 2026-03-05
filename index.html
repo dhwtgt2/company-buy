@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>会社売却・休眠会社買取・法人譲渡｜無料査定（最短即日）</title>
+  <title>会社売却・休眠会社買取・法人譲渡｜無料査定（最短即日・秘密厳守・全国対応）</title>
   <meta name="description" content="会社を手放したい方へ。休眠会社買取、法人売却、会社譲渡、M&Aまで無料相談。全国対応・秘密厳守・最短即日で一次回答。" />
 
   <style>
@@ -42,7 +42,6 @@
     .pill{display:flex;flex-wrap:wrap;gap:10px}
     .tag{font-size:13px;color:var(--brand);background:#eef6ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:999px}
 
-    /* header */
     header{
       position:sticky; top:0; z-index:50;
       background:rgba(255,255,255,.92);
@@ -52,10 +51,9 @@
     .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
     .logo{font-weight:1000;letter-spacing:.02em}
     .menu{display:flex;gap:14px;align-items:center}
-    .menu a{font-size:14px;text-decoration:none;color:var(--muted);font-weight:800}
+    .menu a{font-size:14px;text-decoration:none;color:var(--muted);font-weight:900}
     .menu a:hover{color:var(--text)}
 
-    /* layout */
     section{padding:46px 0}
     .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
@@ -63,26 +61,27 @@
     .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
     h1{font-size:40px;line-height:1.2;margin:0 0 12px}
     h2{font-size:28px;margin:0 0 14px}
+    h3{font-size:18px;margin:0 0 8px}
     .lead{margin:0 0 14px;color:var(--muted)}
+    .note{font-size:12px;color:var(--muted);margin:0 0 10px}
     .danger{font-size:12px;color:var(--muted);margin-top:10px}
     .img{width:100%;height:auto;border-radius:16px;display:block}
     .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     .center{display:flex;justify-content:center}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+    .box p{margin:0;color:var(--muted)}
+    .checklist{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
 
-    /* “見出し帯”っぽい演出（画像じゃなくても雰囲気出る） */
     .ribbon{
       display:inline-flex;align-items:center;gap:10px;
-      padding:10px 14px;
-      border-radius:999px;
-      background:#0f4c81;
-      color:#fff;
-      font-weight:1000;
-      margin-bottom:14px;
-      box-shadow:0 10px 24px rgba(15,76,129,.15);
+      padding:10px 14px;border-radius:999px;
+      background:#0f4c81;color:#fff;font-weight:1000;
+      margin-bottom:14px;box-shadow:0 10px 24px rgba(15,76,129,.15);
     }
     .ribbon small{opacity:.9;font-weight:900}
 
-    /* CTA band (途中の横長帯) */
     .ctaBand{
       background:linear-gradient(90deg, #0f4c81 0%, #0b3b63 100%);
       color:#fff;border-radius:18px;
@@ -90,13 +89,12 @@
       display:flex;align-items:center;justify-content:space-between;
       gap:12px;
       box-shadow:0 14px 40px rgba(15,76,129,.18);
+      margin-top:18px;
     }
     .ctaBand b{font-size:18px}
     .ctaBand p{margin:0;opacity:.92;font-size:13px}
     .ctaBand .right{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
 
-    /* form */
-    .note{font-size:12px;color:var(--muted);margin:0 0 10px}
     .field{display:grid;gap:6px;margin:10px 0}
     .field label{font-size:13px;color:var(--muted)}
     .field input,.field textarea{
@@ -105,7 +103,6 @@
     }
     .field input:focus,.field textarea:focus{border-color:#93c5fd;box-shadow:0 0 0 4px rgba(147,197,253,.25)}
 
-    /* FAQ */
     .faq{display:grid;gap:10px;margin-top:12px}
     details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
     summary{cursor:pointer;font-weight:1000}
@@ -119,6 +116,7 @@
       section{padding:36px 0}
       .ctaBand{flex-direction:column;align-items:flex-start}
       .ctaBand .right{justify-content:flex-start}
+      .two,.three{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -130,10 +128,11 @@
     <div class="nav">
       <div class="logo">会社売却・買取 無料相談</div>
       <nav class="menu">
+        <a href="#pain">お悩み</a>
+        <a href="#benefit">メリット</a>
         <a href="#reasons">選ばれる理由</a>
-        <a href="#target">買取対象</a>
-        <a href="#flow">買取の流れ</a>
-        <a href="#faq">よくある質問</a>
+        <a href="#flow">流れ</a>
+        <a href="#faq">FAQ</a>
       </nav>
       <a class="btn btn-accent" href="#form1">無料査定</a>
     </div>
@@ -142,7 +141,7 @@
 
 <main>
 
-  <!-- FV -->
+  <!-- ===== FV ===== -->
   <section style="background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%); padding-top:34px;">
     <div class="container">
       <div class="grid">
@@ -157,7 +156,8 @@
 
           <h1>会社を手放したい方へ<br>無料相談受付中</h1>
           <p class="lead">
-            休眠会社・法人売却・会社譲渡・M&Aまで、状況に合わせて最適ルートをご提案します。
+            休眠会社・法人売却・会社譲渡・M&Aまで、状況に合わせて整理ルートをご提案します。
+            まずは無料で状況確認します。
           </p>
 
           <!-- hero.jpeg -->
@@ -198,7 +198,7 @@
               <input type="email" name="email" required placeholder="例）taro@example.com" />
             </div>
             <div class="field">
-              <label>ご質問など（任意）</label>
+              <label>会社の状況（任意）</label>
               <textarea name="detail" rows="4" placeholder="例）休眠期間、申告状況、口座の有無など分かる範囲で"></textarea>
             </div>
 
@@ -216,45 +216,69 @@
     </div>
   </section>
 
-  <!-- 悩み（shudesignの「お悩み画像ブロック」っぽい雰囲気） -->
-  <section class="alt">
+  <!-- ===== 悩み（共感） ===== -->
+  <section class="alt" id="pain">
     <div class="container">
       <div class="ribbon">こんなお悩みありませんか？</div>
-      <div class="card pad">
-        <ul style="margin:0; padding-left:18px; color:var(--muted); display:grid; gap:8px;">
-          <li>使っていない会社があり、維持費だけがかかっている</li>
-          <li>会社を売却・譲渡したいが、進め方が分からない</li>
-          <li>解散・清算の手続きが面倒で先延ばしになっている</li>
-          <li>口座・許認可・申告など状況が複雑</li>
-          <li>できれば早く整理したい</li>
-        </ul>
-      </div>
 
-      <div style="margin-top:18px" class="ctaBand">
-        <div>
-          <b>当てはまる方は、今すぐ無料査定へ</b>
-          <p>分かる範囲の情報でOK。最短即日で一次回答します。</p>
+      <div class="two">
+        <div class="card pad">
+          <h2 style="margin-top:0">放置すると、手間と不安が増えやすい</h2>
+          <ul class="checklist">
+            <li>使っていない会社の維持費がかかっている</li>
+            <li>解散・清算の手続きが面倒で先延ばし</li>
+            <li>申告・登記・口座など状況が複雑</li>
+            <li>できれば早く整理したい</li>
+          </ul>
         </div>
-        <div class="right">
-          <a class="btn btn-accent" href="#form1">無料査定</a>
-          <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
+
+        <div class="card pad">
+          <h2 style="margin-top:0">まずは“整理ルート”を決めましょう</h2>
+          <p class="lead">解散・清算だけが選択肢ではありません。条件によっては「譲渡・売却」も検討できます。</p>
+          <div class="box">
+            <h3>分かる範囲でOK</h3>
+            <p>設立年・休眠期間・申告状況など、分かる範囲の情報で一次判断します。</p>
+          </div>
+
+          <div class="ctaBand">
+            <div>
+              <b>当てはまる方は、今すぐ無料査定へ</b>
+              <p>最短即日で一次回答。秘密厳守で対応します。</p>
+            </div>
+            <div class="right">
+              <a class="btn btn-accent" href="#form1">無料査定</a>
+              <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 選ばれる理由（points.jpeg） -->
-  <section id="reasons">
+  <!-- ===== メリット（王道の決め手） ===== -->
+  <section id="benefit">
     <div class="container">
-      <div class="ribbon">「当社」が選ばれる理由</div>
-      <p class="lead">安心してご相談いただけるよう、スピードと情報管理を徹底しています。</p>
+      <div class="ribbon">会社売却（譲渡）のメリット</div>
 
-      <img class="img" src="points.jpeg" alt="スピード・秘密厳守・全国対応" style="margin:14px 0 0;">
+      <div class="three">
+        <div class="box">
+          <h3>① 手続きの負担を減らしやすい</h3>
+          <p>状況により、解散・清算に比べて進め方がシンプルになるケースがあります。</p>
+        </div>
+        <div class="box">
+          <h3>② スピード重視で進められる</h3>
+          <p>必要事項を整理し、優先順位をつけて進行します。</p>
+        </div>
+        <div class="box">
+          <h3>③ 秘密厳守で相談できる</h3>
+          <p>相談内容は外部に漏れないよう、情報管理を徹底します。</p>
+        </div>
+      </div>
 
-      <div style="margin-top:18px" class="ctaBand">
+      <div class="ctaBand">
         <div>
-          <b>無料で査定できます（相談無料）</b>
-          <p>まずは状況を整理して、最適な進め方をご案内します。</p>
+          <b>まずは無料で状況確認</b>
+          <p>「売れるか分からない」状態でもOK。整理してご案内します。</p>
         </div>
         <div class="right">
           <a class="btn btn-accent" href="#form1">無料査定</a>
@@ -264,25 +288,50 @@
     </div>
   </section>
 
-  <!-- 買取対象（チェックリスト風） -->
-  <section class="alt" id="target">
+  <!-- ===== 選ばれる理由（points.jpeg） ===== -->
+  <section class="alt" id="reasons">
     <div class="container">
-      <div class="ribbon">あなたの会社は買取対象？</div>
+      <div class="ribbon">「当社」が選ばれる理由</div>
+      <p class="lead">安心してご相談いただけるよう、スピードと情報管理を徹底しています。</p>
 
-      <div class="card pad">
-        <p class="lead" style="margin-top:0">分かる範囲でOK。まずは状況を教えてください。</p>
-        <div style="display:grid; gap:10px; color:var(--muted);">
-          <label><input type="checkbox"> 休眠会社 / 事業停止会社</label>
-          <label><input type="checkbox"> 売上ゼロ・赤字（状況により）</label>
-          <label><input type="checkbox"> 口座・許認可がある（要確認）</label>
-          <label><input type="checkbox"> できるだけ早く整理したい</label>
+      <img class="img" src="points.jpeg" alt="スピード・秘密厳守・全国対応" style="margin:14px 0 0;">
+
+      <div class="ctaRow center" style="margin-top:18px">
+        <a class="btn btn-accent" href="#form1">無料査定へ</a>
+        <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 対象（王道の “対象/非対象” で信頼UP） ===== -->
+  <section id="target">
+    <div class="container">
+      <div class="ribbon">ご相談いただける会社例</div>
+
+      <div class="two">
+        <div class="box">
+          <h3>対象になりやすい例</h3>
+          <ul class="checklist">
+            <li>休眠会社 / 事業停止会社</li>
+            <li>売上ゼロ・赤字（状況により）</li>
+            <li>口座あり（要確認）</li>
+            <li>許認可あり（要確認）</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>対応できない例</h3>
+          <ul class="checklist">
+            <li>違法目的・不正利用に該当するもの</li>
+            <li>虚偽申告があるもの</li>
+          </ul>
+          <p class="note" style="margin-top:10px">※最終判断はヒアリング後となります。</p>
         </div>
       </div>
 
-      <div style="margin-top:18px" class="ctaBand">
+      <div class="ctaBand">
         <div>
-          <b>当てはまる方は、無料査定へ</b>
-          <p>全国対応。オンライン中心で完結可能です。</p>
+          <b>当てはまる方は無料査定へ</b>
+          <p>分かる範囲でOK。最短即日で一次回答。</p>
         </div>
         <div class="right">
           <a class="btn btn-accent" href="#form1">無料査定</a>
@@ -292,7 +341,29 @@
     </div>
   </section>
 
-  <!-- 流れ（flow.jpeg） -->
+  <!-- ===== 実績（数字が無ければ “対応例” でOK） ===== -->
+  <section class="alt" id="proof">
+    <div class="container">
+      <div class="ribbon">対応例</div>
+      <div class="three">
+        <div class="box">
+          <h3>休眠期間が長いケース</h3>
+          <p>状況整理のうえ、可能な整理ルートをご提案。</p>
+        </div>
+        <div class="box">
+          <h3>申告状況が途中のケース</h3>
+          <p>必要手順を整理し、優先順位をつけて進行。</p>
+        </div>
+        <div class="box">
+          <h3>遠方のケース</h3>
+          <p>電話・オンライン中心で相談〜進行まで対応。</p>
+        </div>
+      </div>
+      <div class="note" style="margin-top:10px">※実績数が出せる場合は、ここを「相談実績◯件」等に差し替えるとさらに強くなります。</div>
+    </div>
+  </section>
+
+  <!-- ===== 流れ（flow.jpeg） ===== -->
   <section id="flow">
     <div class="container">
       <div class="ribbon">買取の流れ</div>
@@ -300,43 +371,55 @@
 
       <img class="img" src="flow.jpeg" alt="相談・査定・譲渡の流れ" style="margin-top:14px;">
 
-      <div style="margin-top:18px" class="center">
+      <div class="ctaRow center" style="margin-top:18px">
         <a class="btn btn-accent" href="#form1">無料査定を申し込む</a>
       </div>
     </div>
   </section>
 
-  <!-- FAQ（shudesignのQ&Aセクション風） -->
+  <!-- ===== FAQ ===== -->
   <section class="alt" id="faq">
     <div class="container">
       <div class="ribbon">よくある質問</div>
 
       <div class="faq">
         <details>
-          <summary>本当に費用はかかりませんか？</summary>
-          <p>はい。相談・査定の段階では費用はかかりません。内容確認のうえご案内します。</p>
+          <summary>相談や査定は無料ですか？</summary>
+          <p>はい、無料です。内容確認のうえご案内します。</p>
         </details>
         <details>
           <summary>赤字でも相談できますか？</summary>
-          <p>状況により異なります。まずは現状をお知らせください。</p>
+          <p>状況によって異なります。まずは現状をお知らせください。</p>
         </details>
         <details>
-          <summary>地方の会社でも対応可能ですか？</summary>
+          <summary>全国対応ですか？</summary>
           <p>はい。電話・オンライン中心で全国対応しています。</p>
         </details>
         <details>
           <summary>情報が外部に漏れませんか？</summary>
           <p>秘密厳守で対応します。お預かりした情報は厳重に管理します。</p>
         </details>
+        <details>
+          <summary>どのくらいで回答が出ますか？</summary>
+          <p>内容によりますが、最短即日で一次回答します。</p>
+        </details>
       </div>
 
-      <div style="margin-top:18px" class="center">
-        <a class="btn btn-accent" href="#form1">無料査定へ</a>
+      <div class="ctaBand">
+        <div>
+          <b>迷ったら、まず無料相談</b>
+          <p>「売却できるか分からない」状態でもOKです。</p>
+        </div>
+        <div class="right">
+          <a class="btn btn-accent" href="#form1">無料査定</a>
+          <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
+          <a class="btn btn-outline" href="tel:03XXXXXXXX">電話</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 下部にもう一度フォーム（shudesignの最下部フォーム風） -->
+  <!-- ===== 最下部（もう一度フォーム誘導） ===== -->
   <section>
     <div class="container">
       <div class="grid">
@@ -346,6 +429,7 @@
           <div class="ctaRow">
             <a class="btn btn-accent" href="#form1">上のフォームへ</a>
             <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
+            <a class="btn btn-outline" href="tel:03XXXXXXXX">電話で相談</a>
           </div>
           <div class="danger">※フォーム送信先（Formspree等）を設定するとメールで届くようになります。</div>
         </div>
