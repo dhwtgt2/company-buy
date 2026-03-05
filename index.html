@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>会社買取（休眠会社・法人譲渡）無料査定｜最短即日・全国対応</title>
-  <meta name="description" content="使っていない会社、買取できる可能性があります。休眠会社・事業停止会社の譲渡/売却を無料査定。最短即日・全国対応・秘密厳守。" />
+  <title>会社売却・休眠会社買取・M&A相談｜無料相談（最短即日）</title>
+  <meta name="description" content="会社を手放したい方へ。休眠会社買取、法人売却、会社譲渡、M&Aの無料相談。全国対応・秘密厳守・最短即日で一次回答。" />
   <style>
     :root{
       --bg:#ffffff;
@@ -14,7 +14,6 @@
       --line:#e5e7eb;
       --brand:#0f4c81;
       --brand2:#0b3b63;
-      --ok:#0ea5e9;
       --radius:14px;
       --shadow: 0 10px 30px rgba(17,24,39,.08);
     }
@@ -22,18 +21,8 @@
     body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;color:var(--text);background:var(--bg);line-height:1.7}
     a{color:inherit}
     .container{max-width:1100px;margin:0 auto;padding:0 18px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 18px;border-radius:12px;background:var(--brand);color:#fff;
-      text-decoration:none;font-weight:700;border:1px solid transparent;
-      box-shadow:0 8px 20px rgba(15,76,129,.18);
-    }
-    .btn:hover{background:var(--brand2)}
-    .btn-outline{background:#fff;color:var(--brand);border-color:var(--brand)}
-    .pill{display:inline-flex;gap:10px;flex-wrap:wrap}
-    .tag{font-size:13px;color:var(--brand);background:#eef6ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:999px}
     header{
-      position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);
+      position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
       backdrop-filter:saturate(1.2) blur(10px);
       border-bottom:1px solid var(--line);
     }
@@ -42,17 +31,28 @@
     .menu{display:flex;gap:14px;align-items:center}
     .menu a{font-size:14px;text-decoration:none;color:var(--muted)}
     .menu a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 18px;border-radius:12px;background:var(--brand);color:#fff;
+      text-decoration:none;font-weight:800;border:1px solid transparent;
+      box-shadow:0 8px 20px rgba(15,76,129,.18);
+    }
+    .btn:hover{background:var(--brand2)}
+    .btn-outline{background:#fff;color:var(--brand);border-color:var(--brand)}
+    .tagwrap{display:flex;gap:10px;flex-wrap:wrap}
+    .tag{font-size:13px;color:var(--brand);background:#eef6ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:999px}
     .hero{padding:34px 0 24px;background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%)}
     .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
     .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
     .hero-copy{padding:20px}
-    .hero h1{font-size:38px;line-height:1.25;margin:0 0 12px}
-    .hero p{margin:0 0 14px;color:var(--muted)}
+    h1{font-size:38px;line-height:1.25;margin:0 0 10px}
+    .lead{margin:0 0 14px;color:var(--muted)}
     .check{display:grid;gap:8px;margin:14px 0 18px}
-    .check div{display:flex;gap:10px;align-items:flex-start;color:var(--text)}
-    .check b{color:var(--brand)}
+    .check div{display:flex;gap:10px;align-items:flex-start}
+    .danger{font-size:12px;color:var(--muted);margin-top:10px}
     .form{padding:18px}
-    .form h3{margin:0 0 10px;font-size:18px}
+    .form h3{margin:0 0 8px;font-size:18px}
+    .note{font-size:12px;color:var(--muted);margin:0 0 10px}
     .field{display:grid;gap:6px;margin:10px 0}
     .field label{font-size:13px;color:var(--muted)}
     .field input,.field textarea, .field select{
@@ -60,32 +60,29 @@
       outline:none;font-size:15px
     }
     .field input:focus,.field textarea:focus,.field select:focus{border-color:#93c5fd;box-shadow:0 0 0 4px rgba(147,197,253,.25)}
-    .note{font-size:12px;color:var(--muted)}
     section{padding:34px 0}
     .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     h2{font-size:28px;margin:0 0 14px}
-    .lead{color:var(--muted);margin:0 0 16px}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     .box{padding:16px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
     .box h3{margin:0 0 8px;font-size:16px}
     .box p{margin:0;color:var(--muted)}
     .list{display:grid;gap:10px;margin:14px 0 0}
     .list li{margin-left:18px}
-    .cta{display:flex;justify-content:center;margin-top:18px}
+    .cta{display:flex;justify-content:center;margin-top:18px;gap:10px;flex-wrap:wrap}
     .faq{display:grid;gap:10px}
     details{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px}
-    summary{cursor:pointer;font-weight:700}
+    summary{cursor:pointer;font-weight:800}
     details p{margin:10px 0 0;color:var(--muted)}
     footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted)}
     .footgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
     .links{display:flex;gap:12px;flex-wrap:wrap}
     .links a{font-size:13px;color:var(--muted);text-decoration:none}
     .links a:hover{color:var(--text)}
-    .danger{font-size:12px;color:var(--muted);margin-top:10px}
     @media (max-width:900px){
       .hero-grid{grid-template-columns:1fr}
       .menu{display:none}
-      .hero h1{font-size:30px}
+      h1{font-size:30px}
       .grid3{grid-template-columns:1fr}
       .footgrid{grid-template-columns:1fr}
     }
@@ -96,10 +93,10 @@
 <header>
   <div class="container">
     <div class="nav">
-      <div class="logo">会社買取・無料査定</div>
+      <div class="logo">会社売却・買取 無料相談</div>
       <nav class="menu">
+        <a href="#service">サービス</a>
         <a href="#reasons">選ばれる理由</a>
-        <a href="#target">買取対象</a>
         <a href="#flow">流れ</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -114,24 +111,28 @@
     <div class="container">
       <div class="hero-grid">
         <div class="card hero-copy">
-          <div class="pill" style="margin-bottom:10px">
-            <span class="tag">最短即日査定</span>
+          <div class="tagwrap" style="margin-bottom:10px">
+            <span class="tag">最短即日で一次回答</span>
             <span class="tag">全国対応</span>
             <span class="tag">秘密厳守</span>
             <span class="tag">相談無料</span>
           </div>
-          <h1>使っていない会社、<br>買取できる可能性があります。</h1>
-          <p>休眠会社・事業停止会社の譲渡/売却を無料査定。状況整理から手続きまで、分かりやすくサポートします。</p>
+
+          <h1>会社を手放したい方へ<br>無料相談受付中</h1>
+          <p class="lead">休眠会社買取・法人売却・会社譲渡・M&Aまで、状況に合わせて整理ルートをご提案します。</p>
 
           <div class="check">
-            <div>✅ <b>清算だけが選択肢ではありません</b></div>
+            <div>✅ <b>「解散・清算」だけが選択肢ではありません</b></div>
             <div>✅ <b>分かる範囲の情報でOK</b></div>
-            <div>✅ <b>途中キャンセル可（進行状況によります）</b></div>
+            <div>✅ <b>途中キャンセル可（進行状況による）</b></div>
           </div>
 
           <div class="cta" style="justify-content:flex-start">
-            <a class="btn" href="#form">無料査定を依頼する</a>
-            <a class="btn btn-outline" href="#tel" style="margin-left:10px">電話で相談</a>
+            <a class="btn" href="#form">無料相談はこちら</a>
+            <!-- ▼電話番号を差し替え -->
+            <a class="btn btn-outline" href="tel:03XXXXXXXX">電話で相談</a>
+            <!-- ▼LINEリンクを差し替え -->
+            <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
           </div>
 
           <div class="danger">※違法目的・不正利用に該当するご相談はお受けできません。最終判断はヒアリング後となります。</div>
@@ -139,9 +140,9 @@
 
         <div class="card form" id="form">
           <h3>無料相談フォーム（1分）</h3>
-          <p class="note">内容確認のため、担当よりご連絡します。</p>
+          <p class="note">送信後、担当より折り返しご連絡します。</p>
 
-          <!-- 送信先は後で差し替え -->
+          <!-- 重要：GitHub Pagesだけだと送信先がないので、ここは後で設定します（下に説明あり） -->
           <form action="https://example.com/form-endpoint" method="post" id="leadForm">
             <div class="field">
               <label>お名前 *</label>
@@ -149,31 +150,25 @@
             </div>
             <div class="field">
               <label>電話番号 *</label>
-              <input name="tel" required inputmode="tel" placeholder="例）09012345678" />
+              <input name="tel" required inputmode="tel" placeholder="例）09012345678（ハイフンなし）" />
             </div>
             <div class="field">
               <label>メールアドレス *</label>
               <input type="email" name="email" required placeholder="例）taro@example.com" />
             </div>
             <div class="field">
-              <label>会社の状況（分かる範囲で）</label>
+              <label>会社の状況（分かる範囲でOK）</label>
               <textarea name="detail" rows="5" placeholder="例）設立：2018年、休眠：2022年〜、申告：2023年分まで、口座あり 等"></textarea>
             </div>
 
-            <div class="field">
-              <label>
-                <input type="checkbox" required />
-                プライバシーポリシーに同意する *
-              </label>
-            </div>
-
             <button class="btn" type="submit" style="width:100%">無料相談を申し込む</button>
-            <p class="note">送信後、入力内容の確認メールをお送りします（設定によります）。</p>
+            <p class="note">※送信先の設定をするとメールで届くようになります（下に手順あり）</p>
           </form>
 
-          <div id="tel" class="note" style="margin-top:10px">
-            電話相談：<b>03-XXXX-XXXX</b>（平日 10:00-18:00）<br>
-            ※番号はあなたのものに差し替え
+          <div class="note" style="margin-top:10px">
+            <!-- ▼ここも差し替え -->
+            電話：<b>03-XXXX-XXXX</b>（平日 10:00-18:00）<br>
+            メール：<b>info@example.com</b>
           </div>
         </div>
       </div>
@@ -183,36 +178,37 @@
   <section class="alt">
     <div class="container">
       <h2>こんなお悩みありませんか？</h2>
-      <p class="lead">「会社をどう整理すべきか分からない」状態でもOK。まずは状況を整理しましょう。</p>
+      <p class="lead">「どう整理すべきか分からない」状態でもOK。まずは状況を整理しましょう。</p>
       <ul class="list">
-        <li>使っていない会社の維持費だけがかかっている</li>
-        <li>清算・廃業の手続きが面倒で先延ばし</li>
-        <li>税務・登記のことが分からない</li>
-        <li>口座・許認可など状況が複雑</li>
-        <li>なるべく早く整理したい</li>
+        <li>使っていない会社があり、維持費だけがかかっている</li>
+        <li>会社を売却・譲渡したいが、やり方が分からない</li>
+        <li>廃業（解散・清算）の手続きが面倒で先延ばし</li>
+        <li>口座・許認可・申告など状況が複雑</li>
+        <li>できれば早く整理したい</li>
       </ul>
-      <div class="cta"><a class="btn" href="#form">無料査定を依頼する</a></div>
+      <div class="cta"><a class="btn" href="#form">無料相談はこちら</a></div>
     </div>
   </section>
 
-  <section>
+  <section id="service">
     <div class="container">
-      <h2>会社買取（会社譲渡）という整理方法</h2>
-      <p class="lead">会社を解散する代わりに、条件が合えば第三者へ譲渡できます。状況に応じて最適な進め方をご提案します。</p>
+      <h2>対応サービス</h2>
+      <p class="lead">状況に合わせて、最適なルートをご提案します。</p>
       <div class="grid3">
         <div class="box">
-          <h3>廃業コストを抑えやすい</h3>
-          <p>清算にかかる費用・手間を軽減できる可能性があります。</p>
+          <h3>休眠会社の買取</h3>
+          <p>使っていない会社の整理について、可能性を確認します。</p>
         </div>
         <div class="box">
-          <h3>スピード重視</h3>
-          <p>内容次第で最短即日で一次回答します。</p>
+          <h3>法人売却サポート</h3>
+          <p>会社売却・譲渡の進め方を整理し、段取りをサポートします。</p>
         </div>
         <div class="box">
-          <h3>段取りをサポート</h3>
-          <p>必要書類や手続きの流れを分かりやすく整理します。</p>
+          <h3>M&A相談</h3>
+          <p>条件によりM&Aの選択肢も含めて検討します。</p>
         </div>
       </div>
+      <div class="cta"><a class="btn" href="#form">無料相談する</a></div>
     </div>
   </section>
 
@@ -221,7 +217,7 @@
       <h2>選ばれる理由</h2>
       <div class="grid3">
         <div class="box">
-          <h3>① スピード対応</h3>
+          <h3>① スピード</h3>
           <p>最短即日で一次回答。状況整理から素早く進めます。</p>
         </div>
         <div class="box">
@@ -233,42 +229,17 @@
           <p>電話・オンライン中心で完結可能です。</p>
         </div>
       </div>
-      <div class="cta"><a class="btn" href="#form">無料相談する</a></div>
+      <div class="cta"><a class="btn" href="#form">無料相談はこちら</a></div>
     </div>
   </section>
 
-  <section id="target">
-    <div class="container">
-      <h2>買取対象（まずはご相談ください）</h2>
-      <p class="lead">以下の会社でもご相談可能です。最終判断はヒアリング後となります。</p>
-      <div class="grid3">
-        <div class="box"><h3>休眠会社</h3><p>長期間動いていない会社</p></div>
-        <div class="box"><h3>事業停止会社</h3><p>売上がない・停止状態</p></div>
-        <div class="box"><h3>赤字会社</h3><p>状況により対応可能</p></div>
-      </div>
-
-      <div class="box" style="margin-top:14px">
-        <h3>無料査定で確認したい項目（分かる範囲でOK）</h3>
-        <ul class="list">
-          <li>設立年月 / 休眠・停止の時期</li>
-          <li>税務申告の状況（直近いつまで）</li>
-          <li>口座の有無（分かる範囲で）</li>
-          <li>許認可の有無（分かる範囲で）</li>
-          <li>役員構成（1名/複数）</li>
-        </ul>
-      </div>
-
-      <div class="cta"><a class="btn" href="#form">無料査定を依頼する</a></div>
-    </div>
-  </section>
-
-  <section class="alt" id="flow">
+  <section id="flow">
     <div class="container">
       <h2>ご相談の流れ</h2>
       <div class="grid3">
         <div class="box">
           <h3>① 無料相談</h3>
-          <p>フォームまたは電話でご相談ください。</p>
+          <p>フォーム / 電話 / LINEでご相談ください。</p>
         </div>
         <div class="box">
           <h3>② ヒアリング</h3>
@@ -276,27 +247,31 @@
         </div>
         <div class="box">
           <h3>③ 条件提示 → 手続き</h3>
-          <p>合意後に譲渡手続きを進めます。</p>
+          <p>合意後に譲渡・売却手続きを進めます。</p>
         </div>
       </div>
       <div class="cta"><a class="btn" href="#form">無料相談する</a></div>
     </div>
   </section>
 
-  <section id="faq">
+  <section class="alt" id="faq">
     <div class="container">
       <h2>よくある質問</h2>
       <div class="faq">
         <details>
-          <summary>相談や査定は本当に無料ですか？</summary>
-          <p>はい、無料です。状況確認のうえご案内します。</p>
+          <summary>相談や査定は無料ですか？</summary>
+          <p>はい、無料です。内容確認のうえご案内します。</p>
         </details>
         <details>
-          <summary>赤字・債務があっても相談できますか？</summary>
-          <p>状況により異なります。まずはご相談ください。</p>
+          <summary>赤字でも相談できますか？</summary>
+          <p>状況によって異なります。まずはご相談ください。</p>
         </details>
         <details>
-          <summary>どのくらいで結果が分かりますか？</summary>
+          <summary>全国対応ですか？</summary>
+          <p>全国対応です。オンライン/電話中心で進められます。</p>
+        </details>
+        <details>
+          <summary>どのくらいで回答が出ますか？</summary>
           <p>内容によりますが、最短即日で一次回答します。</p>
         </details>
         <details>
@@ -308,7 +283,7 @@
           <p>可能です（進行状況によります）。</p>
         </details>
       </div>
-      <div class="cta"><a class="btn" href="#form">無料査定を依頼する</a></div>
+      <div class="cta"><a class="btn" href="#form">無料相談はこちら</a></div>
     </div>
   </section>
 
@@ -319,8 +294,9 @@
     <div class="footgrid">
       <div>
         <b>運営者情報</b><br>
-        会社名：〇〇株式会社<br>
-        所在地：東京都〇〇区〇〇（番地は任意）<br>
+        <!-- ▼ここをあなたの情報に差し替え -->
+        会社名：〇〇株式会社（または屋号）<br>
+        所在地：東京都〇〇区〇〇<br>
         電話：03-XXXX-XXXX　メール：info@example.com<br>
         受付：平日 10:00-18:00
         <div class="danger">※記載内容はあなたの情報に差し替え</div>
@@ -328,9 +304,10 @@
       <div>
         <b>各種ポリシー</b>
         <div class="links" style="margin-top:8px">
-          <a href="privacy.html">プライバシーポリシー</a>
-          <a href="terms.html">利用規約</a>
-          <a href="law.html">特定商取引法に基づく表記（必要な場合）</a>
+          <a href="#form">無料相談</a>
+        </div>
+        <div class="danger" style="margin-top:10px">
+          ※本格運用するなら「プライバシーポリシー」「利用規約」を別ページで用意するのがおすすめです。
         </div>
       </div>
     </div>
@@ -339,7 +316,7 @@
 </footer>
 
 <script>
-  // 簡易バリデーション（電話の数字っぽさチェック）
+  // 電話の簡易チェック（10〜11桁）
   document.getElementById('leadForm').addEventListener('submit', function(e){
     const tel = (this.tel.value || '').replace(/[\s-]/g,'');
     if(!/^[0-9]{10,11}$/.test(tel)){
