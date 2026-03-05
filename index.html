@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>会社売却・休眠会社買取・法人譲渡の無料相談｜最短即日・全国対応</title>
+  <title>会社売却・休眠会社買取・法人譲渡｜無料査定（最短即日）</title>
   <meta name="description" content="会社を手放したい方へ。休眠会社買取、法人売却、会社譲渡、M&Aまで無料相談。全国対応・秘密厳守・最短即日で一次回答。" />
 
   <style>
@@ -15,85 +15,110 @@
       --line:#e5e7eb;
       --brand:#0f4c81;
       --brand2:#0b3b63;
-      --radius:14px;
-      --shadow: 0 10px 30px rgba(17,24,39,.08);
+      --accent:#ffb100;
+      --radius:16px;
+      --shadow: 0 14px 40px rgba(17,24,39,.10);
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
-      color:var(--text);background:var(--bg);line-height:1.7
+      color:var(--text); background:var(--bg); line-height:1.75;
     }
     a{color:inherit}
     .container{max-width:1100px;margin:0 auto;padding:0 18px}
-
-    header{
-      position:sticky;top:0;z-index:50;
-      background:rgba(255,255,255,.92);
-      backdrop-filter:saturate(1.2) blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:12px 0;gap:12px
-    }
-    .logo{font-weight:900;letter-spacing:.02em}
-    .menu{display:flex;gap:14px;align-items:center}
-    .menu a{font-size:14px;text-decoration:none;color:var(--muted)}
-    .menu a:hover{color:var(--text)}
-
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
       padding:14px 18px;border-radius:12px;
       background:var(--brand);color:#fff;text-decoration:none;font-weight:900;
       border:1px solid transparent;
-      box-shadow:0 8px 20px rgba(15,76,129,.18);
+      box-shadow:0 10px 24px rgba(15,76,129,.18);
+      cursor:pointer;
     }
     .btn:hover{background:var(--brand2)}
     .btn-outline{background:#fff;color:var(--brand);border-color:var(--brand)}
+    .btn-accent{background:var(--accent);color:#111827}
+    .btn-accent:hover{filter:brightness(.95)}
+    .pill{display:flex;flex-wrap:wrap;gap:10px}
+    .tag{font-size:13px;color:var(--brand);background:#eef6ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:999px}
 
-    .hero{
-      padding:26px 0 18px;
-      background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);
+    /* header */
+    header{
+      position:sticky; top:0; z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:saturate(1.2) blur(10px);
+      border-bottom:1px solid var(--line);
     }
-    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
-    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .pad{padding:18px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .logo{font-weight:1000;letter-spacing:.02em}
+    .menu{display:flex;gap:14px;align-items:center}
+    .menu a{font-size:14px;text-decoration:none;color:var(--muted);font-weight:800}
+    .menu a:hover{color:var(--text)}
 
-    h1{font-size:36px;line-height:1.25;margin:0 0 10px}
-    h2{font-size:26px;margin:0 0 12px}
-    .lead{margin:0 0 14px;color:var(--muted)}
-    .note{font-size:12px;color:var(--muted)}
-    .danger{font-size:12px;color:var(--muted);margin-top:10px}
-
-    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
-
-    section{padding:28px 0}
+    /* layout */
+    section{padding:46px 0}
     .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .pad{padding:20px}
+    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+    h1{font-size:40px;line-height:1.2;margin:0 0 12px}
+    h2{font-size:28px;margin:0 0 14px}
+    .lead{margin:0 0 14px;color:var(--muted)}
+    .danger{font-size:12px;color:var(--muted);margin-top:10px}
+    .img{width:100%;height:auto;border-radius:16px;display:block}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+    .center{display:flex;justify-content:center}
 
-    .img{
-      width:100%;
-      height:auto;
-      border-radius:14px;
-      display:block;
+    /* “見出し帯”っぽい演出（画像じゃなくても雰囲気出る） */
+    .ribbon{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:#0f4c81;
+      color:#fff;
+      font-weight:1000;
+      margin-bottom:14px;
+      box-shadow:0 10px 24px rgba(15,76,129,.15);
     }
+    .ribbon small{opacity:.9;font-weight:900}
 
+    /* CTA band (途中の横長帯) */
+    .ctaBand{
+      background:linear-gradient(90deg, #0f4c81 0%, #0b3b63 100%);
+      color:#fff;border-radius:18px;
+      padding:18px 16px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:12px;
+      box-shadow:0 14px 40px rgba(15,76,129,.18);
+    }
+    .ctaBand b{font-size:18px}
+    .ctaBand p{margin:0;opacity:.92;font-size:13px}
+    .ctaBand .right{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+    /* form */
+    .note{font-size:12px;color:var(--muted);margin:0 0 10px}
     .field{display:grid;gap:6px;margin:10px 0}
     .field label{font-size:13px;color:var(--muted)}
     .field input,.field textarea{
       width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);
       outline:none;font-size:15px
     }
-    .field input:focus,.field textarea:focus{
-      border-color:#93c5fd;box-shadow:0 0 0 4px rgba(147,197,253,.25)
-    }
+    .field input:focus,.field textarea:focus{border-color:#93c5fd;box-shadow:0 0 0 4px rgba(147,197,253,.25)}
 
-    footer{padding:22px 0;border-top:1px solid var(--line);color:var(--muted)}
+    /* FAQ */
+    .faq{display:grid;gap:10px;margin-top:12px}
+    details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+    summary{cursor:pointer;font-weight:1000}
+    details p{margin:10px 0 0;color:var(--muted)}
 
+    footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted)}
     @media (max-width:900px){
       .grid{grid-template-columns:1fr}
       .menu{display:none}
-      h1{font-size:28px}
+      h1{font-size:30px}
+      section{padding:36px 0}
+      .ctaBand{flex-direction:column;align-items:flex-start}
+      .ctaBand .right{justify-content:flex-start}
     }
   </style>
 </head>
@@ -105,75 +130,79 @@
     <div class="nav">
       <div class="logo">会社売却・買取 無料相談</div>
       <nav class="menu">
-        <a href="#points">強み</a>
-        <a href="#flow">流れ</a>
-        <a href="#contact">相談</a>
+        <a href="#reasons">選ばれる理由</a>
+        <a href="#target">買取対象</a>
+        <a href="#flow">買取の流れ</a>
+        <a href="#faq">よくある質問</a>
       </nav>
-      <a class="btn" href="#contact">無料相談</a>
+      <a class="btn btn-accent" href="#form1">無料査定</a>
     </div>
   </div>
 </header>
 
 <main>
 
-  <!-- ===== ファーストビュー（hero.jpeg をここに表示） ===== -->
-  <section class="hero" id="top">
+  <!-- FV -->
+  <section style="background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%); padding-top:34px;">
     <div class="container">
       <div class="grid">
         <div class="card pad">
 
-          <!-- ▼ヒーロー画像（ここが “欲しい場所”） -->
-          <img class="img" src="hero.jpeg" alt="会社売却・法人譲渡の相談" style="margin:0 0 16px;">
+          <div class="pill" style="margin-bottom:10px">
+            <span class="tag">最短即日で一次回答</span>
+            <span class="tag">秘密厳守</span>
+            <span class="tag">全国対応</span>
+            <span class="tag">相談無料</span>
+          </div>
 
           <h1>会社を手放したい方へ<br>無料相談受付中</h1>
           <p class="lead">
-            休眠会社・法人売却・会社譲渡・M&Aまで、状況に合わせて整理ルートをご提案します。<br>
-            最短即日で一次回答、秘密厳守で対応します。
+            休眠会社・法人売却・会社譲渡・M&Aまで、状況に合わせて最適ルートをご提案します。
           </p>
 
-          <div class="cta">
-            <a class="btn" href="#contact">無料査定はこちら</a>
+          <!-- hero.jpeg -->
+          <img class="img" src="hero.jpeg" alt="会社売却・法人譲渡の相談" style="margin:12px 0 16px;">
 
-            <!-- ▼ここをあなたのLINEリンクに差し替え -->
+          <div class="ctaRow">
+            <a class="btn btn-accent" href="#form1">無料査定はこちら</a>
+            <!-- ▼あなたのLINEリンクに差し替え -->
             <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
-
-            <!-- ▼ここをあなたの電話番号（数字のみ）に差し替え 例: tel:0312345678 -->
+            <!-- ▼あなたの電話番号に差し替え（数字のみ） -->
             <a class="btn btn-outline" href="tel:03XXXXXXXX">電話で相談</a>
           </div>
 
-          <div class="danger">
-            ※違法目的・不正利用に該当するご相談はお受けできません。最終判断はヒアリング後となります。
-          </div>
+          <div class="danger">※違法目的・不正利用に該当するご相談はお受けできません。最終判断はヒアリング後となります。</div>
         </div>
 
-        <!-- ===== 右側：無料相談フォーム ===== -->
-        <div class="card pad" id="contact">
-          <h2 style="margin-top:0">無料相談フォーム（1分）</h2>
+        <!-- 右：フォーム -->
+        <div class="card pad" id="form1">
+          <div class="ribbon">無料お申し込みフォーム <small>（1分）</small></div>
           <p class="note">送信後、担当より折り返しご連絡します。</p>
 
-          <!-- ▼Formspreeを使うなら action を Formspree のURLに差し替え -->
+          <!-- ▼Formspreeを使うなら action を Formspree URL に差し替え -->
           <form action="https://example.com/form-endpoint" method="post" id="leadForm">
             <div class="field">
-              <label>お名前 *</label>
+              <label>会社名（任意）</label>
+              <input name="company" placeholder="例）◯◯株式会社" />
+            </div>
+            <div class="field">
+              <label>ご担当者様氏名 *</label>
               <input name="name" required placeholder="例）山田 太郎" />
             </div>
-
             <div class="field">
               <label>電話番号 *</label>
               <input name="tel" required inputmode="tel" placeholder="例）09012345678（ハイフンなし）" />
             </div>
-
             <div class="field">
               <label>メールアドレス *</label>
               <input type="email" name="email" required placeholder="例）taro@example.com" />
             </div>
-
             <div class="field">
-              <label>会社の状況（分かる範囲でOK）</label>
-              <textarea name="detail" rows="5" placeholder="例）設立：2018年、休眠：2022年〜、申告：2023年分まで、口座あり 等"></textarea>
+              <label>ご質問など（任意）</label>
+              <textarea name="detail" rows="4" placeholder="例）休眠期間、申告状況、口座の有無など分かる範囲で"></textarea>
             </div>
 
-            <button class="btn" type="submit" style="width:100%">無料相談を申し込む</button>
+            <button class="btn btn-accent" type="submit" style="width:100%">無料査定を申し込む</button>
 
             <div class="note" style="margin-top:10px">
               <!-- ▼ここをあなたの情報に差し替え -->
@@ -187,48 +216,149 @@
     </div>
   </section>
 
-  <!-- ===== 選ばれる理由（points.jpeg をここに表示） ===== -->
-  <section class="alt" id="points">
-    <div class="container">
-      <h2>選ばれる理由</h2>
-      <p class="lead">「スピード」「秘密厳守」「全国対応」で、安心してご相談いただけます。</p>
-
-      <!-- ▼強み画像（ここが “欲しい場所”） -->
-      <img class="img" src="points.jpeg" alt="スピード・秘密厳守・全国対応" style="margin:16px 0;">
-
-      <div class="cta" style="justify-content:center">
-        <a class="btn" href="#contact">無料査定はこちら</a>
-        <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ご相談の流れ（flow.jpeg をここに表示） ===== -->
-  <section id="flow">
-    <div class="container">
-      <h2>ご相談の流れ</h2>
-      <p class="lead">相談 → 査定 → 譲渡まで、段取りを分かりやすく進めます。</p>
-
-      <!-- ▼流れ画像（ここが “欲しい場所”） -->
-      <img class="img" src="flow.jpeg" alt="相談から譲渡までの流れ" style="margin:16px 0;">
-
-      <div class="cta" style="justify-content:center">
-        <a class="btn" href="#contact">無料相談する</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 最終CTA ===== -->
+  <!-- 悩み（shudesignの「お悩み画像ブロック」っぽい雰囲気） -->
   <section class="alt">
     <div class="container">
-      <h2>迷ったら、まず無料相談</h2>
-      <p class="lead">
-        「解散すべきか、売却できるか分からない」状態でもOK。状況を整理してご提案します。
-      </p>
-      <div class="cta" style="justify-content:center">
-        <a class="btn" href="#contact">無料査定はこちら</a>
-        <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
-        <a class="btn btn-outline" href="tel:03XXXXXXXX">電話で相談</a>
+      <div class="ribbon">こんなお悩みありませんか？</div>
+      <div class="card pad">
+        <ul style="margin:0; padding-left:18px; color:var(--muted); display:grid; gap:8px;">
+          <li>使っていない会社があり、維持費だけがかかっている</li>
+          <li>会社を売却・譲渡したいが、進め方が分からない</li>
+          <li>解散・清算の手続きが面倒で先延ばしになっている</li>
+          <li>口座・許認可・申告など状況が複雑</li>
+          <li>できれば早く整理したい</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:18px" class="ctaBand">
+        <div>
+          <b>当てはまる方は、今すぐ無料査定へ</b>
+          <p>分かる範囲の情報でOK。最短即日で一次回答します。</p>
+        </div>
+        <div class="right">
+          <a class="btn btn-accent" href="#form1">無料査定</a>
+          <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 選ばれる理由（points.jpeg） -->
+  <section id="reasons">
+    <div class="container">
+      <div class="ribbon">「当社」が選ばれる理由</div>
+      <p class="lead">安心してご相談いただけるよう、スピードと情報管理を徹底しています。</p>
+
+      <img class="img" src="points.jpeg" alt="スピード・秘密厳守・全国対応" style="margin:14px 0 0;">
+
+      <div style="margin-top:18px" class="ctaBand">
+        <div>
+          <b>無料で査定できます（相談無料）</b>
+          <p>まずは状況を整理して、最適な進め方をご案内します。</p>
+        </div>
+        <div class="right">
+          <a class="btn btn-accent" href="#form1">無料査定</a>
+          <a class="btn btn-outline" href="tel:03XXXXXXXX">電話</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 買取対象（チェックリスト風） -->
+  <section class="alt" id="target">
+    <div class="container">
+      <div class="ribbon">あなたの会社は買取対象？</div>
+
+      <div class="card pad">
+        <p class="lead" style="margin-top:0">分かる範囲でOK。まずは状況を教えてください。</p>
+        <div style="display:grid; gap:10px; color:var(--muted);">
+          <label><input type="checkbox"> 休眠会社 / 事業停止会社</label>
+          <label><input type="checkbox"> 売上ゼロ・赤字（状況により）</label>
+          <label><input type="checkbox"> 口座・許認可がある（要確認）</label>
+          <label><input type="checkbox"> できるだけ早く整理したい</label>
+        </div>
+      </div>
+
+      <div style="margin-top:18px" class="ctaBand">
+        <div>
+          <b>当てはまる方は、無料査定へ</b>
+          <p>全国対応。オンライン中心で完結可能です。</p>
+        </div>
+        <div class="right">
+          <a class="btn btn-accent" href="#form1">無料査定</a>
+          <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 流れ（flow.jpeg） -->
+  <section id="flow">
+    <div class="container">
+      <div class="ribbon">買取の流れ</div>
+      <p class="lead">相談 → 査定 → 譲渡まで、段取りを分かりやすく進めます。</p>
+
+      <img class="img" src="flow.jpeg" alt="相談・査定・譲渡の流れ" style="margin-top:14px;">
+
+      <div style="margin-top:18px" class="center">
+        <a class="btn btn-accent" href="#form1">無料査定を申し込む</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ（shudesignのQ&Aセクション風） -->
+  <section class="alt" id="faq">
+    <div class="container">
+      <div class="ribbon">よくある質問</div>
+
+      <div class="faq">
+        <details>
+          <summary>本当に費用はかかりませんか？</summary>
+          <p>はい。相談・査定の段階では費用はかかりません。内容確認のうえご案内します。</p>
+        </details>
+        <details>
+          <summary>赤字でも相談できますか？</summary>
+          <p>状況により異なります。まずは現状をお知らせください。</p>
+        </details>
+        <details>
+          <summary>地方の会社でも対応可能ですか？</summary>
+          <p>はい。電話・オンライン中心で全国対応しています。</p>
+        </details>
+        <details>
+          <summary>情報が外部に漏れませんか？</summary>
+          <p>秘密厳守で対応します。お預かりした情報は厳重に管理します。</p>
+        </details>
+      </div>
+
+      <div style="margin-top:18px" class="center">
+        <a class="btn btn-accent" href="#form1">無料査定へ</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下部にもう一度フォーム（shudesignの最下部フォーム風） -->
+  <section>
+    <div class="container">
+      <div class="grid">
+        <div class="card pad">
+          <div class="ribbon">無料査定を申し込む</div>
+          <p class="lead">迷ったら、まず無料相談。分かる範囲でOKです。</p>
+          <div class="ctaRow">
+            <a class="btn btn-accent" href="#form1">上のフォームへ</a>
+            <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
+          </div>
+          <div class="danger">※フォーム送信先（Formspree等）を設定するとメールで届くようになります。</div>
+        </div>
+
+        <div class="card pad">
+          <div class="ribbon">運営者情報</div>
+          <!-- ▼ここをあなたの情報に差し替え -->
+          会社名：〇〇株式会社（または屋号）<br>
+          所在地：東京都〇〇区〇〇<br>
+          電話：03-XXXX-XXXX<br>
+          メール：info@example.com<br>
+          受付：平日 10:00-18:00
+        </div>
       </div>
     </div>
   </section>
@@ -237,13 +367,7 @@
 
 <footer>
   <div class="container">
-    <b>運営者情報</b><br>
-    <!-- ▼ここをあなたの情報に差し替え -->
-    会社名：〇〇株式会社（または屋号）<br>
-    所在地：東京都〇〇区〇〇<br>
-    電話：03-XXXX-XXXX　メール：info@example.com<br>
-    受付：平日 10:00-18:00
-    <div class="note" style="margin-top:10px">© 2026 〇〇株式会社</div>
+    <div class="note">© 2026 〇〇株式会社</div>
   </div>
 </footer>
 
