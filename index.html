@@ -8,16 +8,9 @@
 
   <style>
     :root{
-      --bg:#ffffff;
-      --bg2:#f6f7f9;
-      --text:#111827;
-      --muted:#6b7280;
-      --line:#e5e7eb;
-      --brand:#0f4c81;
-      --brand2:#0b3b63;
-      --accent:#ffb100;
-      --radius:16px;
-      --shadow: 0 14px 40px rgba(17,24,39,.10);
+      --bg:#ffffff; --bg2:#f6f7f9; --text:#111827; --muted:#6b7280;
+      --line:#e5e7eb; --brand:#0f4c81; --brand2:#0b3b63; --accent:#ffb100;
+      --radius:16px; --shadow: 0 14px 40px rgba(17,24,39,.10);
     }
     *{box-sizing:border-box}
     body{
@@ -26,21 +19,7 @@
       color:var(--text); background:var(--bg); line-height:1.75;
     }
     a{color:inherit}
-    .container{max-width:1100px;margin:0 auto;padding:0 18px}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 18px;border-radius:12px;
-      background:var(--brand);color:#fff;text-decoration:none;font-weight:900;
-      border:1px solid transparent;
-      box-shadow:0 10px 24px rgba(15,76,129,.18);
-      cursor:pointer;
-    }
-    .btn:hover{background:var(--brand2)}
-    .btn-outline{background:#fff;color:var(--brand);border-color:var(--brand)}
-    .btn-accent{background:var(--accent);color:#111827}
-    .btn-accent:hover{filter:brightness(.95)}
-    .pill{display:flex;flex-wrap:wrap;gap:10px}
-    .tag{font-size:13px;color:var(--brand);background:#eef6ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:999px}
+    .container{max-width:1120px;margin:0 auto;padding:0 18px}
 
     header{
       position:sticky; top:0; z-index:50;
@@ -54,11 +33,26 @@
     .menu a{font-size:14px;text-decoration:none;color:var(--muted);font-weight:900}
     .menu a:hover{color:var(--text)}
 
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:14px 18px;border-radius:12px;
+      background:var(--brand);color:#fff;text-decoration:none;font-weight:900;
+      border:1px solid transparent;
+      box-shadow:0 10px 24px rgba(15,76,129,.18);
+      cursor:pointer;
+    }
+    .btn:hover{background:var(--brand2)}
+    .btn-outline{background:#fff;color:var(--brand);border-color:var(--brand)}
+    .btn-accent{background:var(--accent);color:#111827}
+    .btn-accent:hover{filter:brightness(.95)}
+
     section{padding:46px 0}
     .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
     .pad{padding:20px}
-    .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
     h1{font-size:40px;line-height:1.2;margin:0 0 12px}
     h2{font-size:28px;margin:0 0 14px}
     h3{font-size:18px;margin:0 0 8px}
@@ -68,11 +62,8 @@
     .img{width:100%;height:auto;border-radius:16px;display:block}
     .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
     .center{display:flex;justify-content:center}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
-    .box p{margin:0;color:var(--muted)}
-    .checklist{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
+    .pill{display:flex;flex-wrap:wrap;gap:10px}
+    .tag{font-size:13px;color:var(--brand);background:#eef6ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:999px}
 
     .ribbon{
       display:inline-flex;align-items:center;gap:10px;
@@ -95,6 +86,10 @@
     .ctaBand p{margin:0;opacity:.92;font-size:13px}
     .ctaBand .right{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
 
+    .box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+    .box p{margin:0;color:var(--muted)}
+    .checklist{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
+
     .field{display:grid;gap:6px;margin:10px 0}
     .field label{font-size:13px;color:var(--muted)}
     .field input,.field textarea{
@@ -109,6 +104,8 @@
     details p{margin:10px 0 0;color:var(--muted)}
 
     footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .miniGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+
     @media (max-width:900px){
       .grid{grid-template-columns:1fr}
       .menu{display:none}
@@ -116,7 +113,7 @@
       section{padding:36px 0}
       .ctaBand{flex-direction:column;align-items:flex-start}
       .ctaBand .right{justify-content:flex-start}
-      .two,.three{grid-template-columns:1fr}
+      .two,.three,.miniGrid{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -129,8 +126,8 @@
       <div class="logo">会社売却・買取 無料相談</div>
       <nav class="menu">
         <a href="#pain">お悩み</a>
+        <a href="#proof">信頼</a>
         <a href="#benefit">メリット</a>
-        <a href="#reasons">選ばれる理由</a>
         <a href="#flow">流れ</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -142,7 +139,7 @@
 <main>
 
   <!-- ===== FV ===== -->
-  <section style="background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%); padding-top:34px;">
+  <section style="background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%); padding-top:34px;" id="top">
     <div class="container">
       <div class="grid">
         <div class="card pad">
@@ -156,12 +153,50 @@
 
           <h1>会社を手放したい方へ<br>無料相談受付中</h1>
           <p class="lead">
-            休眠会社・法人売却・会社譲渡・M&Aまで、状況に合わせて整理ルートをご提案します。
-            まずは無料で状況確認します。
+            休眠会社・法人売却・会社譲渡・M&Aまで。<br>
+            「何から始めるべきか分からない」状態でもOK。まずは状況整理からご案内します。
           </p>
 
           <!-- hero.jpeg -->
           <img class="img" src="hero.jpeg" alt="会社売却・法人譲渡の相談" style="margin:12px 0 16px;">
+
+          <!-- 視覚を増やす（埋め込みSVG） -->
+          <div class="miniGrid" style="margin-top:6px">
+            <div class="box">
+              <div style="display:flex;gap:10px;align-items:center">
+                <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+                  <circle cx="24" cy="24" r="22" fill="#eef6ff" stroke="#dbeafe"/>
+                  <path d="M14 25l6 6 14-16" fill="none" stroke="#0f4c81" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                  <b>相談無料</b><br><span class="note">分かる範囲でOK</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div style="display:flex;gap:10px;align-items:center">
+                <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+                  <circle cx="24" cy="24" r="22" fill="#fff7e6" stroke="#ffe0a3"/>
+                  <path d="M24 14v12l8 5" fill="none" stroke="#b45309" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                  <b>最短即日</b><br><span class="note">一次回答</span>
+                </div>
+              </div>
+            </div>
+            <div class="box">
+              <div style="display:flex;gap:10px;align-items:center">
+                <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+                  <circle cx="24" cy="24" r="22" fill="#eef2ff" stroke="#dbeafe"/>
+                  <path d="M24 14l12 6v8c0 8-6 14-12 16-6-2-12-8-12-16v-8l12-6z" fill="none" stroke="#0f4c81" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="M18 25l4 4 8-10" fill="none" stroke="#0f4c81" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div>
+                  <b>秘密厳守</b><br><span class="note">情報管理徹底</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="ctaRow">
             <a class="btn btn-accent" href="#form1">無料査定はこちら</a>
@@ -171,7 +206,9 @@
             <a class="btn btn-outline" href="tel:03XXXXXXXX">電話で相談</a>
           </div>
 
-          <div class="danger">※違法目的・不正利用に該当するご相談はお受けできません。最終判断はヒアリング後となります。</div>
+          <div class="danger">
+            ※違法目的・不正利用に該当するご相談はお受けできません。最終判断はヒアリング後となります。
+          </div>
         </div>
 
         <!-- 右：フォーム -->
@@ -210,6 +247,28 @@
               メール：<b>info@example.com</b>
             </div>
           </form>
+
+          <!-- “人の気配”を追加（埋め込みSVG） -->
+          <div class="box" style="margin-top:14px">
+            <div style="display:flex;gap:12px;align-items:center">
+              <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#0f4c81"/>
+                    <stop offset="1" stop-color="#ffb100"/>
+                  </linearGradient>
+                </defs>
+                <circle cx="28" cy="28" r="28" fill="url(#g)"/>
+                <circle cx="28" cy="23" r="10" fill="rgba(255,255,255,.92)"/>
+                <path d="M12 52c3-10 12-16 16-16s13 6 16 16" fill="rgba(255,255,255,.92)"/>
+              </svg>
+              <div>
+                <b>担当者が内容を確認し、折り返します</b><br>
+                <span class="note">最短即日で一次回答（内容により）</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -235,9 +294,21 @@
         <div class="card pad">
           <h2 style="margin-top:0">まずは“整理ルート”を決めましょう</h2>
           <p class="lead">解散・清算だけが選択肢ではありません。条件によっては「譲渡・売却」も検討できます。</p>
-          <div class="box">
-            <h3>分かる範囲でOK</h3>
-            <p>設立年・休眠期間・申告状況など、分かる範囲の情報で一次判断します。</p>
+
+          <!-- “不安解消”の視覚要素を追加 -->
+          <div class="three" style="margin-top:10px">
+            <div class="box">
+              <h3>必要情報は最小</h3>
+              <p>設立年・休眠期間・申告状況など、分かる範囲でOK</p>
+            </div>
+            <div class="box">
+              <h3>無理な勧誘なし</h3>
+              <p>状況に合う選択肢だけをご案内</p>
+            </div>
+            <div class="box">
+              <h3>秘密厳守</h3>
+              <p>相談内容は外部に漏れません</p>
+            </div>
           </div>
 
           <div class="ctaBand">
@@ -255,8 +326,71 @@
     </div>
   </section>
 
-  <!-- ===== メリット（王道の決め手） ===== -->
-  <section id="benefit">
+  <!-- ===== 信頼（“頼めない”を潰す最重要） ===== -->
+  <section id="proof">
+    <div class="container">
+      <div class="ribbon">安心して頼める理由</div>
+
+      <div class="three">
+        <div class="box">
+          <h3>① 対応ポリシー</h3>
+          <p>違法目的・不正利用はお受けしません。ヒアリング後に可否を明確にします。</p>
+        </div>
+        <div class="box">
+          <h3>② 情報管理</h3>
+          <p>相談内容は外部に共有しません。必要最小限の範囲で確認します。</p>
+        </div>
+        <div class="box">
+          <h3>③ 透明な進行</h3>
+          <p>次にやること（必要書類・確認事項）を分かりやすく提示します。</p>
+        </div>
+      </div>
+
+      <!-- “実績が弱い”を補う：バッジ風（数値は後で差し替えOK） -->
+      <div class="two" style="margin-top:14px">
+        <div class="card pad">
+          <div style="display:flex;gap:12px;align-items:center">
+            <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="34" fill="#eef6ff" stroke="#dbeafe"/>
+              <path d="M36 14l6 12 13 2-9 9 2 13-12-6-12 6 2-13-9-9 13-2 6-12z" fill="#0f4c81" opacity=".18"/>
+              <path d="M22 36l9 9 19-22" fill="none" stroke="#0f4c81" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <div>
+              <b>（ここに実績）相談実績：◯◯件</b><br>
+              <span class="note">※数字が無ければ「対応例」にしてOK</span>
+            </div>
+          </div>
+        </div>
+        <div class="card pad">
+          <div style="display:flex;gap:12px;align-items:center">
+            <svg width="72" height="72" viewBox="0 0 72 72" aria-hidden="true">
+              <circle cx="36" cy="36" r="34" fill="#fff7e6" stroke="#ffe0a3"/>
+              <path d="M22 30h28v20H22z" fill="none" stroke="#b45309" stroke-width="3"/>
+              <path d="M26 34h20M26 40h16M26 46h12" stroke="#b45309" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <div>
+              <b>チェックリストで迷わせない</b><br>
+              <span class="note">必要事項を整理して進めます</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ctaBand">
+        <div>
+          <b>「怪しいかも…」と思ったら、まず無料で確認</b>
+          <p>無理に進めません。状況を整理してご案内します。</p>
+        </div>
+        <div class="right">
+          <a class="btn btn-accent" href="#form1">無料査定</a>
+          <a class="btn btn-outline" href="tel:03XXXXXXXX">電話</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== メリット ===== -->
+  <section class="alt" id="benefit">
     <div class="container">
       <div class="ribbon">会社売却（譲渡）のメリット</div>
 
@@ -275,6 +409,12 @@
         </div>
       </div>
 
+      <!-- 既存の強み画像をここでも見せて“画像量”を増やす -->
+      <div class="card pad" style="margin-top:14px">
+        <h3>安心の3つの約束</h3>
+        <img class="img" src="points.jpeg" alt="スピード・秘密厳守・全国対応" style="margin-top:10px;">
+      </div>
+
       <div class="ctaBand">
         <div>
           <b>まずは無料で状況確認</b>
@@ -282,28 +422,13 @@
         </div>
         <div class="right">
           <a class="btn btn-accent" href="#form1">無料査定</a>
-          <a class="btn btn-outline" href="tel:03XXXXXXXX">電話</a>
+          <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== 選ばれる理由（points.jpeg） ===== -->
-  <section class="alt" id="reasons">
-    <div class="container">
-      <div class="ribbon">「当社」が選ばれる理由</div>
-      <p class="lead">安心してご相談いただけるよう、スピードと情報管理を徹底しています。</p>
-
-      <img class="img" src="points.jpeg" alt="スピード・秘密厳守・全国対応" style="margin:14px 0 0;">
-
-      <div class="ctaRow center" style="margin-top:18px">
-        <a class="btn btn-accent" href="#form1">無料査定へ</a>
-        <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== 対象（王道の “対象/非対象” で信頼UP） ===== -->
+  <!-- ===== 対象 ===== -->
   <section id="target">
     <div class="container">
       <div class="ribbon">ご相談いただける会社例</div>
@@ -341,30 +466,8 @@
     </div>
   </section>
 
-  <!-- ===== 実績（数字が無ければ “対応例” でOK） ===== -->
-  <section class="alt" id="proof">
-    <div class="container">
-      <div class="ribbon">対応例</div>
-      <div class="three">
-        <div class="box">
-          <h3>休眠期間が長いケース</h3>
-          <p>状況整理のうえ、可能な整理ルートをご提案。</p>
-        </div>
-        <div class="box">
-          <h3>申告状況が途中のケース</h3>
-          <p>必要手順を整理し、優先順位をつけて進行。</p>
-        </div>
-        <div class="box">
-          <h3>遠方のケース</h3>
-          <p>電話・オンライン中心で相談〜進行まで対応。</p>
-        </div>
-      </div>
-      <div class="note" style="margin-top:10px">※実績数が出せる場合は、ここを「相談実績◯件」等に差し替えるとさらに強くなります。</div>
-    </div>
-  </section>
-
   <!-- ===== 流れ（flow.jpeg） ===== -->
-  <section id="flow">
+  <section class="alt" id="flow">
     <div class="container">
       <div class="ribbon">買取の流れ</div>
       <p class="lead">相談 → 査定 → 譲渡まで、段取りを分かりやすく進めます。</p>
@@ -373,6 +476,35 @@
 
       <div class="ctaRow center" style="margin-top:18px">
         <a class="btn btn-accent" href="#form1">無料査定を申し込む</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== お客様の声（信頼の決定打。仮文でも“形”が効く） ===== -->
+  <section id="voice">
+    <div class="container">
+      <div class="ribbon">ご相談者さまの声（例）</div>
+
+      <div class="three">
+        <div class="card pad">
+          <b>「何からやるべきかが整理できた」</b>
+          <p class="lead">手続きが不安でしたが、次にやることを順番に示してくれて安心でした。</p>
+          <div class="note">（例）東京都 / 会社整理</div>
+        </div>
+        <div class="card pad">
+          <b>「連絡が早くて助かった」</b>
+          <p class="lead">最短即日で一次回答があり、時間を無駄にせず進められました。</p>
+          <div class="note">（例）大阪府 / 休眠会社</div>
+        </div>
+        <div class="card pad">
+          <b>「秘密厳守で相談できた」</b>
+          <p class="lead">外部に漏れないか心配でしたが、説明が明確で安心できました。</p>
+          <div class="note">（例）福岡県 / 法人譲渡</div>
+        </div>
+      </div>
+
+      <div class="note" style="margin-top:10px">
+        ※実際の声が取れたら差し替えると信頼が一気に上がります（今は“見せ方”として置いてOK）
       </div>
     </div>
   </section>
@@ -419,8 +551,8 @@
     </div>
   </section>
 
-  <!-- ===== 最下部（もう一度フォーム誘導） ===== -->
-  <section>
+  <!-- ===== 最下部（運営情報を強める） ===== -->
+  <section id="company">
     <div class="container">
       <div class="grid">
         <div class="card pad">
@@ -441,7 +573,10 @@
           所在地：東京都〇〇区〇〇<br>
           電話：03-XXXX-XXXX<br>
           メール：info@example.com<br>
-          受付：平日 10:00-18:00
+          受付：平日 10:00-18:00<br>
+          <div class="note" style="margin-top:10px">
+            ※「住所」「会社名」「連絡先」がダミーのままだと信用が落ちます。必ず本物にしてください。
+          </div>
         </div>
       </div>
     </div>
