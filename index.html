@@ -31,10 +31,18 @@ border-radius:10px;
 .hero{
 background:white;
 padding:60px 20px;
+text-align:center;
 }
 
-h1{font-size:40px;}
-h2{font-size:28px;}
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+h2{
+font-size:28px;
+margin-bottom:20px;
+}
 
 .btn{
 background:#ffb400;
@@ -56,6 +64,7 @@ gap:15px;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:20px;
+align-items:center;
 }
 
 .card{
@@ -70,6 +79,12 @@ padding:20px;
 border-radius:10px;
 text-align:center;
 margin-top:20px;
+font-weight:bold;
+}
+
+.stats{
+font-size:22px;
+font-weight:bold;
 }
 
 .form input,.form textarea{
@@ -78,6 +93,13 @@ padding:12px;
 border-radius:8px;
 border:1px solid #ddd;
 margin-bottom:10px;
+}
+
+.authority{
+background:#eef6ff;
+padding:30px;
+border-radius:12px;
+margin-top:30px;
 }
 
 .fixedcta{
@@ -101,9 +123,20 @@ font-weight:bold;
 text-decoration:none;
 }
 
-.fixedform{background:#ffb400;color:black;}
-.fixedline{background:#06c755;color:white;}
-.fixedphone{background:#ff6a00;color:white;}
+.fixedform{
+background:#ffb400;
+color:black;
+}
+
+.fixedline{
+background:#06c755;
+color:white;
+}
+
+.fixedphone{
+background:#ff6a00;
+color:white;
+}
 
 @media(max-width:800px){
 
@@ -125,8 +158,8 @@ h1{font-size:30px}
 <div class="container">
 
 <h1>
-放置している会社<br>
-50万円以上で買取可能
+休眠会社<br>
+50万円以上で買取できる可能性があります
 </h1>
 
 <p>
@@ -143,6 +176,35 @@ h1{font-size:30px}
 <br>
 
 <a href="#form" class="btn">会社が売れるか無料チェック</a>
+
+</div>
+</section>
+
+<!-- 実績 -->
+
+<section>
+<div class="container">
+
+<h2>法人買取実績</h2>
+
+<div class="grid3">
+
+<div class="card stats">
+最低買取額<br>
+50万円〜
+</div>
+
+<div class="card stats">
+成約率<br>
+95.2%
+</div>
+
+<div class="card stats">
+年間買取実績<br>
+152社
+</div>
+
+</div>
 
 </div>
 </section>
@@ -172,7 +234,7 @@ h1{font-size:30px}
 </div>
 </section>
 
-<!-- 選ばれる理由 -->
+<!-- メリット -->
 
 <section>
 <div class="container">
@@ -182,11 +244,11 @@ h1{font-size:30px}
 <div class="grid3">
 
 <div class="card">
-秘密厳守
+スピード査定
 </div>
 
 <div class="card">
-最短即日査定
+秘密厳守
 </div>
 
 <div class="card">
@@ -212,11 +274,47 @@ h1{font-size:30px}
 <h2>なぜ売上ゼロでも買取できる？</h2>
 
 <p>
-起業家ネットワークを活用し、
+起業家ネットワークを活用し  
 会社を引き継ぎたい事業者へ譲渡するためです。
 </p>
 
 </div>
+
+</div>
+</section>
+
+<!-- 流れ -->
+
+<section>
+<div class="container">
+
+<h2>買取の流れ</h2>
+
+<div class="grid3">
+
+<div class="card">
+①相談
+</div>
+
+<div class="card">
+②査定
+</div>
+
+<div class="card">
+③譲渡
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- 成約イメージ -->
+
+<section>
+<div class="container">
+
+<img src="handshake.jpg">
 
 </div>
 </section>
@@ -250,94 +348,23 @@ h1{font-size:30px}
 </div>
 </section>
 
-<!-- 買取対象チェック -->
+<!-- CTA -->
 
 <section>
 <div class="container">
 
-<h2>あなたの会社は買取対象？</h2>
+<div class="urgency">
 
-<div class="card">
+<h2>会社売却できる可能性があります</h2>
 
-✓ 借入金がない  
-✓ 売上がなくてもOK  
-✓ 法人登記あり  
+<p>
+無料査定は1分で完了
+</p>
 
-</div>
+<a href="#form" class="btn">
+無料査定はこちら
+</a>
 
-</div>
-</section>
-
-<!-- 流れ -->
-
-<section>
-<div class="container">
-
-<h2>買取の流れ</h2>
-
-<div class="grid3">
-
-<div class="card">
-①相談
-</div>
-
-<div class="card">
-②査定
-</div>
-
-<div class="card">
-③譲渡
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- 比較 -->
-
-<section>
-<div class="container">
-
-<h2>解散との比較</h2>
-
-<div class="grid3">
-
-<div class="card">
-解散<br>
-費用7万円〜
-</div>
-
-<div class="card">
-法人買取<br>
-50万円〜
-</div>
-
-<div class="card">
-差額<br>
-最大50万円以上
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- FAQ -->
-
-<section>
-<div class="container">
-
-<h2>よくある質問</h2>
-
-<div class="card">
-Q. 赤字会社でも売却できますか？<br>
-A. 可能なケースがあります。
-</div>
-
-<div class="card">
-Q. 地方でも対応できますか？<br>
-A. 全国対応しています。
 </div>
 
 </div>
@@ -348,15 +375,13 @@ A. 全国対応しています。
 <section id="form">
 <div class="container">
 
-<h2>無料査定フォーム</h2>
+<h2>無料相談フォーム</h2>
 
 <div class="card">
 
 <form class="form">
 
-<input placeholder="会社名">
-
-<input placeholder="担当者名">
+<input placeholder="お名前">
 
 <input placeholder="電話番号">
 
@@ -368,7 +393,22 @@ A. 全国対応しています。
 
 </form>
 
+<p>
+メール相談<br>
+Info.houjinkaitori@gmail.com
+</p>
+
 </div>
+
+</div>
+</section>
+
+<!-- 書類イメージ -->
+
+<section>
+<div class="container">
+
+<img src="document.jpg">
 
 </div>
 </section>
@@ -378,19 +418,21 @@ A. 全国対応しています。
 <section>
 <div class="container">
 
-<h2>運営会社</h2>
+<h2>会社情報</h2>
 
 <div class="card">
 
 会社名：株式会社コンパニーバイ<br>
 所在地：東京都渋谷区<br>
-事業内容：法人売却サポート<br>
+事業内容：法人売却サポート / 休眠会社買取<br>
 メール：Info.houjinkaitori@gmail.com
 
 </div>
 
 </div>
 </section>
+
+<!-- 固定CTA -->
 
 <div class="fixedcta">
 
