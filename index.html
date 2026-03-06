@@ -10,9 +10,9 @@
 <style>
 
 body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP";
+font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP";
 margin:0;
-background:#f7f7f7;
+background:#f6f7fb;
 color:#333;
 line-height:1.7;
 }
@@ -23,30 +23,33 @@ margin:auto;
 padding:20px;
 }
 
+section{
+padding:70px 20px;
+}
+
 img{
 width:100%;
-border-radius:10px;
+border-radius:12px;
 }
 
 .hero{
 background:white;
-padding:60px 20px;
 text-align:center;
 }
 
 h1{
-font-size:40px;
-margin-bottom:10px;
+font-size:38px;
 }
 
 h2{
 font-size:28px;
-margin-bottom:20px;
+text-align:center;
+margin-bottom:30px;
 }
 
 .btn{
 background:#ffb400;
-padding:16px 24px;
+padding:16px 28px;
 border-radius:10px;
 font-weight:bold;
 text-decoration:none;
@@ -54,38 +57,37 @@ color:black;
 display:inline-block;
 }
 
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
 .grid3{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:15px;
-}
-
-.grid2{
-display:grid;
-grid-template-columns:repeat(2,1fr);
 gap:20px;
-align-items:center;
 }
 
 .card{
 background:white;
-padding:20px;
+padding:25px;
 border-radius:14px;
-}
-
-.urgency{
-background:#ffe9e9;
-padding:20px;
-border-radius:10px;
 text-align:center;
-margin-top:20px;
-font-weight:bold;
 }
 
 .stats{
-font-size:32px;
+font-size:30px;
 font-weight:bold;
 color:#ff6a00;
+}
+
+.cta{
+background:#ffe9e9;
+padding:30px;
+border-radius:12px;
+text-align:center;
 }
 
 .form input,.form textarea{
@@ -101,11 +103,11 @@ position:fixed;
 bottom:0;
 left:0;
 width:100%;
-background:white;
-box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 display:flex;
 gap:10px;
 padding:10px;
+background:white;
+box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 }
 
 .fixedcta a{
@@ -117,22 +119,15 @@ font-weight:bold;
 text-decoration:none;
 }
 
-.fixedform{background:#ffb400;color:black;}
-.fixedline{background:#06c755;color:white;}
-.fixedphone{background:#ff6a00;color:white;}
-
-.authority{
-background:#eef6ff;
-padding:30px;
-border-radius:12px;
-}
+.cta1{background:#ffb400;color:black;}
+.cta2{background:#06c755;color:white;}
+.cta3{background:#ff6a00;color:white;}
 
 @media(max-width:800px){
 
-.grid3{grid-template-columns:1fr}
 .grid2{grid-template-columns:1fr}
-
-h1{font-size:30px}
+.grid3{grid-template-columns:1fr}
+h1{font-size:28px}
 
 }
 
@@ -141,70 +136,43 @@ h1{font-size:30px}
 
 <body>
 
-<!-- ファーストビュー -->
+
+<!-- HERO -->
 
 <section class="hero">
+
 <div class="container">
 
 <h1>
 休眠会社<br>
-50万円以上で買取できる可能性があります
+売却できる可能性があります
 </h1>
 
 <p>
-解散費用を払う前に<br>
-<strong>まずは無料査定</strong>
+解散費用を払う前に  
+まずは無料査定
 </p>
 
 <img src="hero.jpg">
 
-<div class="urgency">
-今月の買取枠 残り3社
-</div>
+<br><br>
 
-<br>
-
-<a href="#form" class="btn">会社が売れるか無料チェック</a>
+<a href="#form" class="btn">無料査定する</a>
 
 </div>
+
 </section>
 
-<!-- 実績カウンター -->
 
-<section>
-<div class="container">
-
-<h2>法人買取実績</h2>
-
-<div class="grid3">
-
-<div class="card">
-<div class="stats" id="count1">0</div>
-最低買取額
-</div>
-
-<div class="card">
-<div class="stats" id="count2">0</div>
-成約率
-</div>
-
-<div class="card">
-<div class="stats" id="count3">0</div>
-年間買取
-</div>
-
-</div>
-
-</div>
-</section>
 
 <!-- 悩み -->
 
 <section>
+
 <div class="container grid2">
 
 <div>
-<img src="IMG_2168.png">
+<img src="worry.jpg">
 </div>
 
 <div>
@@ -221,11 +189,42 @@ h1{font-size:30px}
 </div>
 
 </div>
+
 </section>
 
-<!-- 選ばれる理由 -->
+
+
+<!-- 解決 -->
+
+<section style="background:white">
+
+<div class="container grid2">
+
+<div>
+
+<h2>法人買取で解決</h2>
+
+<p>
+会社を引き継ぐことで  
+解散費用をかけずに整理できます。
+</p>
+
+</div>
+
+<div>
+<img src="transfer.png">
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- 理由 -->
 
 <section>
+
 <div class="container">
 
 <h2>選ばれる理由</h2>
@@ -233,48 +232,89 @@ h1{font-size:30px}
 <div class="grid3">
 
 <div class="card">
-スピード査定
+
+<img src="secure.jpg">
+
+<p>秘密厳守</p>
+
 </div>
 
 <div class="card">
-秘密厳守
+
+<img src="speed.jpg">
+
+<p>スピード査定</p>
+
 </div>
 
 <div class="card">
-全国対応
-</div>
+
+<img src="japan.jpg">
+
+<p>全国対応</p>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- なぜ買取できる -->
 
-<section>
-<div class="container grid2">
 
-<div>
-<img src="building.jpg">
+<!-- 実績 -->
+
+<section style="background:white">
+
+<div class="container">
+
+<h2>法人買取実績</h2>
+
+<div class="grid3">
+
+<div class="card">
+
+<img src="price.jpg">
+
+<div class="stats">50万円〜</div>
+
+最低買取額
+
 </div>
 
-<div>
+<div class="card">
 
-<h2>なぜ売上ゼロでも買取できる？</h2>
+<img src="rate.png">
 
-<p>
-起業家ネットワークを活用し  
-会社を引き継ぎたい事業者へ譲渡するためです。
-</p>
+<div class="stats">95.2%</div>
+
+成約率
+
+</div>
+
+<div class="card">
+
+<img src="company.jpg">
+
+<div class="stats">152社</div>
+
+年間買取実績
 
 </div>
 
 </div>
+
+</div>
+
 </section>
+
+
 
 <!-- 流れ -->
 
 <section>
+
 <div class="container">
 
 <h2>法人買取の流れ</h2>
@@ -282,67 +322,48 @@ h1{font-size:30px}
 <div class="grid3">
 
 <div class="card">
-①相談
+
+<img src="consult.jpg">
+
+<p>①相談</p>
+
 </div>
 
 <div class="card">
-②査定
+
+<img src="contract.jpg">
+
+<p>②査定</p>
+
 </div>
 
 <div class="card">
-③譲渡
-</div>
+
+<img src="transfer.jpg">
+
+<p>③譲渡</p>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<section>
-<div class="container">
 
-<img src="handshake.jpg">
-
-</div>
-</section>
-
-<!-- お客様の声 -->
-
-<section>
-<div class="container">
-
-<h2>お客様の声</h2>
-
-<div class="grid3">
-
-<div class="card">
-休眠会社を売却できました<br>
-東京都 / 法人代表
-</div>
-
-<div class="card">
-解散費用が不要でした<br>
-大阪府 / 経営者
-</div>
-
-<div class="card">
-返信が早く安心でした<br>
-福岡県 / 経営者
-</div>
-
-</div>
-
-</div>
-</section>
 
 <!-- CTA -->
 
 <section>
+
 <div class="container">
 
-<div class="urgency">
+<div class="cta">
 
-<h2>会社売却できる可能性があります</h2>
+<h2>
+会社売却できる可能性があります
+</h2>
 
 <p>
 無料査定は1分で完了
@@ -355,14 +376,24 @@ h1{font-size:30px}
 </div>
 
 </div>
+
 </section>
+
+
 
 <!-- フォーム -->
 
 <section id="form">
+
 <div class="container">
 
 <h2>無料相談フォーム</h2>
+
+<div class="grid2">
+
+<div>
+<img src="form.jpg">
+</div>
 
 <div class="card">
 
@@ -376,87 +407,31 @@ h1{font-size:30px}
 
 <textarea placeholder="会社状況"></textarea>
 
-<button class="btn">無料査定を申し込む</button>
+<button class="btn">送信</button>
 
 </form>
 
-<p>
-メール相談<br>
-Info.houjinkaitori@gmail.com
-</p>
-
 </div>
 
 </div>
+
+</div>
+
 </section>
 
-<!-- 書類 -->
 
-<section>
-<div class="container">
-
-<img src="document.jpg">
-
-</div>
-</section>
-
-<!-- 会社情報 -->
-
-<section>
-<div class="container">
-
-<h2>会社情報</h2>
-
-<div class="card">
-
-会社名：株式会社コンパニーバイ<br>
-所在地：東京都渋谷区<br>
-事業内容：法人売却サポート / 休眠会社買取<br>
-メール：Info.houjinkaitori@gmail.com
-
-</div>
-
-</div>
-</section>
 
 <!-- 固定CTA -->
 
 <div class="fixedcta">
 
-<a href="#form" class="fixedform">無料査定</a>
-<a href="#" class="fixedline">LINE</a>
-<a href="tel:05000000000" class="fixedphone">電話</a>
+<a href="#form" class="cta1">無料査定</a>
+
+<a href="#" class="cta2">LINE相談</a>
+
+<a href="tel:05000000000" class="cta3">電話</a>
 
 </div>
-
-<script>
-
-function animate(id,end,suffix){
-
-let el=document.getElementById(id)
-let start=0
-let step=end/50
-
-let timer=setInterval(function(){
-
-start+=step
-
-if(start>=end){
-start=end
-clearInterval(timer)
-}
-
-el.innerHTML=Math.floor(start)+suffix
-
-},20)
-
-}
-
-animate("count1",50,"万〜")
-animate("count2",95,"％")
-animate("count3",152,"社")
-
-</script>
 
 </body>
 </html>
