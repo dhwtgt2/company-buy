@@ -83,8 +83,9 @@ font-weight:bold;
 }
 
 .stats{
-font-size:22px;
+font-size:32px;
 font-weight:bold;
+color:#ff6a00;
 }
 
 .form input,.form textarea{
@@ -93,13 +94,6 @@ padding:12px;
 border-radius:8px;
 border:1px solid #ddd;
 margin-bottom:10px;
-}
-
-.authority{
-background:#eef6ff;
-padding:30px;
-border-radius:12px;
-margin-top:30px;
 }
 
 .fixedcta{
@@ -123,19 +117,14 @@ font-weight:bold;
 text-decoration:none;
 }
 
-.fixedform{
-background:#ffb400;
-color:black;
-}
+.fixedform{background:#ffb400;color:black;}
+.fixedline{background:#06c755;color:white;}
+.fixedphone{background:#ff6a00;color:white;}
 
-.fixedline{
-background:#06c755;
-color:white;
-}
-
-.fixedphone{
-background:#ff6a00;
-color:white;
+.authority{
+background:#eef6ff;
+padding:30px;
+border-radius:12px;
 }
 
 @media(max-width:800px){
@@ -180,7 +169,7 @@ h1{font-size:30px}
 </div>
 </section>
 
-<!-- 実績 -->
+<!-- 実績カウンター -->
 
 <section>
 <div class="container">
@@ -189,19 +178,19 @@ h1{font-size:30px}
 
 <div class="grid3">
 
-<div class="card stats">
-最低買取額<br>
-50万円〜
+<div class="card">
+<div class="stats" id="count1">0</div>
+最低買取額
 </div>
 
-<div class="card stats">
-成約率<br>
-95.2%
+<div class="card">
+<div class="stats" id="count2">0</div>
+成約率
 </div>
 
-<div class="card stats">
-年間買取実績<br>
-152社
+<div class="card">
+<div class="stats" id="count3">0</div>
+年間買取
 </div>
 
 </div>
@@ -215,7 +204,7 @@ h1{font-size:30px}
 <div class="container grid2">
 
 <div>
-<img src="IMG_2168.png">
+<img src="woman_worry.png">
 </div>
 
 <div>
@@ -234,7 +223,7 @@ h1{font-size:30px}
 </div>
 </section>
 
-<!-- メリット -->
+<!-- 選ばれる理由 -->
 
 <section>
 <div class="container">
@@ -288,7 +277,7 @@ h1{font-size:30px}
 <section>
 <div class="container">
 
-<h2>買取の流れ</h2>
+<h2>法人買取の流れ</h2>
 
 <div class="grid3">
 
@@ -308,8 +297,6 @@ h1{font-size:30px}
 
 </div>
 </section>
-
-<!-- 成約イメージ -->
 
 <section>
 <div class="container">
@@ -403,7 +390,7 @@ Info.houjinkaitori@gmail.com
 </div>
 </section>
 
-<!-- 書類イメージ -->
+<!-- 書類 -->
 
 <section>
 <div class="container">
@@ -441,6 +428,35 @@ Info.houjinkaitori@gmail.com
 <a href="tel:05000000000" class="fixedphone">電話</a>
 
 </div>
+
+<script>
+
+function animate(id,end,suffix){
+
+let el=document.getElementById(id)
+let start=0
+let step=end/50
+
+let timer=setInterval(function(){
+
+start+=step
+
+if(start>=end){
+start=end
+clearInterval(timer)
+}
+
+el.innerHTML=Math.floor(start)+suffix
+
+},20)
+
+}
+
+animate("count1",50,"万〜")
+animate("count2",95,"％")
+animate("count3",152,"社")
+
+</script>
 
 </body>
 </html>
