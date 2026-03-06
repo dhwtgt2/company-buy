@@ -1,8 +1,10 @@
 <!doctype html>
 <html lang="ja">
 <head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>法人買取｜休眠会社売却</title>
 
 <style>
@@ -21,9 +23,14 @@ margin:auto;
 padding:20px;
 }
 
+img{
+width:100%;
+border-radius:10px;
+}
+
 .hero{
 background:white;
-padding:70px 20px;
+padding:60px 20px;
 }
 
 h1{
@@ -33,34 +40,6 @@ margin-bottom:10px;
 
 h2{
 font-size:28px;
-}
-
-.badges{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-bottom:20px;
-}
-
-.badge{
-background:#eef6ff;
-padding:6px 12px;
-border-radius:20px;
-font-size:13px;
-}
-
-.trust{
-display:flex;
-gap:10px;
-flex-wrap:wrap;
-margin-top:15px;
-}
-
-.trust div{
-background:#e9f6ff;
-padding:10px 14px;
-border-radius:20px;
-font-size:14px;
 }
 
 .btn{
@@ -73,16 +52,6 @@ color:black;
 display:inline-block;
 }
 
-.linebtn{
-background:#06c755;
-color:white;
-padding:16px 24px;
-border-radius:10px;
-font-weight:bold;
-text-decoration:none;
-display:inline-block;
-}
-
 .grid3{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -92,24 +61,20 @@ gap:15px;
 .grid2{
 display:grid;
 grid-template-columns:repeat(2,1fr);
-gap:15px;
+gap:20px;
 }
 
 .card{
 background:white;
 padding:20px;
 border-radius:14px;
-margin:10px 0;
 }
 
-.cta{
-background:#0f4c81;
-color:white;
-padding:35px;
-border-radius:14px;
-display:flex;
-justify-content:space-between;
-align-items:center;
+.urgency{
+background:#ffe9e9;
+padding:20px;
+border-radius:10px;
+text-align:center;
 margin-top:20px;
 }
 
@@ -121,33 +86,56 @@ border:1px solid #ddd;
 margin-bottom:10px;
 }
 
-.urgency{
-background:#ffe9e9;
-padding:20px;
-border-radius:10px;
-text-align:center;
-margin-top:20px;
-}
-
-.faq{
-background:white;
-padding:18px;
+.authority{
+background:#eef6ff;
+padding:30px;
 border-radius:12px;
-margin:10px 0;
+margin-top:30px;
 }
 
-footer{
-padding:40px;
+.fixedcta{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:white;
+box-shadow:0 -2px 10px rgba(0,0,0,0.1);
+display:flex;
+gap:10px;
+padding:10px;
+}
+
+.fixedcta a{
+flex:1;
 text-align:center;
-font-size:14px;
-color:#666;
+padding:14px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.fixedform{
+background:#ffb400;
+color:black;
+}
+
+.fixedline{
+background:#06c755;
+color:white;
+}
+
+.fixedphone{
+background:#ff6a00;
+color:white;
 }
 
 @media(max-width:800px){
+
 .grid3{grid-template-columns:1fr}
 .grid2{grid-template-columns:1fr}
+
 h1{font-size:30px}
-.cta{flex-direction:column;gap:15px}
+
 }
 
 </style>
@@ -158,36 +146,25 @@ h1{font-size:30px}
 <section class="hero">
 <div class="container">
 
-<div class="badges">
-<div class="badge">最低50万円〜買取</div>
-<div class="badge">成約率95.2%</div>
-<div class="badge">年間152社</div>
-<div class="badge">満足度97.5%</div>
-</div>
-
-<h1>使っていない会社<br>そのままにしていませんか？</h1>
+<h1>
+休眠会社<br>
+売却できる可能性があります
+</h1>
 
 <p>
 解散費用を払う前に<br>
-<strong>会社が売れるか無料確認</strong>できます
+<strong>まずは無料査定</strong>
 </p>
 
-<div class="urgency">
-<b>今月の買取枠 残り3社</b><br>
-※法人買取枠に限りがあります
-</div>
+<img src="hero.jpg">
 
-<div class="trust">
-<div>法人専門</div>
-<div>秘密厳守</div>
-<div>全国対応</div>
-<div>無料相談</div>
+<div class="urgency">
+今月の買取枠 残り3社
 </div>
 
 <br>
 
-<a href="#form" class="btn">無料査定</a>
-<a href="https://line.me/" class="linebtn">LINE相談</a>
+<a href="#form" class="btn">会社が売れるか無料チェック</a>
 
 </div>
 </section>
@@ -195,23 +172,78 @@ h1{font-size:30px}
 <section>
 <div class="container">
 
-<h2>実績</h2>
+<h2>法人買取実績</h2>
 
 <div class="grid3">
 
 <div class="card">
 <h3>最低買取額</h3>
-<b style="font-size:26px">50万円〜</b>
+50万円〜
 </div>
 
 <div class="card">
 <h3>成約率</h3>
-<b style="font-size:26px">95.2%</b><br>2025年度
+95.2%
 </div>
 
 <div class="card">
-<h3>年間買取実績</h3>
-<b style="font-size:26px">152社</b><br>2025年度
+<h3>年間買取</h3>
+152社
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container grid2">
+
+<div>
+<img src="consult.jpg">
+</div>
+
+<div>
+
+<h2>こんなお悩みありませんか？</h2>
+
+<ul>
+<li>休眠会社を放置している</li>
+<li>解散費用を払いたくない</li>
+<li>会社整理したい</li>
+<li>会社を売却したい</li>
+</ul>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<img src="building.jpg">
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2>法人買取の流れ</h2>
+
+<div class="grid3">
+
+<div class="card">
+①相談
+</div>
+
+<div class="card">
+②査定
+</div>
+
+<div class="card">
+③譲渡
 </div>
 
 </div>
@@ -222,25 +254,7 @@ h1{font-size:30px}
 <section>
 <div class="container">
 
-<h2>こんなお悩みありませんか？</h2>
-
-<div class="grid2">
-
-<div class="card">
-<ul>
-<li>休眠会社を放置している</li>
-<li>解散費用を払いたくない</li>
-<li>会社整理したい</li>
-<li>手続きが面倒</li>
-</ul>
-</div>
-
-<div class="card">
-その会社<br>
-<strong>売却できる可能性があります</strong>
-</div>
-
-</div>
+<img src="handshake.jpg">
 
 </div>
 </section>
@@ -254,20 +268,48 @@ h1{font-size:30px}
 
 <div class="card">
 休眠会社を売却できました<br>
-<b>東京都 / 経営者</b>
+東京都 / 法人代表
 </div>
 
 <div class="card">
 解散費用が不要でした<br>
-<b>大阪府 / 法人代表</b>
+大阪府 / 経営者
 </div>
 
 <div class="card">
 返信が早く安心でした<br>
-<b>福岡県 / 経営者</b>
+福岡県 / 経営者
 </div>
 
 </div>
+
+</div>
+</section>
+
+<section class="authority">
+<div class="container">
+
+<h2>専門家監修</h2>
+
+<p>
+
+本サービスは法人売却・法人整理に関する専門家の知見をもとに運営しています。
+
+</p>
+
+<ul>
+
+<li>提携税理士</li>
+<li>提携司法書士</li>
+<li>法人登記サポート</li>
+
+</ul>
+
+<p>
+
+すべての相談は秘密厳守で対応いたします。
+
+</p>
 
 </div>
 </section>
@@ -277,12 +319,12 @@ h1{font-size:30px}
 
 <h2>よくある質問</h2>
 
-<div class="faq">
-Q. 赤字会社でも相談できますか？<br>
-A. 可能です。
+<div class="card">
+Q. 赤字会社でも売却できますか？<br>
+A. 状況によりますが可能なケースがあります。
 </div>
 
-<div class="faq">
+<div class="card">
 Q. 相談は無料ですか？<br>
 A. 完全無料です。
 </div>
@@ -297,14 +339,17 @@ A. 完全無料です。
 
 <div class="card">
 
-<form action="https://formspree.io/f/YOURID" method="POST" class="form">
+<form class="form">
 
-<input name="name" placeholder="お名前" required>
-<input name="tel" placeholder="電話番号" required>
-<input name="email" placeholder="メールアドレス" required>
-<textarea name="message" placeholder="会社状況"></textarea>
+<input placeholder="お名前">
 
-<button class="btn" type="submit">無料査定を申し込む</button>
+<input placeholder="電話番号">
+
+<input placeholder="メールアドレス">
+
+<textarea placeholder="会社状況"></textarea>
+
+<button class="btn">無料査定を申し込む</button>
 
 </form>
 
@@ -321,14 +366,7 @@ Info.houjinkaitori@gmail.com
 <section>
 <div class="container">
 
-<h2>法人買取について</h2>
-
-<div class="card">
-
-当サービスでは休眠会社・法人売却・会社整理などの相談を承っています。  
-解散費用を払う前に会社が売却可能かどうか無料で確認できます。  
-
-</div>
+<img src="document.jpg">
 
 </div>
 </section>
@@ -350,9 +388,13 @@ Info.houjinkaitori@gmail.com
 </div>
 </section>
 
-<footer>
-© 法人買取サービス
-</footer>
+<div class="fixedcta">
+
+<a href="#form" class="fixedform">無料査定</a>
+<a href="#" class="fixedline">LINE</a>
+<a href="tel:05000000000" class="fixedphone">電話</a>
+
+</div>
 
 </body>
 </html>
