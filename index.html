@@ -1,510 +1,341 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>会社売却・休眠会社買取・法人譲渡｜無料相談（最短即日・秘密厳守・全国対応）</title>
-  <meta name="description" content="会社を手放したい方へ。休眠会社買取、法人売却、会社譲渡、M&Aまで無料相談。最低50万円〜で買取、全国対応・秘密厳守・最短即日で一次回答。" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>法人買取｜休眠会社売却</title>
 
-  <style>
-    :root{
-      --bg:#ffffff; --bg2:#f6f7f9; --text:#111827; --muted:#6b7280;
-      --line:#e5e7eb; --brand:#0f4c81; --brand2:#0b3b63; --accent:#ffb100;
-      --radius:18px; --shadow: 0 14px 40px rgba(17,24,39,.10);
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
-      color:var(--text); background:var(--bg); line-height:1.75;
-    }
-    a{color:inherit}
-    .container{max-width:1120px;margin:0 auto;padding:0 18px}
+<style>
 
-    header{
-      position:sticky; top:0; z-index:50;
-      background:rgba(255,255,255,.92);
-      backdrop-filter:saturate(1.2) blur(10px);
-      border-bottom:1px solid var(--line);
-    }
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
-    .logo{font-weight:1000;letter-spacing:.02em}
-    .menu{display:flex;gap:14px;align-items:center}
-    .menu a{font-size:14px;text-decoration:none;color:var(--muted);font-weight:900}
-    .menu a:hover{color:var(--text)}
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP";
+margin:0;
+background:#f7f7f7;
+color:#333;
+line-height:1.7;
+}
 
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:14px 18px;border-radius:14px;
-      background:var(--brand);color:#fff;text-decoration:none;font-weight:1000;
-      border:1px solid transparent;
-      box-shadow:0 10px 24px rgba(15,76,129,.18);
-      cursor:pointer;
-    }
-    .btn:hover{background:var(--brand2)}
-    .btn-outline{background:#fff;color:var(--brand);border-color:var(--brand)}
-    .btn-accent{background:var(--accent);color:#111827}
-    .btn-accent:hover{filter:brightness(.96)}
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
+}
 
-    section{padding:44px 0}
-    .alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .pad{padding:20px}
-    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.hero{
+background:white;
+padding:70px 20px;
+}
 
-    h1{font-size:38px;line-height:1.15;margin:0 0 12px}
-    h2{font-size:26px;margin:0 0 14px}
-    h3{font-size:18px;margin:0 0 8px}
+h1{
+font-size:40px;
+margin-bottom:10px;
+}
 
-    .lead{margin:0 0 14px;color:var(--muted)}
-    .note{font-size:12px;color:var(--muted);margin:0 0 10px}
-    .danger{font-size:12px;color:var(--muted);margin-top:10px}
-    .img{width:100%;height:auto;border-radius:18px;display:block}
+h2{
+font-size:28px;
+}
 
-    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-    .center{display:flex;justify-content:center}
+.badges{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
 
-    .pill{display:flex;flex-wrap:wrap;gap:10px}
-    .tag{font-size:13px;color:var(--brand);background:#eef6ff;border:1px solid #dbeafe;padding:6px 10px;border-radius:999px}
+.badge{
+background:#eef6ff;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+}
 
-    .ribbon{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:10px 14px;border-radius:999px;
-      background:#0f4c81;color:#fff;font-weight:1000;
-      margin-bottom:14px;box-shadow:0 10px 24px rgba(15,76,129,.15);
-    }
-    .ribbon small{opacity:.92;font-weight:900}
+.trust{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:15px;
+}
 
-    .statsRow{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
-    .stat{
-      background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);
-      border:1px solid #dbeafe;
-      border-radius:16px;
-      padding:14px;
-      display:flex;gap:12px;align-items:center;
-    }
-    .stat b{font-size:18px}
-    .stat .sub{font-size:12px;color:var(--muted);margin-top:2px}
-    .emoji{font-size:22px;line-height:1}
+.trust div{
+background:#e9f6ff;
+padding:10px 14px;
+border-radius:20px;
+font-size:14px;
+}
 
-    .ctaBand{
-      background:linear-gradient(90deg, #0f4c81 0%, #0b3b63 100%);
-      color:#fff;border-radius:18px;
-      padding:18px 16px;
-      display:flex;align-items:center;justify-content:space-between;
-      gap:12px;
-      box-shadow:0 14px 40px rgba(15,76,129,.18);
-      margin-top:18px;
-    }
-    .ctaBand b{font-size:18px}
-    .ctaBand p{margin:0;opacity:.92;font-size:13px}
-    .ctaBand .right{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.btn{
+background:#ffb400;
+padding:16px 24px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+color:black;
+display:inline-block;
+}
 
-    .box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
-    .box p{margin:0;color:var(--muted)}
-    .checklist{margin:0;padding-left:18px;color:var(--muted);display:grid;gap:8px}
+.linebtn{
+background:#06c755;
+color:white;
+padding:16px 24px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+display:inline-block;
+}
 
-    .field{display:grid;gap:6px;margin:10px 0}
-    .field label{font-size:13px;color:var(--muted)}
-    .field input,.field textarea{
-      width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);
-      outline:none;font-size:15px
-    }
-    .field input:focus,.field textarea:focus{border-color:#93c5fd;box-shadow:0 0 0 4px rgba(147,197,253,.25)}
+.phonebtn{
+background:#ff6a00;
+color:white;
+padding:16px 24px;
+border-radius:10px;
+font-weight:bold;
+text-decoration:none;
+display:inline-block;
+}
 
-    .faq{display:grid;gap:10px;margin-top:12px}
-    details{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px}
-    summary{cursor:pointer;font-weight:1000}
-    details p{margin:10px 0 0;color:var(--muted)}
+.grid3{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
 
-    .quote{
-      background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;
-      position:relative;
-    }
-    .quote:before{
-      content:"“"; position:absolute; left:12px; top:-12px;
-      font-size:44px; color:#dbeafe; font-weight:1000;
-    }
+.grid2{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
 
-    footer{padding:26px 0;border-top:1px solid var(--line);color:var(--muted)}
+.card{
+background:white;
+padding:20px;
+border-radius:14px;
+margin:10px 0;
+}
 
-    @media (max-width:900px){
-      .grid{grid-template-columns:1fr}
-      .menu{display:none}
-      h1{font-size:30px}
-      section{padding:34px 0}
-      .ctaBand{flex-direction:column;align-items:flex-start}
-      .ctaBand .right{justify-content:flex-start}
-      .two,.three,.statsRow{grid-template-columns:1fr}
-    }
-  </style>
+.cta{
+background:#0f4c81;
+color:white;
+padding:35px;
+border-radius:14px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-top:20px;
+}
+
+.form input,.form textarea{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+margin-bottom:10px;
+}
+
+.urgency{
+background:#ffe9e9;
+padding:20px;
+border-radius:10px;
+text-align:center;
+margin-top:20px;
+}
+
+.faq{
+background:white;
+padding:18px;
+border-radius:12px;
+margin:10px 0;
+}
+
+footer{
+padding:40px;
+text-align:center;
+font-size:14px;
+color:#666;
+}
+
+/* 固定CTA */
+
+.fixedcta{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:white;
+box-shadow:0 -2px 10px rgba(0,0,0,0.1);
+display:flex;
+justify-content:center;
+gap:10px;
+padding:10px;
+z-index:999;
+}
+
+.fixedcta a{
+flex:1;
+text-align:center;
+padding:14px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.fixedform{
+background:#ffb400;
+color:black;
+}
+
+.fixedline{
+background:#06c755;
+color:white;
+}
+
+.fixedphone{
+background:#ff6a00;
+color:white;
+}
+
+@media(max-width:800px){
+
+.grid3{grid-template-columns:1fr}
+.grid2{grid-template-columns:1fr}
+
+h1{font-size:30px}
+
+.cta{
+flex-direction:column;
+gap:15px;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  <div class="container">
-    <div class="nav">
-      <div class="logo">会社売却・買取 無料相談</div>
-      <nav class="menu">
-        <a href="#stats">実績</a>
-        <a href="#pain">お悩み</a>
-        <a href="#benefit">メリット</a>
-        <a href="#flow">流れ</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <a class="btn btn-accent" href="#form1">無料査定</a>
-    </div>
-  </div>
-</header>
+<section class="hero">
+<div class="container">
 
-<main>
+<div class="badges">
+<div class="badge">最低50万円〜買取</div>
+<div class="badge">成約率95.2%</div>
+<div class="badge">年間152社</div>
+<div class="badge">満足度97.5%</div>
+</div>
 
-  <!-- FV -->
-  <section style="background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%); padding-top:34px;" id="top">
-    <div class="container">
-      <div class="grid">
-        <div class="card pad">
+<h1>
+使っていない会社<br>
+そのままにしていませんか？
+</h1>
 
-          <div class="pill" style="margin-bottom:10px">
-            <span class="tag">最低50万円〜で買取</span>
-            <span class="tag">成約率 95.2%</span>
-            <span class="tag">年間買取実績 152社</span>
-            <span class="tag">満足度 97.5%</span>
-          </div>
+<p>
+解散費用を払う前に<br>
+<strong>会社が売れるか無料確認</strong>できます
+</p>
 
-          <h1>放置しているその会社、<br>最低50万円〜で買取します</h1>
+<div class="urgency">
+<b>今月の買取枠 残り3社</b><br>
+※法人買取枠に限りがあります
+</div>
 
-          <p class="lead">
-            休眠会社・法人売却・会社譲渡・M&Aまで。<br>
-            2025年度 年間買取実績152社、成約率95.2%、お客様満足度97.5%。<br>
-            まずは無料で状況確認します。
-          </p>
+<div class="trust">
+<div>法人専門</div>
+<div>秘密厳守</div>
+<div>全国対応</div>
+<div>無料相談</div>
+</div>
 
-          <img class="img" src="hero.jpeg" alt="会社売却・法人譲渡の相談" style="margin:12px 0 16px;">
+<br>
 
-          <div class="statsRow">
-            <div class="stat"><div class="emoji">⚡</div><div><b>スピード対応</b><div class="sub">最短即日で一次回答</div></div></div>
-            <div class="stat"><div class="emoji">🤫</div><div><b>秘密厳守</b><div class="sub">情報管理徹底</div></div></div>
-            <div class="stat"><div class="emoji">🗾</div><div><b>全国対応</b><div class="sub">電話・オンラインOK</div></div></div>
-          </div>
+<a href="#form" class="btn">無料査定</a>
+<a href="https://line.me/" class="linebtn">LINE相談</a>
+<a href="tel:05000000000" class="phonebtn">電話相談</a>
 
-          <div class="ctaRow">
-            <a class="btn btn-accent" href="#form1">無料査定はこちら</a>
-            <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINEで相談</a>
-            <a class="btn btn-outline" href="tel:03XXXXXXXX">電話で相談</a>
-          </div>
+</div>
+</section>
 
-          <div class="danger">
-            ※違法目的・不正利用に該当するご相談はお受けできません。最終判断はヒアリング後となります。
-          </div>
-        </div>
+<section>
+<div class="container">
 
-        <div class="card pad" id="form1">
-          <div class="ribbon">無料お申し込みフォーム <small>（1分）</small></div>
-          <p class="note">送信後、担当より折り返しご連絡します。</p>
+<h2>実績</h2>
 
-          <form action="https://example.com/form-endpoint" method="post" id="leadForm">
-            <div class="field">
-              <label>会社名（任意）</label>
-              <input name="company" placeholder="例）◯◯株式会社" />
-            </div>
-            <div class="field">
-              <label>ご担当者様氏名 *</label>
-              <input name="name" required placeholder="例）山田 太郎" />
-            </div>
-            <div class="field">
-              <label>電話番号 *</label>
-              <input name="tel" required inputmode="tel" placeholder="例）09012345678（ハイフンなし）" />
-            </div>
-            <div class="field">
-              <label>メールアドレス *</label>
-              <input type="email" name="email" required placeholder="例）taro@example.com" />
-            </div>
-            <div class="field">
-              <label>会社の状況（任意）</label>
-              <textarea name="detail" rows="4" placeholder="例）休眠期間、申告状況、口座の有無など分かる範囲で"></textarea>
-            </div>
+<div class="grid3">
 
-            <button class="btn btn-accent" type="submit" style="width:100%">無料査定を申し込む</button>
+<div class="card">
+<h3>最低買取額</h3>
+<b style="font-size:26px">50万円〜</b>
+</div>
 
-            <div class="note" style="margin-top:10px">
-              電話：<b>03-XXXX-XXXX</b>（平日 10:00-18:00）<br>
-              メール：<b>info@example.com</b>
-            </div>
-          </form>
+<div class="card">
+<h3>成約率</h3>
+<b style="font-size:26px">95.2%</b><br>2025年度
+</div>
 
-          <div class="box" style="margin-top:14px">
-            <b>👤 担当が内容を確認して折り返します</b><br>
-            <span class="note">無理な勧誘なし。まずは状況整理から。</span>
-          </div>
-        </div>
+<div class="card">
+<h3>年間買取実績</h3>
+<b style="font-size:26px">152社</b><br>2025年度
+</div>
 
-      </div>
-    </div>
-  </section>
+</div>
 
-  <!-- 実績ブロック -->
-  <section class="alt" id="stats">
-    <div class="container">
-      <div class="ribbon">実績・数字</div>
+</div>
+</section>
 
-      <div class="three">
-        <div class="card pad">
-          <h3>💰 最低買取額</h3>
-          <p class="lead" style="margin:6px 0 0">
-            <b style="font-size:26px">50万円〜</b>
-          </p>
-          <p class="note">※会社の状況・条件により変動します。</p>
-        </div>
+<section id="form">
+<div class="container">
 
-        <div class="card pad">
-          <h3>🤝 成約率</h3>
-          <p class="lead" style="margin:6px 0 0">
-            <b style="font-size:26px">95.2%</b>
-          </p>
-          <p class="note">※2025年度実績。査定後に譲渡契約に至った割合。</p>
-        </div>
+<h2>無料相談フォーム</h2>
 
-        <div class="card pad">
-          <h3>🏢 年間買取実績</h3>
-          <p class="lead" style="margin:6px 0 0">
-            <b style="font-size:26px">152社</b>
-          </p>
-          <p class="note">※2025年度実績。</p>
-        </div>
-      </div>
+<div class="card">
 
-      <div class="two" style="margin-top:14px">
-        <div class="card pad">
-          <h3>😊 お客様満足度</h3>
-          <p class="lead" style="margin:6px 0 0">
-            <b style="font-size:26px">97.5%</b>
-          </p>
-          <p class="note">※2025年度・自社アンケート（回答数109件）。</p>
-        </div>
+<form action="https://formspree.io/f/YOURID" method="POST" class="form">
 
-        <div class="card pad">
-          <h3>📌 ご相談しやすい理由</h3>
-          <p class="lead" style="margin:6px 0 0">
-            最低50万円〜の明確な基準と、<br>
-            実績ベースの対応で安心してご相談いただけます。
-          </p>
-          <p class="note">※詳細条件は個別査定となります。</p>
-        </div>
-      </div>
+<input name="name" placeholder="お名前" required>
+<input name="tel" placeholder="電話番号" required>
+<input name="email" placeholder="メールアドレス" required>
+<textarea name="message" placeholder="会社状況"></textarea>
 
-      <div class="ctaBand">
-        <div>
-          <b>まずは無料査定で、買取可否と金額感を確認</b>
-          <p>分かる範囲でOK。最短即日で一次回答します。</p>
-        </div>
-        <div class="right">
-          <a class="btn btn-accent" href="#form1">無料査定</a>
-          <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<button class="btn" type="submit">無料査定を申し込む</button>
 
-  <!-- お悩み -->
-  <section id="pain">
-    <div class="container">
-      <div class="ribbon">こんなお悩みありませんか？</div>
-      <div class="two">
-        <div class="box">
-          <h3>よくあるやつ</h3>
-          <ul class="checklist">
-            <li>使ってない会社の維持費がもったいない</li>
-            <li>解散・清算の手続きが面倒</li>
-            <li>申告/登記/口座などがゴチャついてる</li>
-            <li>できれば早くスッキリしたい</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3>まずは「整理ルート」を決めよう</h3>
-          <p class="lead">解散だけじゃなく「譲渡・売却」も選択肢になることがあります。</p>
-          <div class="three">
-            <div class="box"><b>✅ 分かる範囲でOK</b><p>設立年/休眠期間などで一次判断</p></div>
-            <div class="box"><b>✅ 無理に進めない</b><p>合わなければやめてOK</p></div>
-            <div class="box"><b>✅ 秘密厳守</b><p>外部に漏れません</p></div>
-          </div>
-        </div>
-      </div>
+</form>
 
-      <div class="ctaBand">
-        <div>
-          <b>当てはまるなら、まず無料で確認</b>
-          <p>「売れるか分からない」でもOK。状況を整理します。</p>
-        </div>
-        <div class="right">
-          <a class="btn btn-accent" href="#form1">無料査定</a>
-          <a class="btn btn-outline" href="tel:03XXXXXXXX">電話</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<p>
+メール相談<br>
+Info.houjinkaitori@gmail.com
+</p>
 
-  <!-- メリット -->
-  <section class="alt" id="benefit">
-    <div class="container">
-      <div class="ribbon">会社売却（譲渡）のメリット</div>
-      <div class="three">
-        <div class="box"><h3>① 手続きの負担が減りやすい</h3><p>状況により、解散よりラクなケースも。</p></div>
-        <div class="box"><h3>② スピード重視で進められる</h3><p>優先順位をつけて、必要事項から。</p></div>
-        <div class="box"><h3>③ 秘密厳守で相談できる</h3><p>相談内容は外部に出しません。</p></div>
-      </div>
+</div>
 
-      <div class="card pad" style="margin-top:14px">
-        <h3>安心の3つ（画像）</h3>
-        <img class="img" src="points.jpeg" alt="スピード・秘密厳守・全国対応" style="margin-top:10px;">
-      </div>
+</div>
+</section>
 
-      <div class="ctaBand">
-        <div>
-          <b>無料で状況確認できます</b>
-          <p>判断に必要なところだけ聞きます。</p>
-        </div>
-        <div class="right">
-          <a class="btn btn-accent" href="#form1">無料査定</a>
-          <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<section>
+<div class="container">
 
-  <!-- 流れ -->
-  <section id="flow">
-    <div class="container">
-      <div class="ribbon">流れ（サクッと）</div>
-      <p class="lead">相談 → 査定 → 譲渡まで、迷わないように案内します。</p>
-      <img class="img" src="flow.jpeg" alt="相談・査定・譲渡の流れ" style="margin-top:14px;">
+<h2>会社情報</h2>
 
-      <div class="center" style="margin-top:18px">
-        <a class="btn btn-accent" href="#form1">無料査定を申し込む</a>
-      </div>
-    </div>
-  </section>
+<div class="card">
 
-  <!-- 声 -->
-  <section class="alt" id="voice">
-    <div class="container">
-      <div class="ribbon">声（例）</div>
-      <div class="three">
-        <div class="quote">
-          <b>「何からやるか整理できた」</b>
-          <p class="lead">手続きが不安だったけど、次の一手が分かって安心。</p>
-          <div class="note">東京都 / 会社整理</div>
-        </div>
-        <div class="quote">
-          <b>「返信が早くて助かった」</b>
-          <p class="lead">すぐ一次回答がもらえて、無駄に悩まず進められた。</p>
-          <div class="note">大阪府 / 休眠会社</div>
-        </div>
-        <div class="quote">
-          <b>「秘密厳守で相談できた」</b>
-          <p class="lead">周りに知られたくなかったので、安心して話せた。</p>
-          <div class="note">福岡県 / 法人譲渡</div>
-        </div>
-      </div>
-      <div class="note" style="margin-top:10px">※実際の声が取れたら差し替えると成約率が上がります。</div>
-    </div>
-  </section>
+会社名：株式会社コンパニーバイ<br>
+所在地：東京都渋谷区<br>
+事業内容：法人売却サポート / 休眠会社買取<br>
+メール：Info.houjinkaitori@gmail.com
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container">
-      <div class="ribbon">よくある質問</div>
-      <div class="faq">
-        <details>
-          <summary>相談や査定は無料？</summary>
-          <p>はい、無料です。内容確認のうえご案内します。</p>
-        </details>
-        <details>
-          <summary>赤字でも相談できる？</summary>
-          <p>状況によります。まずは現状を教えてください。</p>
-        </details>
-        <details>
-          <summary>全国対応？</summary>
-          <p>はい。電話・オンライン中心で対応しています。</p>
-        </details>
-        <details>
-          <summary>情報が外に漏れない？</summary>
-          <p>秘密厳守で対応します。情報管理を徹底します。</p>
-        </details>
-        <details>
-          <summary>本当に最低50万円〜で買取してもらえますか？</summary>
-          <p>はい。会社の状況や条件によりますが、最低50万円〜での買取を基準としてご案内しています。</p>
-        </details>
-        <details>
-          <summary>実績はどれくらいありますか？</summary>
-          <p>2025年度の年間買取実績は152社、成約率95.2%、お客様満足度97.5%です。</p>
-        </details>
-      </div>
+</div>
 
-      <div class="ctaBand">
-        <div>
-          <b>迷ったら、まず無料でOK</b>
-          <p>「これって売れる？」の確認だけでも大丈夫。</p>
-        </div>
-        <div class="right">
-          <a class="btn btn-accent" href="#form1">無料査定</a>
-          <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
-          <a class="btn btn-outline" href="tel:03XXXXXXXX">電話</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 運営情報 -->
-  <section class="alt" id="company">
-    <div class="container">
-      <div class="two">
-        <div class="card pad">
-          <div class="ribbon">最後にもう一度</div>
-          <p class="lead">無料で状況を整理して、進め方を案内します。</p>
-          <div class="ctaRow">
-            <a class="btn btn-accent" href="#form1">無料査定へ</a>
-            <a class="btn btn-outline" href="https://line.me/ti/p/XXXXXXXX" target="_blank" rel="noopener">LINE</a>
-            <a class="btn btn-outline" href="tel:03XXXXXXXX">電話</a>
-          </div>
-          <div class="danger">※フォーム送信先（Formspree等）を設定するとメールで届くようになります。</div>
-        </div>
-
-        <div class="card pad">
-          <div class="ribbon">運営者情報</div>
-          会社名：〇〇株式会社（または屋号）<br>
-          所在地：東京都〇〇区〇〇<br>
-          電話：03-XXXX-XXXX<br>
-          メール：info.houjinkaitori@gmail.com<br>
-          受付：平日 10:00-18:00<br>
-          <div class="note" style="margin-top:10px">
-            ※会社名/連絡先/所在地がダミーだと一気に怪しく見えます。必ず本物にしてください。
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
+</div>
+</section>
 
 <footer>
-  <div class="container">
-    <div class="note">© 2026 〇〇株式会社</div>
-  </div>
+© 法人買取サービス
 </footer>
 
-<script>
-  document.getElementById('leadForm')?.addEventListener('submit', function(e){
-    const tel = (this.tel.value || '').replace(/[\s-]/g,'');
-    if(!/^[0-9]{10,11}$/.test(tel)){
-      e.preventDefault();
-      alert('電話番号は10〜11桁の数字で入力してください（ハイフン不要）');
-    }
-  });
-</script>
+<div class="fixedcta">
+
+<a href="#form" class="fixedform">無料査定</a>
+<a href="https://line.me/" class="fixedline">LINE</a>
+<a href="tel:05000000000" class="fixedphone">電話</a>
+
+</div>
 
 </body>
 </html>
