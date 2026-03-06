@@ -93,6 +93,30 @@ border-radius:12px;
 margin-top:30px;
 }
 
+.compare{
+background:white;
+padding:20px;
+border-radius:12px;
+overflow:auto;
+}
+
+.compare table{
+width:100%;
+border-collapse:collapse;
+}
+
+.compare th{
+background:#0d3b66;
+color:white;
+padding:12px;
+}
+
+.compare td{
+padding:12px;
+border-bottom:1px solid #eee;
+text-align:center;
+}
+
 .fixedcta{
 position:fixed;
 bottom:0;
@@ -178,17 +202,17 @@ h1{font-size:30px}
 
 <div class="card">
 <h3>最低買取額</h3>
-50万円〜
+<strong style="font-size:26px">50万円〜</strong>
 </div>
 
 <div class="card">
 <h3>成約率</h3>
-95.2%
+<strong style="font-size:26px">95.2%</strong>
 </div>
 
 <div class="card">
 <h3>年間買取</h3>
-152社
+<strong style="font-size:26px">152社</strong>
 </div>
 
 </div>
@@ -219,6 +243,54 @@ h1{font-size:30px}
 </div>
 </section>
 
+<!-- 比較表 -->
+
+<section>
+<div class="container">
+
+<h2>M&A仲介との違い</h2>
+
+<div class="compare">
+
+<table>
+
+<tr>
+<th>項目</th>
+<th>M&A仲介</th>
+<th>当社法人買取</th>
+</tr>
+
+<tr>
+<td>売却期間</td>
+<td>数ヶ月〜</td>
+<td><b>最短即日</b></td>
+</tr>
+
+<tr>
+<td>手数料</td>
+<td>成功報酬あり</td>
+<td><b>無料</b></td>
+</tr>
+
+<tr>
+<td>買い手探し</td>
+<td>必要</td>
+<td><b>不要</b></td>
+</tr>
+
+<tr>
+<td>手続き</td>
+<td>複雑</td>
+<td><b>簡単</b></td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+</section>
+
 <section>
 <div class="container">
 
@@ -234,17 +306,9 @@ h1{font-size:30px}
 
 <div class="grid3">
 
-<div class="card">
-①相談
-</div>
-
-<div class="card">
-②査定
-</div>
-
-<div class="card">
-③譲渡
-</div>
+<div class="card">①相談</div>
+<div class="card">②査定</div>
+<div class="card">③譲渡</div>
 
 </div>
 
@@ -286,52 +350,6 @@ h1{font-size:30px}
 </div>
 </section>
 
-<section class="authority">
-<div class="container">
-
-<h2>専門家監修</h2>
-
-<p>
-
-本サービスは法人売却・法人整理に関する専門家の知見をもとに運営しています。
-
-</p>
-
-<ul>
-
-<li>提携税理士</li>
-<li>提携司法書士</li>
-<li>法人登記サポート</li>
-
-</ul>
-
-<p>
-
-すべての相談は秘密厳守で対応いたします。
-
-</p>
-
-</div>
-</section>
-
-<section>
-<div class="container">
-
-<h2>よくある質問</h2>
-
-<div class="card">
-Q. 赤字会社でも売却できますか？<br>
-A. 状況によりますが可能なケースがあります。
-</div>
-
-<div class="card">
-Q. 相談は無料ですか？<br>
-A. 完全無料です。
-</div>
-
-</div>
-</section>
-
 <section id="form">
 <div class="container">
 
@@ -342,11 +360,8 @@ A. 完全無料です。
 <form class="form">
 
 <input placeholder="お名前">
-
 <input placeholder="電話番号">
-
 <input placeholder="メールアドレス">
-
 <textarea placeholder="会社状況"></textarea>
 
 <button class="btn">無料査定を申し込む</button>
