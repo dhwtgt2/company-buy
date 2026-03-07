@@ -9,6 +9,10 @@
 
 <style>
 
+*{
+box-sizing:border-box;
+}
+
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP";
 margin:0;
@@ -39,7 +43,7 @@ border-radius:14px;
 }
 
 h1{
-font-size:46px;
+font-size:44px;
 line-height:1.4;
 }
 
@@ -55,13 +59,14 @@ font-size:22px;
 
 .btn{
 background:#ffb400;
-padding:20px 36px;
+padding:18px 28px;
 border-radius:10px;
 font-weight:bold;
 text-decoration:none;
 color:black;
 display:inline-block;
-font-size:22px;
+font-size:20px;
+max-width:100%;
 }
 
 .grid2{
@@ -85,7 +90,7 @@ text-align:center;
 }
 
 .stats{
-font-size:46px;
+font-size:44px;
 font-weight:bold;
 color:#ff6a00;
 }
@@ -154,11 +159,11 @@ box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 .fixedcta a{
 flex:1;
 text-align:center;
-padding:16px;
+padding:14px;
 border-radius:8px;
 font-weight:bold;
 text-decoration:none;
-font-size:18px;
+font-size:16px;
 }
 
 .cta1{background:#ffb400;color:black;}
@@ -169,9 +174,9 @@ font-size:18px;
 
 body{font-size:16px;}
 
-h1{font-size:32px;}
+h1{font-size:30px;}
 
-h2{font-size:26px;}
+h2{font-size:24px;}
 
 .grid2{grid-template-columns:1fr;}
 
@@ -227,6 +232,7 @@ h2{font-size:26px;}
 
 </section>
 
+
 <!-- 悩み -->
 
 <section>
@@ -246,7 +252,7 @@ h2{font-size:26px;}
 <li><span class="marker">休眠会社を放置している</span></li>
 <li>解散費用を払いたくない</li>
 <li>会社整理したい</li>
-<li>毎年法人税がかかる</li>
+<li>法人税が毎年かかる</li>
 <li>手続きが難しい</li>
 
 </ul>
@@ -256,6 +262,7 @@ h2{font-size:26px;}
 </div>
 
 </section>
+
 
 <!-- 放置リスク -->
 
@@ -274,25 +281,27 @@ h2{font-size:26px;}
 
 <div class="card">
 
+<img src="tax.jpg">
+
 <h3>法人住民税</h3>
 
 <p>
 
-会社を使っていなくても  
-毎年約7万円かかります。
+毎年約7万円の税金
 
 </p>
 
 </div>
 
 <div class="card">
+
+<img src="tax2.jpg">
 
 <h3>税務申告</h3>
 
 <p>
 
-休眠会社でも  
-税務申告が必要です。
+休眠会社でも申告必要
 
 </p>
 
@@ -300,12 +309,13 @@ h2{font-size:26px;}
 
 <div class="card">
 
-<h3>手続き負担</h3>
+<img src="document.jpg">
+
+<h3>解散手続き</h3>
 
 <p>
 
-解散には  
-複雑な手続きがあります。
+複雑な登記手続き
 
 </p>
 
@@ -317,44 +327,10 @@ h2{font-size:26px;}
 
 </section>
 
-<!-- 解決 -->
-
-<section>
-
-<div class="container grid2">
-
-<div>
-
-<h2>
-
-<span class="highlight">法人買取で解決</span>
-
-</h2>
-
-<p>
-
-条件により  
-
-<span class="highlight">50万円以上</span>で  
-売却できる可能性があります。
-
-</p>
-
-</div>
-
-<div>
-
-<img src="baikyaku.jpg">
-
-</div>
-
-</div>
-
-</section>
 
 <!-- 実績 -->
 
-<section style="background:white">
+<section>
 
 <div class="container">
 
@@ -364,37 +340,31 @@ h2{font-size:26px;}
 
 <div class="card">
 
+<img src="baikyaku.jpg">
+
 <div class="stats">50万円〜</div>
 
-<p class="small">
-
-最低買取額
-
-</p>
+<div class="small">最低買取額</div>
 
 </div>
 
 <div class="card">
 
-<div class="stats" id="rate">0%</div>
+<img src="seiyakuritu.jpg">
 
-<p class="small">
+<div class="stats">95.2%</div>
 
-成約率
-
-</p>
+<div class="small">成約率</div>
 
 </div>
 
 <div class="card">
+
+<img src="IMG_2183.jpeg">
 
 <div class="stats">152社</div>
 
-<p class="small">
-
-2025年度買取実績
-
-</p>
+<div class="small">2025年度買取実績</div>
 
 </div>
 
@@ -404,28 +374,53 @@ h2{font-size:26px;}
 
 </section>
 
-<!-- 買取条件 -->
+
+<!-- 流れ -->
 
 <section>
 
 <div class="container">
 
-<h2>このような会社でも買取対象です</h2>
+<h2>法人買取の流れ</h2>
 
 <div class="grid3">
 
-<div class="card">売上ゼロ</div>
-<div class="card">赤字会社</div>
-<div class="card">設立のみ</div>
-<div class="card">債務超過</div>
-<div class="card">全国対応</div>
-<div class="card">無料査定</div>
+<div class="card">
+
+<img src="consult.jpg">
+
+<h3>①相談</h3>
+
+<p>会社情報を送るだけ</p>
+
+</div>
+
+<div class="card">
+
+<img src="Satei.jpg">
+
+<h3>②査定</h3>
+
+<p>最短即日査定</p>
+
+</div>
+
+<div class="card">
+
+<img src="contract.png">
+
+<h3>③契約</h3>
+
+<p>法人譲渡契約</p>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
+
 
 <!-- 比較 -->
 
@@ -437,25 +432,47 @@ h2{font-size:26px;}
 
 <h2>
 
-放置している会社に  
-<span class="point">毎年7万円</span>払いますか？
-
-<br><br>
-
-それとも  
-
-<br>
-
-<span class="highlight">50万円以上</span>の
-現金を手にしますか？
+<span class="point">毎年7万円</span>払うか  
+<span class="highlight">50万円以上</span>手にするか
 
 </h2>
+
+<div class="grid2">
+
+<div>
+
+<img src="IMG_2185.jpeg">
+
+<p>
+
+会社解散  
+費用 約7万円〜
+
+</p>
+
+</div>
+
+<div>
+
+<img src="baikyaku.jpg">
+
+<p>
+
+会社売却  
+50万円以上の可能性
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
 </div>
 
 </section>
+
 
 <!-- お客様の声 -->
 
@@ -469,15 +486,11 @@ h2{font-size:26px;}
 
 <div class="card">
 
+<img src="voice1.jpg">
+
 <p>
 
-休眠会社を売却できました。
-
-</p>
-
-<p class="small">
-
-東京都 / 会社代表
+解散費用が不要でした
 
 </p>
 
@@ -485,15 +498,11 @@ h2{font-size:26px;}
 
 <div class="card">
 
+<img src="voice2.jpg">
+
 <p>
 
-解散費用が不要でした。
-
-</p>
-
-<p class="small">
-
-大阪府 / 経営者
+休眠会社を売却できました
 
 </p>
 
@@ -501,15 +510,11 @@ h2{font-size:26px;}
 
 <div class="card">
 
+<img src="voice3.jpg">
+
 <p>
 
-査定が早く安心でした。
-
-</p>
-
-<p class="small">
-
-愛知県 / 法人代表
+査定が早かったです
 
 </p>
 
@@ -521,41 +526,6 @@ h2{font-size:26px;}
 
 </section>
 
-<!-- FAQ -->
-
-<section>
-
-<div class="container">
-
-<h2>よくある質問</h2>
-
-<div class="card">
-
-<p><strong>赤字会社でも売却できますか？</strong></p>
-
-<p>
-
-可能なケースがあります。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<p><strong>相談は無料ですか？</strong></p>
-
-<p>
-
-完全無料です。
-
-</p>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- CTA -->
 
@@ -572,11 +542,9 @@ h2{font-size:26px;}
 
 </h2>
 
-<p>
+<img src="form.jpg">
 
-無料相談は1分で完了
-
-</p>
+<br><br>
 
 <a href="#form" class="btn">
 
@@ -589,6 +557,7 @@ h2{font-size:26px;}
 </div>
 
 </section>
+
 
 <!-- フォーム -->
 
@@ -603,7 +572,9 @@ h2{font-size:26px;}
 <form class="form">
 
 <input placeholder="お名前">
+
 <input placeholder="電話番号">
+
 <input placeholder="メールアドレス">
 
 <textarea placeholder="会社状況"></textarea>
@@ -616,17 +587,12 @@ h2{font-size:26px;}
 
 </form>
 
-<p>
-
-info.houjinkaitori@gmail.com
-
-</p>
-
 </div>
 
 </div>
 
 </section>
+
 
 <!-- 固定CTA -->
 
@@ -640,11 +606,5 @@ info.houjinkaitori@gmail.com
 
 </div>
 
-<script>
-
-let rate=document.getElementById("rate")
-let i=0
-
-let interval=setInterval(function(){
-
-i++
+</body>
+</html>
