@@ -14,17 +14,18 @@ font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP";
 margin:0;
 background:#f6f7fb;
 color:#333;
-line-height:1.7;
+line-height:1.8;
+font-size:18px;
 }
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:20px;
+padding:24px;
 }
 
 section{
-padding:70px 20px;
+padding:80px 20px;
 }
 
 .hero{
@@ -38,73 +39,79 @@ border-radius:14px;
 }
 
 h1{
-font-size:38px;
+font-size:46px;
+line-height:1.4;
 }
 
 h2{
-font-size:28px;
+font-size:34px;
 text-align:center;
-margin-bottom:30px;
+margin-bottom:35px;
+}
+
+h3{
+font-size:22px;
+margin-top:10px;
 }
 
 .btn{
 background:#ffb400;
-padding:18px 30px;
+padding:20px 36px;
 border-radius:10px;
 font-weight:bold;
 text-decoration:none;
 color:black;
 display:inline-block;
-font-size:18px;
+font-size:22px;
 }
 
 .grid2{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:50px;
 align-items:center;
 }
 
 .grid3{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:25px;
 }
 
 .card{
 background:white;
-padding:25px;
+padding:30px;
 border-radius:14px;
 text-align:center;
 }
 
 .stats{
-font-size:36px;
+font-size:46px;
 font-weight:bold;
 color:#ff6a00;
 }
 
 .compare{
 background:#fff3cd;
-padding:40px;
+padding:50px;
 border-radius:14px;
 text-align:center;
 }
 
 .cta{
 background:#ffe9e9;
-padding:40px;
+padding:50px;
 border-radius:14px;
 text-align:center;
 }
 
 .form input,.form textarea{
 width:100%;
-padding:14px;
+padding:16px;
 border-radius:8px;
 border:1px solid #ddd;
-margin-bottom:10px;
-font-size:16px;
+margin-bottom:12px;
+font-size:18px;
 }
 
 .fixedcta{
@@ -114,7 +121,7 @@ left:0;
 width:100%;
 display:flex;
 gap:10px;
-padding:10px;
+padding:12px;
 background:white;
 box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 }
@@ -122,10 +129,11 @@ box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 .fixedcta a{
 flex:1;
 text-align:center;
-padding:14px;
+padding:16px;
 border-radius:8px;
 font-weight:bold;
 text-decoration:none;
+font-size:18px;
 }
 
 .cta1{background:#ffb400;color:black;}
@@ -134,10 +142,11 @@ text-decoration:none;
 
 .urgent{
 background:#ffe2e2;
-padding:15px;
+padding:16px;
 border-radius:10px;
 margin-top:20px;
 font-weight:bold;
+font-size:20px;
 }
 
 /* 強調 */
@@ -145,20 +154,21 @@ font-weight:bold;
 .highlight{
 color:#ff6a00;
 font-weight:bold;
-font-size:1.2em;
+font-size:1.3em;
 }
 
 .point{
-color:red;
+color:#ff0000;
 font-weight:bold;
 }
 
 .marker{
 background:linear-gradient(transparent 60%, #fff3a0 60%);
+font-weight:bold;
 }
 
 .small{
-font-size:14px;
+font-size:16px;
 color:#777;
 }
 
@@ -166,20 +176,16 @@ color:#777;
 
 @media(max-width:600px){
 
-.container{
-padding:16px;
-}
-
-section{
-padding:40px 15px;
+body{
+font-size:16px;
 }
 
 h1{
-font-size:26px;
+font-size:32px;
 }
 
 h2{
-font-size:22px;
+font-size:26px;
 }
 
 .grid2{
@@ -192,6 +198,7 @@ grid-template-columns:1fr;
 
 .btn{
 width:100%;
+font-size:20px;
 }
 
 }
@@ -200,8 +207,6 @@ width:100%;
 </head>
 
 <body>
-
-<!-- HERO -->
 
 <section class="hero">
 
@@ -218,7 +223,7 @@ width:100%;
 <p>
 
 解散費用  
-<span class="point">7万円〜</span>を払う前に  
+<span class="point">約7万円</span>を払う前に  
 
 </p>
 
@@ -244,8 +249,6 @@ width:100%;
 
 
 
-<!-- 悩み -->
-
 <section>
 
 <div class="container grid2">
@@ -268,7 +271,7 @@ width:100%;
 
 <li>会社整理したい</li>
 
-<li>法人税が毎年かかる</li>
+<li>毎年法人税がかかる</li>
 
 <li>手続きが難しい</li>
 
@@ -281,8 +284,6 @@ width:100%;
 </section>
 
 
-
-<!-- 解決 -->
 
 <section style="background:white">
 
@@ -301,7 +302,7 @@ width:100%;
 条件により  
 
 <span class="highlight">50万円以上</span>で  
-会社売却できる可能性があります。
+売却できる可能性があります。
 
 </p>
 
@@ -319,8 +320,6 @@ width:100%;
 
 
 
-<!-- 実績 -->
-
 <section>
 
 <div class="container">
@@ -333,17 +332,9 @@ width:100%;
 
 <img src="baikyaku.jpg">
 
-<div class="stats">
+<div class="stats">50万円〜</div>
 
-50万円〜
-
-</div>
-
-<div class="small">
-
-最低買取額
-
-</div>
+<div class="small">最低買取額</div>
 
 </div>
 
@@ -351,17 +342,9 @@ width:100%;
 
 <img src="seiyakuritu.jpg">
 
-<div class="stats" id="rate">
+<div class="stats" id="rate">0%</div>
 
-0%
-
-</div>
-
-<div class="small">
-
-成約率
-
-</div>
+<div class="small">成約率</div>
 
 </div>
 
@@ -369,17 +352,9 @@ width:100%;
 
 <img src="IMG_2183.jpeg">
 
-<div class="stats">
+<div class="stats">152社</div>
 
-152社
-
-</div>
-
-<div class="small">
-
-2025年度買取実績
-
-</div>
+<div class="small">2025年度買取実績</div>
 
 </div>
 
@@ -390,8 +365,6 @@ width:100%;
 </section>
 
 
-
-<!-- 流れ -->
 
 <section>
 
@@ -407,11 +380,7 @@ width:100%;
 
 <h3>①相談</h3>
 
-<p>
-
-会社情報を送るだけ
-
-</p>
+<p>会社情報を送るだけ</p>
 
 </div>
 
@@ -421,11 +390,7 @@ width:100%;
 
 <h3>②査定</h3>
 
-<p>
-
-最短即日査定
-
-</p>
+<p>最短即日査定</p>
 
 </div>
 
@@ -435,11 +400,7 @@ width:100%;
 
 <h3>③契約</h3>
 
-<p>
-
-法人譲渡契約
-
-</p>
+<p>法人譲渡契約</p>
 
 </div>
 
@@ -450,8 +411,6 @@ width:100%;
 </section>
 
 
-
-<!-- 比較 -->
 
 <section>
 
@@ -471,11 +430,7 @@ width:100%;
 
 <p>
 
-<span class="point">
-
-費用 約7万円〜
-
-</span>
+<span class="point">費用 約7万円〜</span>
 
 </p>
 
@@ -489,11 +444,7 @@ width:100%;
 
 <p>
 
-<span class="highlight">
-
-50万円以上の可能性
-
-</span>
+<span class="highlight">50万円以上の可能性</span>
 
 </p>
 
@@ -508,8 +459,6 @@ width:100%;
 </section>
 
 
-
-<!-- お客様の声 -->
 
 <section>
 
@@ -575,8 +524,6 @@ width:100%;
 
 
 
-<!-- FAQ -->
-
 <section>
 
 <div class="container">
@@ -593,7 +540,7 @@ width:100%;
 
 <p>
 
-状況によって可能なケースがあります。
+可能なケースがあります。
 
 </p>
 
@@ -621,8 +568,6 @@ width:100%;
 
 
 
-<!-- CTA -->
-
 <section>
 
 <div class="container">
@@ -631,13 +576,8 @@ width:100%;
 
 <h2>
 
-<span class="highlight">
-
-50万円以上
-
-</span>
-
-で会社売却できる可能性
+<span class="highlight">50万円以上</span>で  
+会社売却できる可能性
 
 </h2>
 
@@ -662,8 +602,6 @@ width:100%;
 </section>
 
 
-
-<!-- フォーム -->
 
 <section id="form">
 
