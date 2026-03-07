@@ -9,9 +9,7 @@
 
 <style>
 
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP";
@@ -43,7 +41,7 @@ border-radius:14px;
 }
 
 h1{
-font-size:44px;
+font-size:46px;
 line-height:1.4;
 }
 
@@ -57,6 +55,20 @@ h3{
 font-size:22px;
 }
 
+.highlight{
+color:#ff6a00;
+font-weight:bold;
+}
+
+.point{
+color:#ff0000;
+font-weight:bold;
+}
+
+.marker{
+background:linear-gradient(transparent 60%, #fff3a0 60%);
+}
+
 .btn{
 background:#ffb400;
 padding:18px 28px;
@@ -66,7 +78,6 @@ text-decoration:none;
 color:black;
 display:inline-block;
 font-size:20px;
-max-width:100%;
 }
 
 .grid2{
@@ -85,33 +96,15 @@ gap:25px;
 .card{
 background:white;
 padding:30px;
-border-radius:14px;
+border-radius:16px;
 text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 .stats{
-font-size:44px;
+font-size:48px;
 font-weight:bold;
 color:#ff6a00;
-}
-
-.highlight{
-color:#ff6a00;
-font-weight:bold;
-}
-
-.point{
-color:#ff0000;
-font-weight:bold;
-}
-
-.marker{
-background:linear-gradient(transparent 60%, #fff3a0 60%);
-}
-
-.small{
-font-size:16px;
-color:#777;
 }
 
 .compare{
@@ -125,6 +118,15 @@ background:#ffe9e9;
 padding:50px;
 border-radius:14px;
 text-align:center;
+}
+
+.badge{
+background:#e8f5ff;
+padding:10px 16px;
+border-radius:8px;
+display:inline-block;
+margin:5px;
+font-size:14px;
 }
 
 .form input,.form textarea{
@@ -170,11 +172,22 @@ font-size:16px;
 .cta2{background:#06c755;color:white;}
 .cta3{background:#ff6a00;color:white;}
 
+.scrollcta{
+position:fixed;
+bottom:80px;
+right:20px;
+background:#ffb400;
+padding:14px 20px;
+border-radius:30px;
+font-weight:bold;
+display:none;
+}
+
 @media(max-width:600px){
 
 body{font-size:16px;}
 
-h1{font-size:30px;}
+h1{font-size:32px;}
 
 h2{font-size:24px;}
 
@@ -191,8 +204,6 @@ h2{font-size:24px;}
 
 <body>
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="container">
@@ -200,8 +211,7 @@ h2{font-size:24px;}
 <h1>
 
 <span class="highlight">休眠会社</span><br>
-<span class="highlight">50万円以上</span>で<br>
-売却できる可能性
+<span class="highlight">50万円以上</span>で売却
 
 </h1>
 
@@ -216,7 +226,8 @@ h2{font-size:24px;}
 
 <div class="urgent">
 
-今月の買取枠 残り3社
+今月の買取枠  
+<strong id="remain">3</strong>社
 
 </div>
 
@@ -232,8 +243,6 @@ h2{font-size:24px;}
 
 </section>
 
-
-<!-- 悩み -->
 
 <section>
 
@@ -264,72 +273,6 @@ h2{font-size:24px;}
 </section>
 
 
-<!-- 放置リスク -->
-
-<section style="background:white">
-
-<div class="container">
-
-<h2>
-
-休眠会社を放置すると  
-<span class="point">毎年税金がかかります</span>
-
-</h2>
-
-<div class="grid3">
-
-<div class="card">
-
-<img src="tax.jpg">
-
-<h3>法人住民税</h3>
-
-<p>
-
-毎年約7万円の税金
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="tax2.jpg">
-
-<h3>税務申告</h3>
-
-<p>
-
-休眠会社でも申告必要
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="document.jpg">
-
-<h3>解散手続き</h3>
-
-<p>
-
-複雑な登記手続き
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- 実績 -->
-
 <section>
 
 <div class="container">
@@ -340,31 +283,25 @@ h2{font-size:24px;}
 
 <div class="card">
 
-<img src="baikyaku.jpg">
-
 <div class="stats">50万円〜</div>
 
-<div class="small">最低買取額</div>
+最低買取額
 
 </div>
 
 <div class="card">
 
-<img src="seiyakuritu.jpg">
+<div class="stats" id="rate">0%</div>
 
-<div class="stats">95.2%</div>
-
-<div class="small">成約率</div>
+成約率
 
 </div>
 
 <div class="card">
 
-<img src="IMG_2183.jpeg">
+<div class="stats" id="count">0</div>
 
-<div class="stats">152社</div>
-
-<div class="small">2025年度買取実績</div>
+買取実績
 
 </div>
 
@@ -374,55 +311,6 @@ h2{font-size:24px;}
 
 </section>
 
-
-<!-- 流れ -->
-
-<section>
-
-<div class="container">
-
-<h2>法人買取の流れ</h2>
-
-<div class="grid3">
-
-<div class="card">
-
-<img src="consult.jpg">
-
-<h3>①相談</h3>
-
-<p>会社情報を送るだけ</p>
-
-</div>
-
-<div class="card">
-
-<img src="Satei.jpg">
-
-<h3>②査定</h3>
-
-<p>最短即日査定</p>
-
-</div>
-
-<div class="card">
-
-<img src="contract.png">
-
-<h3>③契約</h3>
-
-<p>法人譲渡契約</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- 比較 -->
 
 <section>
 
@@ -437,88 +325,25 @@ h2{font-size:24px;}
 
 </h2>
 
-<div class="grid2">
-
-<div>
-
-<img src="IMG_2185.jpeg">
-
-<p>
-
-会社解散  
-費用 約7万円〜
-
-</p>
-
-</div>
-
-<div>
-
-<img src="baikyaku.jpg">
-
-<p>
-
-会社売却  
-50万円以上の可能性
-
-</p>
-
-</div>
-
-</div>
-
 </div>
 
 </div>
 
 </section>
 
-
-<!-- お客様の声 -->
 
 <section>
 
 <div class="container">
 
-<h2>お客様の声</h2>
+<h2>安心してご相談ください</h2>
 
-<div class="grid3">
+<div style="text-align:center">
 
-<div class="card">
-
-<img src="voice1.jpg">
-
-<p>
-
-解散費用が不要でした
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="voice2.jpg">
-
-<p>
-
-休眠会社を売却できました
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="voice3.jpg">
-
-<p>
-
-査定が早かったです
-
-</p>
-
-</div>
+<span class="badge">相談無料</span>
+<span class="badge">秘密厳守</span>
+<span class="badge">全国対応</span>
+<span class="badge">即日査定</span>
 
 </div>
 
@@ -526,8 +351,6 @@ h2{font-size:24px;}
 
 </section>
 
-
-<!-- CTA -->
 
 <section>
 
@@ -537,18 +360,13 @@ h2{font-size:24px;}
 
 <h2>
 
-<span class="highlight">50万円以上</span>で  
-会社売却できる可能性
+<span class="highlight">50万円以上</span>で会社売却
 
 </h2>
 
-<img src="form.jpg">
-
-<br><br>
-
 <a href="#form" class="btn">
 
-無料査定はこちら
+会社が売れるか無料チェック
 
 </a>
 
@@ -558,8 +376,6 @@ h2{font-size:24px;}
 
 </section>
 
-
-<!-- フォーム -->
 
 <section id="form">
 
@@ -572,9 +388,7 @@ h2{font-size:24px;}
 <form class="form">
 
 <input placeholder="お名前">
-
 <input placeholder="電話番号">
-
 <input placeholder="メールアドレス">
 
 <textarea placeholder="会社状況"></textarea>
@@ -587,6 +401,13 @@ h2{font-size:24px;}
 
 </form>
 
+<p>
+
+メール相談  
+info.houjinkaitori@gmail.com
+
+</p>
+
 </div>
 
 </div>
@@ -594,17 +415,75 @@ h2{font-size:24px;}
 </section>
 
 
-<!-- 固定CTA -->
+<div class="scrollcta" id="scrollcta">
+
+<a href="#form">無料査定</a>
+
+</div>
+
 
 <div class="fixedcta">
 
 <a href="#form" class="cta1">無料査定</a>
 
-<a href="#" class="cta2">LINE</a>
+<a href="https://line.me" class="cta2">LINE</a>
 
 <a href="tel:05000000000" class="cta3">電話</a>
 
 </div>
+
+
+<script>
+
+let rate=document.getElementById("rate")
+let i=0
+
+let interval=setInterval(function(){
+
+i++
+rate.innerText=i+"%"
+
+if(i>=95.2){
+
+rate.innerText="95.2%"
+clearInterval(interval)
+
+}
+
+},20)
+
+let count=document.getElementById("count")
+let n=0
+
+let c=setInterval(function(){
+
+n++
+count.innerText=n
+
+if(n>=152){
+
+count.innerText="152社"
+clearInterval(c)
+
+}
+
+},20)
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>800){
+
+document.getElementById("scrollcta").style.display="block"
+
+}else{
+
+document.getElementById("scrollcta").style.display="none"
+
+}
+
+})
+
+</script>
 
 </body>
 </html>
