@@ -3,11 +3,17 @@
 <head>
 
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>法人買取｜休眠会社売却</title>
 
 <style>
+
+*{box-sizing:border-box;}
+
+html{
+scroll-behavior:smooth;
+}
 
 body{
 font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP";
@@ -15,70 +21,27 @@ margin:0;
 background:#f6f7fb;
 color:#333;
 line-height:1.8;
+font-size:18px;
+padding-top:70px;
 }
-
-/* header */
-
-header{
-background:white;
-position:sticky;
-top:0;
-z-index:999;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-.header-inner{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-max-width:1100px;
-margin:auto;
-}
-
-.logo{
-font-weight:bold;
-font-size:20px;
-}
-
-.menu-btn{
-font-size:26px;
-cursor:pointer;
-}
-
-.nav{
-display:none;
-background:white;
-border-top:1px solid #eee;
-}
-
-.nav a{
-display:block;
-padding:15px;
-border-bottom:1px solid #eee;
-text-decoration:none;
-color:#333;
-}
-
-/* container */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:25px;
+padding:24px;
 }
 
 section{
-padding:70px 0;
+padding:80px 20px;
 }
 
 img{
 width:100%;
-border-radius:12px;
+border-radius:14px;
 }
 
 h1{
-font-size:34px;
+font-size:38px;
 }
 
 h2{
@@ -87,15 +50,19 @@ text-align:center;
 margin-bottom:30px;
 }
 
+h3{
+margin-top:10px;
+}
+
 .btn{
-display:inline-block;
-background:#ff7a00;
-color:white;
+background:#ffb400;
 padding:16px 28px;
-border-radius:12px;
+border-radius:10px;
 font-weight:bold;
 text-decoration:none;
-margin-top:20px;
+color:black;
+display:inline-block;
+font-size:18px;
 }
 
 .grid2{
@@ -108,18 +75,19 @@ align-items:center;
 .grid3{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:20px;
+gap:25px;
 }
 
 .card{
 background:white;
 padding:25px;
-border-radius:14px;
+border-radius:16px;
 text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .stats{
-font-size:34px;
+font-size:36px;
 font-weight:bold;
 color:#ff6a00;
 }
@@ -131,20 +99,95 @@ border-radius:14px;
 text-align:center;
 }
 
-.cta{
-background:#ffe9e9;
-padding:40px;
-border-radius:14px;
-text-align:center;
-}
-
 .form input,.form textarea{
 width:100%;
-padding:12px;
+padding:14px;
 border-radius:8px;
 border:1px solid #ddd;
 margin-bottom:10px;
 }
+
+/* ナビ */
+
+.topnav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+z-index:999;
+}
+
+.navwrap{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+}
+
+.logo{
+font-weight:bold;
+font-size:18px;
+}
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+font-size:14px;
+}
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* スマホ */
+
+@media(max-width:768px){
+
+.grid2{grid-template-columns:1fr;}
+.grid3{grid-template-columns:1fr;}
+
+h1{font-size:28px;}
+h2{font-size:22px;}
+
+.hamburger{
+display:block;
+}
+
+.menu{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+display:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.menu a{
+padding:16px;
+border-bottom:1px solid #eee;
+}
+
+.menu.show{
+display:flex;
+}
+
+}
+
+/* 固定CTA */
 
 .fixedcta{
 position:fixed;
@@ -171,108 +214,62 @@ text-decoration:none;
 .cta2{background:#06c755;color:white;}
 .cta3{background:#ff6a00;color:white;}
 
-.urgent{
-background:#ffe2e2;
-padding:12px;
-border-radius:10px;
-margin-top:20px;
-font-weight:bold;
-text-align:center;
-}
-
-/* mobile */
-
-@media(max-width:800px){
-
-.grid2{
-grid-template-columns:1fr;
-}
-
-.grid3{
-grid-template-columns:1fr;
-}
-
-h1{
-font-size:26px;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<header>
+<!-- ナビ -->
 
-<div class="header-inner">
+<div class="topnav">
 
-<div class="logo">
-法人買取
-</div>
+<div class="navwrap">
 
-<div class="menu-btn" onclick="toggleMenu()">
-☰
-</div>
+<div class="logo">法人買取</div>
 
-</div>
+<div class="hamburger" onclick="toggleMenu()">☰</div>
 
-<div class="nav" id="nav">
+<div class="menu" id="menu">
 
-<a href="#nayami">悩み</a>
-<a href="#solution">解決</a>
-<a href="#reason">理由</a>
-<a href="#result">実績</a>
-<a href="#flow">流れ</a>
+<a href="#worry">悩み</a>
+<a href="#results">実績</a>
+<a href="#cases">売却事例</a>
 <a href="#compare">比較</a>
-<a href="#form">無料診断</a>
+<a href="#form">無料査定</a>
 
 </div>
 
-</header>
+</div>
+
+</div>
 
 
 <!-- HERO -->
 
 <section>
 
-<div class="container grid2">
-
-<div>
+<div class="container">
 
 <h1>
 
-放置している会社  
-<strong style="color:#ff6a00">50万円以上</strong>  
-で買取できる可能性があります
+休眠会社<br>
+<strong style="color:#ff6a00">50万円以上</strong>で売却できる可能性
 
 </h1>
 
+<img src="hero.jpg">
+
 <p>
 
-売上ゼロ・赤字でもOK  
-最短1日で現金化
+解散費用 約7万円を払う前に
 
 </p>
 
-<div class="urgent">
-
-今月の買取枠 残り3社
-
-</div>
-
 <a href="#form" class="btn">
+
 無料査定する
+
 </a>
-
-</div>
-
-<div>
-
-<img src="hero.png">
-
-</div>
 
 </div>
 
@@ -281,14 +278,12 @@ font-size:26px;
 
 <!-- 悩み -->
 
-<section id="nayami">
+<section id="worry">
 
 <div class="container grid2">
 
 <div>
-
-<img src="nayami.png">
-
+<img src="kyuumin.jpg">
 </div>
 
 <div>
@@ -300,7 +295,8 @@ font-size:26px;
 <li>休眠会社を放置している</li>
 <li>解散費用を払いたくない</li>
 <li>会社整理したい</li>
-<li>毎年の法人税がかかる</li>
+<li>法人税が毎年かかる</li>
+<li>手続きが難しい</li>
 
 </ul>
 
@@ -311,42 +307,9 @@ font-size:26px;
 </section>
 
 
-<!-- 税金 -->
-
-<section>
-
-<div class="container grid2">
-
-<div>
-
-<h2>放置すると税金が発生</h2>
-
-<p>
-
-休眠会社でも  
-法人住民税や申告義務があります。
-
-放置すると  
-税金やペナルティが発生する可能性があります。
-
-</p>
-
-</div>
-
-<div>
-
-<img src="tax.png">
-
-</div>
-
-</div>
-
-</section>
-
-
 <!-- 実績 -->
 
-<section id="result" style="background:white">
+<section id="results">
 
 <div class="container">
 
@@ -356,6 +319,8 @@ font-size:26px;
 
 <div class="card">
 
+<img src="price.jpg">
+
 <div class="stats">50万円〜</div>
 
 最低買取額
@@ -364,7 +329,9 @@ font-size:26px;
 
 <div class="card">
 
-<div class="stats" id="rate">0%</div>
+<img src="rate.jpg">
+
+<div class="stats">95.2%</div>
 
 成約率
 
@@ -372,9 +339,11 @@ font-size:26px;
 
 <div class="card">
 
+<img src="company.jpg">
+
 <div class="stats">152社</div>
 
-年間買取実績
+買取実績
 
 </div>
 
@@ -385,33 +354,23 @@ font-size:26px;
 </section>
 
 
-<!-- 流れ -->
+<!-- 売却事例 -->
 
-<section id="flow">
+<section id="cases">
 
 <div class="container">
 
-<h2>法人買取の流れ</h2>
+<h2>会社売却事例</h2>
 
 <div class="grid3">
 
 <div class="card">
 
-<img src="consult.png">
+<img src="contract.png">
 
-<h3>①相談</h3>
+<h3>IT会社</h3>
 
-会社情報を送るだけ
-
-</div>
-
-<div class="card">
-
-<img src="document.png">
-
-<h3>②査定</h3>
-
-最短即日査定
+<p>65万円で売却</p>
 
 </div>
 
@@ -419,9 +378,19 @@ font-size:26px;
 
 <img src="contract.png">
 
-<h3>③契約</h3>
+<h3>広告会社</h3>
 
-法人譲渡契約
+<p>80万円で売却</p>
+
+</div>
+
+<div class="card">
+
+<img src="contract.png">
+
+<h3>貿易会社</h3>
+
+<p>50万円で売却</p>
 
 </div>
 
@@ -440,53 +409,13 @@ font-size:26px;
 
 <div class="compare">
 
-<h2>会社解散との比較</h2>
-
-<img src="compare.png">
-
-<p>
-
-会社解散  
-<strong>費用 約7万円〜</strong>
-
-</p>
-
-<p>
-
-法人買取  
-<strong>50万円以上の可能性</strong>
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section>
-
-<div class="container">
-
-<div class="cta">
-
-<img src="check.png">
-
 <h2>
 
-あなたの会社が  
-いくらで売れるか？
+解散費用 約7万円  
+VS  
+会社売却 50万円以上
 
 </h2>
-
-<a href="#form" class="btn">
-
-無料診断する
-
-</a>
 
 </div>
 
@@ -503,19 +432,36 @@ font-size:26px;
 
 <div>
 
-<img src="consult.png">
+<img src="form.jpg">
 
 </div>
 
 <div class="card">
 
-<h2>無料相談</h2>
+<h2>無料相談フォーム</h2>
 
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSceYXKOgD7jWKX7-ty0aUU9PDl_IopAjBvieyG09yzlTPKUYg/viewform" class="btn">
+<form class="form">
 
-無料相談フォーム
+<input placeholder="お名前">
+<input placeholder="電話番号">
+<input placeholder="メールアドレス">
 
-</a>
+<textarea placeholder="会社状況"></textarea>
+
+<button class="btn">
+
+無料査定を申し込む
+
+</button>
+
+</form>
+
+<p>
+
+メール相談  
+info.houjinkaitori@gmail.com
+
+</p>
 
 </div>
 
@@ -524,12 +470,12 @@ font-size:26px;
 </section>
 
 
+<!-- 固定CTA -->
+
 <div class="fixedcta">
 
 <a href="#form" class="cta1">無料査定</a>
-
 <a href="#" class="cta2">LINE</a>
-
 <a href="tel:05000000000" class="cta3">電話</a>
 
 </div>
@@ -539,41 +485,23 @@ font-size:26px;
 
 function toggleMenu(){
 
-var nav=document.getElementById("nav")
-
-if(nav.style.display==="block"){
-
-nav.style.display="none"
-
-}else{
-
-nav.style.display="block"
+let menu=document.getElementById("menu")
+menu.classList.toggle("show")
 
 }
 
-}
+/* メニュークリックで自動で閉じる */
 
-/* 成約率 */
+document.querySelectorAll("#menu a").forEach(function(link){
 
-let rate=document.getElementById("rate")
+link.addEventListener("click",function(){
 
-let i=0
+let menu=document.getElementById("menu")
+menu.classList.remove("show")
 
-let interval=setInterval(function(){
+})
 
-i++
-
-rate.innerText=i+"%"
-
-if(i>=95){
-
-rate.innerText="95.2%"
-
-clearInterval(interval)
-
-}
-
-},20)
+})
 
 </script>
 
