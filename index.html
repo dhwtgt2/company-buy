@@ -36,8 +36,39 @@ width:100%;
 border-radius:14px;
 }
 
-h1{font-size:44px;}
-h2{font-size:34px;text-align:center;margin-bottom:40px;}
+h1{
+font-size:44px;
+line-height:1.4;
+}
+
+h2{
+font-size:34px;
+text-align:center;
+margin-bottom:40px;
+}
+
+h3{
+font-size:22px;
+}
+
+.highlight{
+color:#ff6a00;
+font-weight:bold;
+}
+
+.point{
+color:#ff0000;
+font-weight:bold;
+}
+
+.marker{
+background:linear-gradient(transparent 60%, #fff3a0 60%);
+}
+
+.small{
+font-size:16px;
+color:#777;
+}
 
 .btn{
 background:#ffb400;
@@ -81,7 +112,22 @@ color:#ff6a00;
 background:#fff3cd;
 padding:40px;
 border-radius:14px;
+}
+
+.cta{
+background:#ffe9e9;
+padding:40px;
+border-radius:14px;
 text-align:center;
+}
+
+.badge{
+background:#e8f5ff;
+padding:10px 16px;
+border-radius:8px;
+display:inline-block;
+margin:5px;
+font-size:14px;
 }
 
 .quizbtn{
@@ -160,11 +206,24 @@ font-weight:bold;
 font-size:14px;
 }
 
+.scrollcta{
+position:fixed;
+right:20px;
+bottom:100px;
+background:#ffb400;
+padding:14px 20px;
+border-radius:30px;
+font-weight:bold;
+display:none;
+}
+
 @media(max-width:700px){
 
 .grid2{grid-template-columns:1fr;}
 .grid3{grid-template-columns:1fr;}
+
 .menu{display:none;}
+
 h1{font-size:30px;}
 h2{font-size:24px;}
 
@@ -195,6 +254,7 @@ h2{font-size:24px;}
 </div>
 </div>
 
+
 <!-- HERO -->
 
 <section>
@@ -203,16 +263,24 @@ h2{font-size:24px;}
 
 <h1>
 
-休眠会社<br>
-<strong style="color:#ff6a00">50万円以上</strong>で売却できる可能性
+<span class="highlight">休眠会社</span><br>
+<span class="highlight">50万円以上</span>で売却できる可能性
 
 </h1>
 
-<img src="hero.jpg">
-
 <p>
 
-解散費用 約7万円を払う前に
+解散費用  
+<span class="point">約7万円</span>を払う前に
+
+</p>
+
+<img src="hero.jpg">
+
+<p class="point">
+
+今月の買取枠  
+<strong id="remain">3</strong>社
 
 </p>
 
@@ -226,6 +294,7 @@ h2{font-size:24px;}
 
 </section>
 
+
 <!-- 悩み -->
 
 <section id="worry">
@@ -233,9 +302,7 @@ h2{font-size:24px;}
 <div class="container grid2">
 
 <div>
-
 <img src="IMG_2179.jpeg">
-
 </div>
 
 <div>
@@ -244,7 +311,7 @@ h2{font-size:24px;}
 
 <ul>
 
-<li>休眠会社を放置している</li>
+<li><span class="marker">休眠会社を放置している</span></li>
 <li>解散費用を払いたくない</li>
 <li>会社整理したい</li>
 <li>法人税が毎年かかる</li>
@@ -258,45 +325,6 @@ h2{font-size:24px;}
 
 </section>
 
-<!-- 放置リスク -->
-
-<section>
-
-<div class="container grid3">
-
-<div class="card">
-
-<img src="tax.jpg">
-
-<h3>法人住民税</h3>
-
-<p>毎年約7万円</p>
-
-</div>
-
-<div class="card">
-
-<img src="document.jpg">
-
-<h3>税務申告</h3>
-
-<p>休眠でも必要</p>
-
-</div>
-
-<div class="card">
-
-<img src="warning.jpg">
-
-<h3>放置リスク</h3>
-
-<p>税務問題</p>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- 実績 -->
 
@@ -309,33 +337,18 @@ h2{font-size:24px;}
 <div class="grid3">
 
 <div class="card">
-
-<img src="graph.jpg">
-
 <div class="stats">50万円〜</div>
-
 最低買取額
-
 </div>
 
 <div class="card">
-
-<img src="rate.jpg">
-
-<div class="stats" id="rate">95.2%</div>
-
+<div class="stats" id="rate">0%</div>
 成約率
-
 </div>
 
 <div class="card">
-
-<img src="company.jpg">
-
-<div class="stats">152社</div>
-
-買取実績
-
+<div class="stats" id="count">0</div>
+年間買取実績
 </div>
 
 </div>
@@ -343,6 +356,7 @@ h2{font-size:24px;}
 </div>
 
 </section>
+
 
 <!-- 売却事例 -->
 
@@ -355,33 +369,18 @@ h2{font-size:24px;}
 <div class="grid3">
 
 <div class="card">
-
-<img src="contract.png">
-
 <h3>IT会社</h3>
-
 <p>65万円で売却</p>
-
 </div>
 
 <div class="card">
-
-<img src="contract.png">
-
 <h3>広告会社</h3>
-
 <p>80万円で売却</p>
-
 </div>
 
 <div class="card">
-
-<img src="contract.png">
-
 <h3>貿易会社</h3>
-
 <p>50万円で売却</p>
-
 </div>
 
 </div>
@@ -389,6 +388,7 @@ h2{font-size:24px;}
 </div>
 
 </section>
+
 
 <!-- 比較 -->
 
@@ -398,13 +398,10 @@ h2{font-size:24px;}
 
 <div class="compare">
 
-<img src="compare.png">
-
 <h2>
 
-解散費用 約7万円  
-VS  
-会社売却 50万円以上
+<span class="point">毎年7万円</span>払うか  
+<span class="highlight">50万円以上</span>手にするか
 
 </h2>
 
@@ -414,19 +411,12 @@ VS
 
 </section>
 
+
 <!-- 診断 -->
 
-<section>
+<section id="check">
 
-<div class="container grid2">
-
-<div>
-
-<img src="check.png">
-
-</div>
-
-<div>
+<div class="container">
 
 <h2>あなたの会社は売却できる？</h2>
 
@@ -434,12 +424,10 @@ VS
 
 <div id="quiz">
 
-<p>会社は営業していますか？</p>
+<p>Q1 会社は営業していますか？</p>
 
-<button onclick="result()" class="quizbtn">営業中</button>
-<button onclick="result()" class="quizbtn">休眠会社</button>
-
-</div>
+<button onclick="next()" class="quizbtn">営業中</button>
+<button onclick="next()" class="quizbtn">休眠会社</button>
 
 </div>
 
@@ -449,54 +437,16 @@ VS
 
 </section>
 
-<!-- CTA -->
-
-<section>
-
-<div class="container grid2">
-
-<div>
-
-<h2>
-
-50万円以上で<br>
-売却できる可能性
-
-</h2>
-
-<a href="#form" class="btn">
-
-無料査定する
-
-</a>
-
-</div>
-
-<div>
-
-<img src="consult.jpg">
-
-</div>
-
-</div>
-
-</section>
 
 <!-- フォーム -->
 
 <section id="form">
 
-<div class="container grid2">
-
-<div>
-
-<img src="form.jpg">
-
-</div>
-
-<div class="card">
+<div class="container">
 
 <h2>無料相談フォーム</h2>
+
+<div class="card">
 
 <form class="form">
 
@@ -520,6 +470,12 @@ VS
 
 </section>
 
+
+<div class="scrollcta" id="scrollcta">
+<a href="#form">無料査定</a>
+</div>
+
+
 <div class="fixedcta">
 
 <a href="#form" class="cta1">無料査定</a>
@@ -528,11 +484,81 @@ VS
 
 </div>
 
+
 <script>
 
-function result(){
+let rate=document.getElementById("rate")
+let i=0
 
-document.getElementById("quiz").innerHTML=`
+let interval=setInterval(function(){
+
+i++
+rate.innerText=i+"%"
+
+if(i>=95.2){
+
+rate.innerText="95.2%"
+clearInterval(interval)
+
+}
+
+},20)
+
+
+let count=document.getElementById("count")
+let n=0
+
+let c=setInterval(function(){
+
+n++
+count.innerText=n
+
+if(n>=152){
+
+count.innerText="152社"
+clearInterval(c)
+
+}
+
+},20)
+
+
+window.addEventListener("scroll",function(){
+
+if(window.scrollY>800){
+
+document.getElementById("scrollcta").style.display="block"
+
+}else{
+
+document.getElementById("scrollcta").style.display="none"
+
+}
+
+})
+
+
+let step=1
+
+function next(){
+
+let quiz=document.getElementById("quiz")
+
+if(step==1){
+
+quiz.innerHTML=`
+<p>Q2 売上はありますか？</p>
+<button onclick="next()" class="quizbtn">ある</button>
+<button onclick="next()" class="quizbtn">ない</button>
+`
+
+step++
+
+}
+
+else{
+
+quiz.innerHTML=`
 
 <h3 style="color:#ff6a00">
 
@@ -547,6 +573,8 @@ document.getElementById("quiz").innerHTML=`
 </a>
 
 `
+
+}
 
 }
 
