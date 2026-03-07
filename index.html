@@ -46,12 +46,11 @@ line-height:1.4;
 h2{
 font-size:34px;
 text-align:center;
-margin-bottom:35px;
+margin-bottom:40px;
 }
 
 h3{
 font-size:22px;
-margin-top:10px;
 }
 
 .btn{
@@ -91,11 +90,29 @@ font-weight:bold;
 color:#ff6a00;
 }
 
+.highlight{
+color:#ff6a00;
+font-weight:bold;
+}
+
+.point{
+color:#ff0000;
+font-weight:bold;
+}
+
+.marker{
+background:linear-gradient(transparent 60%, #fff3a0 60%);
+}
+
+.small{
+font-size:16px;
+color:#777;
+}
+
 .compare{
 background:#fff3cd;
 padding:50px;
 border-radius:14px;
-text-align:center;
 }
 
 .cta{
@@ -112,6 +129,14 @@ border-radius:8px;
 border:1px solid #ddd;
 margin-bottom:12px;
 font-size:18px;
+}
+
+.urgent{
+background:#ffe2e2;
+padding:16px;
+border-radius:10px;
+margin-top:20px;
+font-weight:bold;
 }
 
 .fixedcta{
@@ -140,66 +165,19 @@ font-size:18px;
 .cta2{background:#06c755;color:white;}
 .cta3{background:#ff6a00;color:white;}
 
-.urgent{
-background:#ffe2e2;
-padding:16px;
-border-radius:10px;
-margin-top:20px;
-font-weight:bold;
-font-size:20px;
-}
-
-/* 強調 */
-
-.highlight{
-color:#ff6a00;
-font-weight:bold;
-font-size:1.3em;
-}
-
-.point{
-color:#ff0000;
-font-weight:bold;
-}
-
-.marker{
-background:linear-gradient(transparent 60%, #fff3a0 60%);
-font-weight:bold;
-}
-
-.small{
-font-size:16px;
-color:#777;
-}
-
-/* スマホ */
-
 @media(max-width:600px){
 
-body{
-font-size:16px;
-}
+body{font-size:16px;}
 
-h1{
-font-size:32px;
-}
+h1{font-size:32px;}
 
-h2{
-font-size:26px;
-}
+h2{font-size:26px;}
 
-.grid2{
-grid-template-columns:1fr;
-}
+.grid2{grid-template-columns:1fr;}
 
-.grid3{
-grid-template-columns:1fr;
-}
+.grid3{grid-template-columns:1fr;}
 
-.btn{
-width:100%;
-font-size:20px;
-}
+.btn{width:100%;}
 
 }
 
@@ -207,6 +185,8 @@ font-size:20px;
 </head>
 
 <body>
+
+<!-- HERO -->
 
 <section class="hero">
 
@@ -223,7 +203,7 @@ font-size:20px;
 <p>
 
 解散費用  
-<span class="point">約7万円</span>を払う前に  
+<span class="point">約7万円</span>を払う前に
 
 </p>
 
@@ -247,16 +227,14 @@ font-size:20px;
 
 </section>
 
-
+<!-- 悩み -->
 
 <section>
 
 <div class="container grid2">
 
 <div>
-
 <img src="IMG_2179.jpeg">
-
 </div>
 
 <div>
@@ -266,13 +244,9 @@ font-size:20px;
 <ul>
 
 <li><span class="marker">休眠会社を放置している</span></li>
-
 <li>解散費用を払いたくない</li>
-
 <li>会社整理したい</li>
-
 <li>毎年法人税がかかる</li>
-
 <li>手続きが難しい</li>
 
 </ul>
@@ -283,9 +257,69 @@ font-size:20px;
 
 </section>
 
-
+<!-- 放置リスク -->
 
 <section style="background:white">
+
+<div class="container">
+
+<h2>
+
+休眠会社を放置すると  
+<span class="point">毎年税金がかかります</span>
+
+</h2>
+
+<div class="grid3">
+
+<div class="card">
+
+<h3>法人住民税</h3>
+
+<p>
+
+会社を使っていなくても  
+毎年約7万円かかります。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>税務申告</h3>
+
+<p>
+
+休眠会社でも  
+税務申告が必要です。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>手続き負担</h3>
+
+<p>
+
+解散には  
+複雑な手続きがあります。
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- 解決 -->
+
+<section>
 
 <div class="container grid2">
 
@@ -318,9 +352,9 @@ font-size:20px;
 
 </section>
 
+<!-- 実績 -->
 
-
-<section>
+<section style="background:white">
 
 <div class="container">
 
@@ -330,31 +364,37 @@ font-size:20px;
 
 <div class="card">
 
-<img src="baikyaku.jpg">
-
 <div class="stats">50万円〜</div>
 
-<div class="small">最低買取額</div>
+<p class="small">
+
+最低買取額
+
+</p>
 
 </div>
 
 <div class="card">
-
-<img src="seiyakuritu.jpg">
 
 <div class="stats" id="rate">0%</div>
 
-<div class="small">成約率</div>
+<p class="small">
+
+成約率
+
+</p>
 
 </div>
 
 <div class="card">
 
-<img src="IMG_2183.jpeg">
-
 <div class="stats">152社</div>
 
-<div class="small">2025年度買取実績</div>
+<p class="small">
+
+2025年度買取実績
+
+</p>
 
 </div>
 
@@ -364,45 +404,22 @@ font-size:20px;
 
 </section>
 
-
+<!-- 買取条件 -->
 
 <section>
 
 <div class="container">
 
-<h2>法人買取の流れ</h2>
+<h2>このような会社でも買取対象です</h2>
 
 <div class="grid3">
 
-<div class="card">
-
-<img src="consult.jpg">
-
-<h3>①相談</h3>
-
-<p>会社情報を送るだけ</p>
-
-</div>
-
-<div class="card">
-
-<img src="Satei.jpg">
-
-<h3>②査定</h3>
-
-<p>最短即日査定</p>
-
-</div>
-
-<div class="card">
-
-<img src="2D1E78D3-58FB-4DDF-A5C8-981418B17619.png">
-
-<h3>③契約</h3>
-
-<p>法人譲渡契約</p>
-
-</div>
+<div class="card">売上ゼロ</div>
+<div class="card">赤字会社</div>
+<div class="card">設立のみ</div>
+<div class="card">債務超過</div>
+<div class="card">全国対応</div>
+<div class="card">無料査定</div>
 
 </div>
 
@@ -410,7 +427,7 @@ font-size:20px;
 
 </section>
 
-
+<!-- 比較 -->
 
 <section>
 
@@ -418,39 +435,21 @@ font-size:20px;
 
 <div class="compare">
 
-<h2>会社解散との比較</h2>
+<h2>
 
-<div class="grid2">
+放置している会社に  
+<span class="point">毎年7万円</span>払いますか？
 
-<div>
+<br><br>
 
-<h3>会社解散</h3>
+それとも  
 
-<img src="IMG_2185.jpeg">
+<br>
 
-<p>
+<span class="highlight">50万円以上</span>の
+現金を手にしますか？
 
-<span class="point">費用 約7万円〜</span>
-
-</p>
-
-</div>
-
-<div>
-
-<h3>会社売却</h3>
-
-<img src="baikyaku.jpg">
-
-<p>
-
-<span class="highlight">50万円以上の可能性</span>
-
-</p>
-
-</div>
-
-</div>
+</h2>
 
 </div>
 
@@ -458,7 +457,7 @@ font-size:20px;
 
 </section>
 
-
+<!-- お客様の声 -->
 
 <section>
 
@@ -522,7 +521,7 @@ font-size:20px;
 
 </section>
 
-
+<!-- FAQ -->
 
 <section>
 
@@ -532,11 +531,7 @@ font-size:20px;
 
 <div class="card">
 
-<p>
-
-<strong>Q. 赤字会社でも売却できますか？</strong>
-
-</p>
+<p><strong>赤字会社でも売却できますか？</strong></p>
 
 <p>
 
@@ -548,11 +543,7 @@ font-size:20px;
 
 <div class="card">
 
-<p>
-
-<strong>Q. 相談は無料ですか？</strong>
-
-</p>
+<p><strong>相談は無料ですか？</strong></p>
 
 <p>
 
@@ -566,7 +557,7 @@ font-size:20px;
 
 </section>
 
-
+<!-- CTA -->
 
 <section>
 
@@ -580,8 +571,6 @@ font-size:20px;
 会社売却できる可能性
 
 </h2>
-
-<img src="form.jpg">
 
 <p>
 
@@ -601,7 +590,7 @@ font-size:20px;
 
 </section>
 
-
+<!-- フォーム -->
 
 <section id="form">
 
@@ -614,9 +603,7 @@ font-size:20px;
 <form class="form">
 
 <input placeholder="お名前">
-
 <input placeholder="電話番号">
-
 <input placeholder="メールアドレス">
 
 <textarea placeholder="会社状況"></textarea>
@@ -641,7 +628,7 @@ info.houjinkaitori@gmail.com
 
 </section>
 
-
+<!-- 固定CTA -->
 
 <div class="fixedcta">
 
@@ -653,31 +640,11 @@ info.houjinkaitori@gmail.com
 
 </div>
 
-
-
 <script>
 
 let rate=document.getElementById("rate")
-
 let i=0
 
 let interval=setInterval(function(){
 
 i++
-
-rate.innerText=i+"%"
-
-if(i>=95.2){
-
-rate.innerText="95.2%"
-
-clearInterval(interval)
-
-}
-
-},20)
-
-</script>
-
-</body>
-</html>
