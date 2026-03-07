@@ -78,7 +78,7 @@ text-align:center;
 }
 
 .stats{
-font-size:30px;
+font-size:34px;
 font-weight:bold;
 color:#ff6a00;
 }
@@ -90,12 +90,18 @@ border-radius:12px;
 text-align:center;
 }
 
-.form input,.form textarea{
-width:100%;
-padding:12px;
-border-radius:8px;
-border:1px solid #ddd;
-margin-bottom:10px;
+.trust{
+background:#eef6ff;
+padding:30px;
+border-radius:12px;
+text-align:center;
+}
+
+.countdown{
+font-size:26px;
+font-weight:bold;
+color:#ff0000;
+margin-top:10px;
 }
 
 .fixedcta{
@@ -122,6 +128,12 @@ text-decoration:none;
 .cta1{background:#ffb400;color:black;}
 .cta2{background:#06c755;color:white;}
 .cta3{background:#ff6a00;color:white;}
+
+iframe{
+width:100%;
+height:1100px;
+border:none;
+}
 
 @media(max-width:800px){
 
@@ -155,9 +167,55 @@ h1{font-size:28px}
 
 <img src="hero.jpg">
 
-<br><br>
+<div class="countdown">
+今月の買取枠 残り <span id="limit">3</span> 社
+</div>
+
+<br>
 
 <a href="#form" class="btn">無料査定する</a>
+
+</div>
+
+</section>
+
+
+
+<!-- 実績 -->
+
+<section>
+
+<div class="container">
+
+<h2>法人買取実績</h2>
+
+<div class="grid3">
+
+<div class="card">
+
+<div class="stats" id="count1">0</div>
+
+最低買取額
+
+</div>
+
+<div class="card">
+
+<div class="stats" id="count2">0</div>
+
+成約率
+
+</div>
+
+<div class="card">
+
+<div class="stats" id="count3">0</div>
+
+年間買取実績
+
+</div>
+
+</div>
 
 </div>
 
@@ -182,10 +240,8 @@ h1{font-size:28px}
 <ul>
 <li>休眠会社を放置している</li>
 <li>解散費用を払いたくない</li>
-<li>事業の予定はないので少しでも
-  お金に換えたい</li>
-<li>手続きが複雑そうで
-  何から手をつけていいかわからない</li>
+<li>事業の予定はないので少しでもお金に換えたい</li>
+<li>手続きが複雑そうで何から手をつけていいかわからない</li>
 <li>毎年かかる法人税</li>
 </ul>
 
@@ -208,9 +264,11 @@ h1{font-size:28px}
 <h2>法人買取で解決</h2>
 
 <p>
-私たちが全て解決します！ 
-面倒な手続きは一切不要！
+
+私たちが全て解決します！  
+面倒な手続きは一切不要！  
 あなたの会社を50万以上で買取致します。
+
 </p>
 
 </div>
@@ -236,27 +294,18 @@ h1{font-size:28px}
 <div class="grid3">
 
 <div class="card">
-
 <img src="secure.jpg">
-
 <p>秘密厳守</p>
-
 </div>
 
 <div class="card">
-
 <img src="speed.jpg">
-
 <p>スピード査定</p>
-
 </div>
 
 <div class="card">
-
 <img src="japan.jpg">
-
 <p>全国対応</p>
-
 </div>
 
 </div>
@@ -267,87 +316,29 @@ h1{font-size:28px}
 
 
 
-<!-- 実績 -->
-
-<section style="background:white">
-
-<div class="container">
-
-<h2>法人買取実績</h2>
-
-<div class="grid3">
-
-<div class="card">
-
-<img src="price.jpg">
-
-<div class="stats">50万円〜</div>
-
-最低買取額
-
-</div>
-
-<div class="card">
-
-<img src="rate.jpg">
-
-<div class="stats">95.2%</div>
-
-成約率
-
-</div>
-
-<div class="card">
-
-<img src="company.jpg">
-
-<div class="stats">152社</div>
-
-年間買取実績
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- 流れ -->
+<!-- 信頼 -->
 
 <section>
 
 <div class="container">
 
-<h2>法人買取の流れ</h2>
+<div class="trust">
 
-<div class="grid3">
+<h2>専門家監修</h2>
 
-<div class="card">
+<p>
 
-<img src="consult.jpg">
+提携税理士  
+提携司法書士  
+法人登記サポート  
 
-<p>①相談</p>
+</p>
 
-</div>
+<p>
 
-<div class="card">
+すべての相談は秘密厳守で対応します
 
-<img src="contract.jpg">
-
-<p>②査定</p>
-
-</div>
-
-<div class="card">
-
-<img src="transfer.jpg">
-
-<p>③譲渡</p>
-
-</div>
+</p>
 
 </div>
 
@@ -370,7 +361,8 @@ h1{font-size:28px}
 </h2>
 
 <p>
-無料査定は1分で完了
+無料相談は1分で完了  
+営業電話は行いません
 </p>
 
 <a href="#form" class="btn">
@@ -393,31 +385,10 @@ h1{font-size:28px}
 
 <h2>無料相談フォーム</h2>
 
-<div class="grid2">
-
-<div>
-<img src="form.jpg">
-</div>
-
-<div class="card">
-
-<form class="form">
-
-<input placeholder="お名前">
-
-<input placeholder="電話番号">
-
-<input placeholder="メールアドレス">
-
-<textarea placeholder="会社状況"></textarea>
-
-<button class="btn">送信</button>
-
-</form>
-
-</div>
-
-</div>
+<iframe 
+src="https://docs.google.com/forms/d/e/1FAIpQLSceYXKOgD7jWKX7-ty0aUU9PDl_IopAjBvieyG09yzlTPKUYg/viewform?embedded=true">
+読み込み中…
+</iframe>
 
 </div>
 
@@ -431,11 +402,43 @@ h1{font-size:28px}
 
 <a href="#form" class="cta1">無料査定</a>
 
-<a href="#" class="cta2">LINE相談</a>
+<a href="https://line.me" class="cta2">LINE相談</a>
 
 <a href="tel:05000000000" class="cta3">電話</a>
 
 </div>
+
+
+
+<script>
+
+function animate(id,end,suffix){
+
+let el=document.getElementById(id)
+let start=0
+let step=end/50
+
+let timer=setInterval(function(){
+
+start+=step
+
+if(start>=end){
+start=end
+clearInterval(timer)
+}
+
+el.innerHTML=Math.floor(start)+suffix
+
+},20)
+
+}
+
+animate("count1",50,"万〜")
+animate("count2",95,"%")
+animate("count3",152,"社")
+
+</script>
+
 
 </body>
 </html>
