@@ -32,6 +32,11 @@ background:white;
 text-align:center;
 }
 
+img{
+width:100%;
+border-radius:14px;
+}
+
 h1{
 font-size:38px;
 }
@@ -91,28 +96,8 @@ border-radius:12px;
 text-align:center;
 }
 
-.voice{
-background:white;
-padding:25px;
-border-radius:12px;
-}
-
-.faq{
-background:white;
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-}
-
 .cta{
 background:#ffe9e9;
-padding:30px;
-border-radius:12px;
-text-align:center;
-}
-
-.trust{
-background:#eef6ff;
 padding:30px;
 border-radius:12px;
 text-align:center;
@@ -159,12 +144,6 @@ margin-top:20px;
 font-weight:bold;
 }
 
-svg{
-width:120px;
-margin:auto;
-display:block;
-}
-
 @media(max-width:800px){
 
 .grid2{grid-template-columns:1fr}
@@ -180,19 +159,24 @@ h1{font-size:28px}
 
 <body>
 
+
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="container">
 
 <h1>
 休眠会社<br>
-  買取いたします。
+売却できる可能性があります
 </h1>
 
 <p>
 解散費用を払う前に  
 まずは無料査定
 </p>
+
+<img src="hero.jpg">
 
 <div class="urgent">
 今月の買取枠 残り3社
@@ -207,46 +191,27 @@ h1{font-size:28px}
 </section>
 
 
+<!-- 悩み -->
 
 <section>
 
-<div class="container">
+<div class="container grid2">
+
+<div>
+<img src="kyuuminn.jpg">
+</div>
+
+<div>
 
 <h2>こんなお悩みありませんか？</h2>
 
-<div class="grid3">
-
-<div class="card">
-
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="10" fill="#ffdcdc"/>
-<path d="M12 7v6" stroke="#333" stroke-width="2"/>
-<circle cx="12" cy="16" r="1.5" fill="#333"/>
-</svg>
-
-<p>休眠会社を放置している</p>
-
-</div>
-
-<div class="card">
-
-<svg viewBox="0 0 24 24">
-<rect x="4" y="6" width="16" height="12" fill="#ffe5b4"/>
-</svg>
-
-<p>解散費用を払いたくない</p>
-
-</div>
-
-<div class="card">
-
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="10" fill="#e0f0ff"/>
-</svg>
-
-<p>会社整理したい</p>
-
-</div>
+<ul>
+<li>休眠会社を放置している</li>
+<li>解散費用を払いたくない</li>
+<li>会社整理したい</li>
+<li>法人税が毎年かかる</li>
+<li>手続きが分からない</li>
+</ul>
 
 </div>
 
@@ -255,14 +220,17 @@ h1{font-size:28px}
 </section>
 
 
+<!-- 解決 -->
 
 <section style="background:white">
 
-<div class="container">
+<div class="container grid2">
+
+<div>
 
 <h2>法人買取で解決</h2>
 
-<p style="text-align:center">
+<p>
 
 面倒な手続きは不要。  
 条件により50万円以上で買取可能です。
@@ -271,9 +239,18 @@ h1{font-size:28px}
 
 </div>
 
+<div>
+
+<img src="baikyaku.jpg">
+
+</div>
+
+</div>
+
 </section>
 
 
+<!-- 選ばれる理由 -->
 
 <section>
 
@@ -281,69 +258,35 @@ h1{font-size:28px}
 
 <h2>選ばれる理由</h2>
 
-<div class="grid4">
+<div class="grid3">
 
 <div class="card">
 
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="10" fill="#e6f7ff"/>
-</svg>
+<img src="secure.jpg">
 
 <h3>秘密厳守</h3>
 
-<p>
-
-会社情報はすべて秘密厳守で対応します。
-
-</p>
+<p>会社情報はすべて秘密厳守で対応します。</p>
 
 </div>
 
 <div class="card">
 
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="10" fill="#e8ffe8"/>
-</svg>
+<img src="Satei.jpg">
 
 <h3>スピード査定</h3>
 
-<p>
-
-最短即日査定が可能です。
-
-</p>
+<p>最短即日査定が可能です。</p>
 
 </div>
 
 <div class="card">
 
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="10" fill="#fff3cd"/>
-</svg>
+<img src="japan.jpg">
 
 <h3>全国対応</h3>
 
-<p>
-
-オンライン相談で全国対応。
-
-</p>
-
-</div>
-
-<div class="card">
-
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="12" r="10" fill="#ffe2e2"/>
-</svg>
-
-<h3>高価買取</h3>
-
-<p>
-
-条件により50万円以上の買取。
-
-</p>
+<p>オンライン相談で全国対応。</p>
 
 </div>
 
@@ -354,6 +297,7 @@ h1{font-size:28px}
 </section>
 
 
+<!-- 実績 -->
 
 <section style="background:white">
 
@@ -364,18 +308,33 @@ h1{font-size:28px}
 <div class="grid3">
 
 <div class="card">
+
+<img src="price.jpg">
+
 <div class="stats">50万円〜</div>
+
 最低買取額
+
 </div>
 
 <div class="card">
+
+<img src="rate.jpg">
+
 <div class="stats" id="rate">0%</div>
+
 成約率
+
 </div>
 
 <div class="card">
+
+<img src="company.jpg">
+
 <div class="stats">152社</div>
+
 年間買取実績
+
 </div>
 
 </div>
@@ -385,6 +344,48 @@ h1{font-size:28px}
 </section>
 
 
+<!-- 流れ -->
+
+<section>
+
+<div class="container">
+
+<h2>法人買取の流れ</h2>
+
+<div class="grid3">
+
+<div class="card">
+
+<img src="consult.jpg">
+
+<p>①相談</p>
+
+</div>
+
+<div class="card">
+
+<img src="Satei.jpg">
+
+<p>②査定</p>
+
+</div>
+
+<div class="card">
+
+<img src="seiyakuri.jpg">
+
+<p>③契約</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 比較 -->
 
 <section>
 
@@ -415,6 +416,42 @@ h1{font-size:28px}
 </section>
 
 
+<!-- CTA -->
+
+<section>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+
+会社売却できる可能性があります
+
+</h2>
+
+<img src="form.jpg">
+
+<p>
+
+無料相談は1分で完了
+
+</p>
+
+<a href="#form" class="btn">
+
+無料査定はこちら
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- フォーム -->
 
 <section id="form">
 
@@ -452,6 +489,7 @@ Info.houjinkaitori@gmail.com
 </section>
 
 
+<!-- 固定CTA -->
 
 <div class="fixedcta">
 
@@ -462,7 +500,6 @@ Info.houjinkaitori@gmail.com
 <a href="tel:05000000000" class="cta3">電話</a>
 
 </div>
-
 
 
 <script>
