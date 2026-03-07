@@ -36,12 +36,23 @@ width:100%;
 border-radius:14px;
 }
 
-h1{font-size:44px;}
-h2{font-size:34px;text-align:center;margin-bottom:40px;}
+h1{
+font-size:40px;
+}
+
+h2{
+font-size:30px;
+text-align:center;
+margin-bottom:40px;
+}
+
+h3{
+margin-top:10px;
+}
 
 .btn{
 background:#ffb400;
-padding:18px 28px;
+padding:16px 28px;
 border-radius:10px;
 font-weight:bold;
 text-decoration:none;
@@ -65,14 +76,14 @@ gap:25px;
 
 .card{
 background:white;
-padding:30px;
+padding:25px;
 border-radius:16px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.08);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
 
 .stats{
-font-size:44px;
+font-size:40px;
 font-weight:bold;
 color:#ff6a00;
 }
@@ -104,6 +115,86 @@ border:1px solid #ddd;
 margin-bottom:10px;
 }
 
+/* ナビ */
+
+.topnav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+z-index:999;
+}
+
+.navwrap{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+}
+
+.logo{
+font-weight:bold;
+font-size:18px;
+}
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+font-size:14px;
+}
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* スマホ */
+
+@media(max-width:768px){
+
+.grid2{grid-template-columns:1fr;}
+.grid3{grid-template-columns:1fr;}
+
+h1{font-size:28px;}
+h2{font-size:22px;}
+
+.hamburger{
+display:block;
+}
+
+.menu{
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+display:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+}
+
+.menu a{
+padding:16px;
+border-bottom:1px solid #eee;
+}
+
+.menu.show{
+display:flex;
+}
+
+}
+
 .fixedcta{
 position:fixed;
 bottom:0;
@@ -129,47 +220,6 @@ text-decoration:none;
 .cta2{background:#06c755;color:white;}
 .cta3{background:#ff6a00;color:white;}
 
-.topnav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
-z-index:999;
-}
-
-.navwrap{
-max-width:1100px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:12px 20px;
-}
-
-.menu{
-display:flex;
-gap:20px;
-}
-
-.menu a{
-text-decoration:none;
-color:#333;
-font-weight:bold;
-font-size:14px;
-}
-
-@media(max-width:700px){
-
-.grid2{grid-template-columns:1fr;}
-.grid3{grid-template-columns:1fr;}
-.menu{display:none;}
-h1{font-size:30px;}
-h2{font-size:24px;}
-
-}
-
 </style>
 </head>
 
@@ -178,11 +228,14 @@ h2{font-size:24px;}
 <!-- ナビ -->
 
 <div class="topnav">
+
 <div class="navwrap">
 
-<div><strong>法人買取</strong></div>
+<div class="logo">法人買取</div>
 
-<div class="menu">
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<div class="menu" id="menu">
 
 <a href="#worry">悩み</a>
 <a href="#results">実績</a>
@@ -193,7 +246,9 @@ h2{font-size:24px;}
 </div>
 
 </div>
+
 </div>
+
 
 <!-- HERO -->
 
@@ -226,6 +281,7 @@ h2{font-size:24px;}
 
 </section>
 
+
 <!-- 悩み -->
 
 <section id="worry">
@@ -233,9 +289,7 @@ h2{font-size:24px;}
 <div class="container grid2">
 
 <div>
-
-<img src="IMG_2179.jpeg">
-
+<img src="kyuumin.jpg">
 </div>
 
 <div>
@@ -258,45 +312,6 @@ h2{font-size:24px;}
 
 </section>
 
-<!-- 放置リスク -->
-
-<section>
-
-<div class="container grid3">
-
-<div class="card">
-
-<img src="tax.jpg">
-
-<h3>法人住民税</h3>
-
-<p>毎年約7万円</p>
-
-</div>
-
-<div class="card">
-
-<img src="document.jpg">
-
-<h3>税務申告</h3>
-
-<p>休眠でも必要</p>
-
-</div>
-
-<div class="card">
-
-<img src="warning.jpg">
-
-<h3>放置リスク</h3>
-
-<p>税務問題</p>
-
-</div>
-
-</div>
-
-</section>
 
 <!-- 実績 -->
 
@@ -310,7 +325,7 @@ h2{font-size:24px;}
 
 <div class="card">
 
-<img src="graph.jpg">
+<img src="price.jpg">
 
 <div class="stats">50万円〜</div>
 
@@ -322,7 +337,7 @@ h2{font-size:24px;}
 
 <img src="rate.jpg">
 
-<div class="stats" id="rate">95.2%</div>
+<div class="stats">95.2%</div>
 
 成約率
 
@@ -343,6 +358,7 @@ h2{font-size:24px;}
 </div>
 
 </section>
+
 
 <!-- 売却事例 -->
 
@@ -390,6 +406,7 @@ h2{font-size:24px;}
 
 </section>
 
+
 <!-- 比較 -->
 
 <section id="compare">
@@ -397,8 +414,6 @@ h2{font-size:24px;}
 <div class="container">
 
 <div class="compare">
-
-<img src="compare.png">
 
 <h2>
 
@@ -414,73 +429,6 @@ VS
 
 </section>
 
-<!-- 診断 -->
-
-<section>
-
-<div class="container grid2">
-
-<div>
-
-<img src="check.png">
-
-</div>
-
-<div>
-
-<h2>あなたの会社は売却できる？</h2>
-
-<div class="card">
-
-<div id="quiz">
-
-<p>会社は営業していますか？</p>
-
-<button onclick="result()" class="quizbtn">営業中</button>
-<button onclick="result()" class="quizbtn">休眠会社</button>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CTA -->
-
-<section>
-
-<div class="container grid2">
-
-<div>
-
-<h2>
-
-50万円以上で<br>
-売却できる可能性
-
-</h2>
-
-<a href="#form" class="btn">
-
-無料査定する
-
-</a>
-
-</div>
-
-<div>
-
-<img src="consult.jpg">
-
-</div>
-
-</div>
-
-</section>
 
 <!-- フォーム -->
 
@@ -514,11 +462,21 @@ VS
 
 </form>
 
+<p>
+
+メール相談  
+info.houjinkaitori@gmail.com
+
+</p>
+
 </div>
 
 </div>
 
 </section>
+
+
+<!-- 固定CTA -->
 
 <div class="fixedcta">
 
@@ -528,25 +486,14 @@ VS
 
 </div>
 
+
 <script>
 
-function result(){
+function toggleMenu(){
 
-document.getElementById("quiz").innerHTML=`
+let menu=document.getElementById("menu")
 
-<h3 style="color:#ff6a00">
-
-売却できる可能性があります
-
-</h3>
-
-<a href="#form" class="btn">
-
-無料査定する
-
-</a>
-
-`
+menu.classList.toggle("show")
 
 }
 
