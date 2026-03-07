@@ -70,6 +70,12 @@ grid-template-columns:repeat(3,1fr);
 gap:20px;
 }
 
+.grid4{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+}
+
 .card{
 background:white;
 padding:25px;
@@ -77,10 +83,28 @@ border-radius:14px;
 text-align:center;
 }
 
+.card p{
+font-size:14px;
+margin-top:10px;
+}
+
 .stats{
-font-size:34px;
+font-size:30px;
 font-weight:bold;
 color:#ff6a00;
+}
+
+.compare{
+background:#fff3cd;
+padding:30px;
+border-radius:12px;
+text-align:center;
+}
+
+.voice{
+background:white;
+padding:25px;
+border-radius:12px;
 }
 
 .cta{
@@ -95,13 +119,6 @@ background:#eef6ff;
 padding:30px;
 border-radius:12px;
 text-align:center;
-}
-
-.countdown{
-font-size:26px;
-font-weight:bold;
-color:#ff0000;
-margin-top:10px;
 }
 
 .fixedcta{
@@ -139,6 +156,7 @@ border:none;
 
 .grid2{grid-template-columns:1fr}
 .grid3{grid-template-columns:1fr}
+.grid4{grid-template-columns:1fr}
 h1{font-size:28px}
 
 }
@@ -147,7 +165,6 @@ h1{font-size:28px}
 </head>
 
 <body>
-
 
 <!-- HERO -->
 
@@ -161,66 +178,19 @@ h1{font-size:28px}
 </h1>
 
 <p>
-解散費用を払う前に  
-まずは無料査定
+会社解散の前に  
+まずは無料査定をご利用ください
 </p>
 
 <img src="hero.jpg">
 
-<div class="countdown">
-今月の買取枠 残り <span id="limit">3</span> 社
-</div>
-
-<br>
+<br><br>
 
 <a href="#form" class="btn">無料査定する</a>
 
 </div>
 
 </section>
-
-
-
-<!-- 実績 -->
-
-<section>
-
-<div class="container">
-
-<h2>法人買取実績</h2>
-
-<div class="grid3">
-
-<div class="card">
-
-<div class="stats" id="count1">0</div>
-
-最低買取額
-
-</div>
-
-<div class="card">
-
-<div class="stats" id="count2">0</div>
-
-成約率
-
-</div>
-
-<div class="card">
-
-<div class="stats" id="count3">0</div>
-
-年間買取実績
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
 
 
 <!-- 悩み -->
@@ -240,10 +210,17 @@ h1{font-size:28px}
 <ul>
 <li>休眠会社を放置している</li>
 <li>解散費用を払いたくない</li>
-<li>事業の予定はないので少しでもお金に換えたい</li>
-<li>手続きが複雑そうで何から手をつけていいかわからない</li>
-<li>毎年かかる法人税</li>
+<li>事業の予定はないが会社だけ残っている</li>
+<li>会社を整理したいが手続きが分からない</li>
+<li>毎年かかる法人税をどうにかしたい</li>
 </ul>
+
+<p>
+
+このような休眠会社でも  
+売却できる可能性があります。
+
+</p>
 
 </div>
 
@@ -265,9 +242,22 @@ h1{font-size:28px}
 
 <p>
 
-私たちが全て解決します！  
-面倒な手続きは一切不要！  
-あなたの会社を50万以上で買取致します。
+当社では休眠会社や事業停止中の法人でも  
+条件により買取が可能です。
+
+</p>
+
+<p>
+
+面倒な手続きはサポートいたしますので  
+安心してご相談ください。
+
+</p>
+
+<p>
+
+解散費用を払う前に  
+まずは無料査定をご利用ください。
 
 </p>
 
@@ -283,7 +273,7 @@ h1{font-size:28px}
 
 
 
-<!-- 理由 -->
+<!-- 選ばれる理由 -->
 
 <section>
 
@@ -291,21 +281,242 @@ h1{font-size:28px}
 
 <h2>選ばれる理由</h2>
 
+<div class="grid4">
+
+<div class="card">
+
+<img src="secure.jpg">
+
+<h3>秘密厳守</h3>
+
+<p>
+
+ご相談内容や会社情報は  
+すべて秘密厳守で対応いたします。
+
+外部に情報が漏れることは  
+一切ありません。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="speed.jpg">
+
+<h3>スピード査定</h3>
+
+<p>
+
+最短即日で査定可能です。
+
+お急ぎの方でも  
+迅速に対応いたします。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="japan.jpg">
+
+<h3>全国対応</h3>
+
+<p>
+
+オンライン相談により  
+全国どこからでもご相談可能です。
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="price.jpg">
+
+<h3>高価買取</h3>
+
+<p>
+
+会社の状況によっては  
+50万円以上での買取が可能です。
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- 実績 -->
+
+<section style="background:white">
+
+<div class="container">
+
+<h2>法人買取実績</h2>
+
 <div class="grid3">
 
 <div class="card">
-<img src="secure.jpg">
-<p>秘密厳守</p>
+
+<img src="price.jpg">
+
+<div class="stats">50万円〜</div>
+
+<p>
+
+休眠会社でも条件により  
+買取可能です。
+
+</p>
+
 </div>
 
 <div class="card">
-<img src="speed.jpg">
-<p>スピード査定</p>
+
+<img src="rate.jpg">
+
+<div class="stats">95.2%</div>
+
+<p>
+
+多くのご相談が  
+成約につながっています。
+
+</p>
+
 </div>
 
 <div class="card">
-<img src="japan.jpg">
-<p>全国対応</p>
+
+<img src="company.jpg">
+
+<div class="stats">152社</div>
+
+<p>
+
+年間で多くの会社整理を  
+サポートしています。
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- 比較 -->
+
+<section>
+
+<div class="container">
+
+<div class="compare">
+
+<h2>会社解散との比較</h2>
+
+<p>
+
+会社解散の場合  
+解散費用 約7万円〜
+
+</p>
+
+<p>
+
+法人買取の場合  
+50万円以上の可能性
+
+</p>
+
+<p>
+
+解散費用を払う前に  
+一度ご相談ください。
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- お客様の声 -->
+
+<section>
+
+<div class="container">
+
+<h2>お客様の声</h2>
+
+<div class="grid3">
+
+<div class="voice">
+
+<p>
+
+長年放置していた会社でしたが  
+売却できて本当に助かりました。
+
+</p>
+
+<p>
+
+東京都 / 会社代表
+
+</p>
+
+</div>
+
+<div class="voice">
+
+<p>
+
+解散費用を払わずに  
+会社整理できました。
+
+</p>
+
+<p>
+
+大阪府 / 経営者
+
+</p>
+
+</div>
+
+<div class="voice">
+
+<p>
+
+相談から対応まで  
+とても丁寧でした。
+
+</p>
+
+<p>
+
+福岡県 / 法人代表
+
+</p>
+
 </div>
 
 </div>
@@ -330,7 +541,7 @@ h1{font-size:28px}
 
 提携税理士  
 提携司法書士  
-法人登記サポート  
+法人登記サポート
 
 </p>
 
@@ -357,16 +568,22 @@ h1{font-size:28px}
 <div class="cta">
 
 <h2>
+
 会社売却できる可能性があります
+
 </h2>
 
 <p>
+
 無料相談は1分で完了  
-営業電話は行いません
+しつこい営業は一切ありません
+
 </p>
 
 <a href="#form" class="btn">
+
 無料査定はこちら
+
 </a>
 
 </div>
@@ -385,10 +602,7 @@ h1{font-size:28px}
 
 <h2>無料相談フォーム</h2>
 
-<iframe 
-src="https://docs.google.com/forms/d/e/1FAIpQLSceYXKOgD7jWKX7-ty0aUU9PDl_IopAjBvieyG09yzlTPKUYg/viewform?embedded=true">
-読み込み中…
-</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSceYXKOgD7jWKX7-ty0aUU9PDl_IopAjBvieyG09yzlTPKUYg/viewform?embedded=true"></iframe>
 
 </div>
 
@@ -402,43 +616,11 @@ src="https://docs.google.com/forms/d/e/1FAIpQLSceYXKOgD7jWKX7-ty0aUU9PDl_IopAjBv
 
 <a href="#form" class="cta1">無料査定</a>
 
-<a href="https://line.me" class="cta2">LINE相談</a>
+<a href="#" class="cta2">LINE相談</a>
 
 <a href="tel:05000000000" class="cta3">電話</a>
 
 </div>
-
-
-
-<script>
-
-function animate(id,end,suffix){
-
-let el=document.getElementById(id)
-let start=0
-let step=end/50
-
-let timer=setInterval(function(){
-
-start+=step
-
-if(start>=end){
-start=end
-clearInterval(timer)
-}
-
-el.innerHTML=Math.floor(start)+suffix
-
-},20)
-
-}
-
-animate("count1",50,"万〜")
-animate("count2",95,"%")
-animate("count3",152,"社")
-
-</script>
-
 
 </body>
 </html>
