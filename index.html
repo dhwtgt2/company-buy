@@ -18,6 +18,7 @@ background:#f6f7fb;
 color:#333;
 line-height:1.8;
 font-size:18px;
+padding-top:70px;
 }
 
 .container{
@@ -30,18 +31,13 @@ section{
 padding:80px 20px;
 }
 
-.hero{
-background:white;
-text-align:center;
-}
-
 img{
 width:100%;
 border-radius:14px;
 }
 
 h1{
-font-size:46px;
+font-size:44px;
 line-height:1.4;
 }
 
@@ -69,6 +65,11 @@ font-weight:bold;
 background:linear-gradient(transparent 60%, #fff3a0 60%);
 }
 
+.small{
+font-size:16px;
+color:#777;
+}
+
 .btn{
 background:#ffb400;
 padding:18px 28px;
@@ -83,7 +84,7 @@ font-size:20px;
 .grid2{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:50px;
+gap:40px;
 align-items:center;
 }
 
@@ -102,20 +103,20 @@ box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
 
 .stats{
-font-size:48px;
+font-size:44px;
 font-weight:bold;
 color:#ff6a00;
 }
 
 .compare{
 background:#fff3cd;
-padding:50px;
+padding:40px;
 border-radius:14px;
 }
 
 .cta{
 background:#ffe9e9;
-padding:50px;
+padding:40px;
 border-radius:14px;
 text-align:center;
 }
@@ -129,21 +130,24 @@ margin:5px;
 font-size:14px;
 }
 
-.form input,.form textarea{
+.quizbtn{
+display:block;
 width:100%;
-padding:16px;
-border-radius:8px;
-border:1px solid #ddd;
-margin-bottom:12px;
+margin:10px 0;
+padding:14px;
 font-size:18px;
+border:none;
+border-radius:8px;
+background:#ffb400;
+font-weight:bold;
 }
 
-.urgent{
-background:#ffe2e2;
-padding:16px;
-border-radius:10px;
-margin-top:20px;
-font-weight:bold;
+.form input,.form textarea{
+width:100%;
+padding:14px;
+border-radius:8px;
+border:1px solid #ddd;
+margin-bottom:10px;
 }
 
 .fixedcta{
@@ -153,7 +157,7 @@ left:0;
 width:100%;
 display:flex;
 gap:10px;
-padding:12px;
+padding:10px;
 background:white;
 box-shadow:0 -2px 10px rgba(0,0,0,0.1);
 }
@@ -165,17 +169,47 @@ padding:14px;
 border-radius:8px;
 font-weight:bold;
 text-decoration:none;
-font-size:16px;
 }
 
 .cta1{background:#ffb400;color:black;}
 .cta2{background:#06c755;color:white;}
 .cta3{background:#ff6a00;color:white;}
 
+.topnav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+z-index:999;
+}
+
+.navwrap{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 20px;
+}
+
+.menu{
+display:flex;
+gap:20px;
+}
+
+.menu a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+font-size:14px;
+}
+
 .scrollcta{
 position:fixed;
-bottom:80px;
 right:20px;
+bottom:100px;
 background:#ffb400;
 padding:14px 20px;
 border-radius:30px;
@@ -183,19 +217,15 @@ font-weight:bold;
 display:none;
 }
 
-@media(max-width:600px){
-
-body{font-size:16px;}
-
-h1{font-size:32px;}
-
-h2{font-size:24px;}
+@media(max-width:700px){
 
 .grid2{grid-template-columns:1fr;}
-
 .grid3{grid-template-columns:1fr;}
 
-.btn{width:100%;}
+.menu{display:none;}
+
+h1{font-size:30px;}
+h2{font-size:24px;}
 
 }
 
@@ -204,14 +234,37 @@ h2{font-size:24px;}
 
 <body>
 
-<section class="hero">
+<!-- ナビ -->
+
+<div class="topnav">
+<div class="navwrap">
+
+<div><strong>法人買取</strong></div>
+
+<div class="menu">
+
+<a href="#worry">悩み</a>
+<a href="#results">実績</a>
+<a href="#cases">売却事例</a>
+<a href="#compare">比較</a>
+<a href="#form">無料査定</a>
+
+</div>
+
+</div>
+</div>
+
+
+<!-- HERO -->
+
+<section>
 
 <div class="container">
 
 <h1>
 
 <span class="highlight">休眠会社</span><br>
-<span class="highlight">50万円以上</span>で売却
+<span class="highlight">50万円以上</span>で売却できる可能性
 
 </h1>
 
@@ -224,14 +277,12 @@ h2{font-size:24px;}
 
 <img src="hero.jpg">
 
-<div class="urgent">
+<p class="point">
 
 今月の買取枠  
 <strong id="remain">3</strong>社
 
-</div>
-
-<br>
+</p>
 
 <a href="#form" class="btn">
 
@@ -244,7 +295,9 @@ h2{font-size:24px;}
 </section>
 
 
-<section>
+<!-- 悩み -->
+
+<section id="worry">
 
 <div class="container grid2">
 
@@ -273,7 +326,9 @@ h2{font-size:24px;}
 </section>
 
 
-<section>
+<!-- 実績 -->
+
+<section id="results">
 
 <div class="container">
 
@@ -282,27 +337,18 @@ h2{font-size:24px;}
 <div class="grid3">
 
 <div class="card">
-
 <div class="stats">50万円〜</div>
-
 最低買取額
-
 </div>
 
 <div class="card">
-
 <div class="stats" id="rate">0%</div>
-
 成約率
-
 </div>
 
 <div class="card">
-
 <div class="stats" id="count">0</div>
-
-買取実績
-
+年間買取実績
 </div>
 
 </div>
@@ -312,7 +358,41 @@ h2{font-size:24px;}
 </section>
 
 
-<section>
+<!-- 売却事例 -->
+
+<section id="cases">
+
+<div class="container">
+
+<h2>会社売却事例</h2>
+
+<div class="grid3">
+
+<div class="card">
+<h3>IT会社</h3>
+<p>65万円で売却</p>
+</div>
+
+<div class="card">
+<h3>広告会社</h3>
+<p>80万円で売却</p>
+</div>
+
+<div class="card">
+<h3>貿易会社</h3>
+<p>50万円で売却</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- 比較 -->
+
+<section id="compare">
 
 <div class="container">
 
@@ -332,18 +412,24 @@ h2{font-size:24px;}
 </section>
 
 
-<section>
+<!-- 診断 -->
+
+<section id="check">
 
 <div class="container">
 
-<h2>安心してご相談ください</h2>
+<h2>あなたの会社は売却できる？</h2>
 
-<div style="text-align:center">
+<div class="card">
 
-<span class="badge">相談無料</span>
-<span class="badge">秘密厳守</span>
-<span class="badge">全国対応</span>
-<span class="badge">即日査定</span>
+<div id="quiz">
+
+<p>Q1 会社は営業していますか？</p>
+
+<button onclick="next()" class="quizbtn">営業中</button>
+<button onclick="next()" class="quizbtn">休眠会社</button>
+
+</div>
 
 </div>
 
@@ -352,30 +438,7 @@ h2{font-size:24px;}
 </section>
 
 
-<section>
-
-<div class="container">
-
-<div class="cta">
-
-<h2>
-
-<span class="highlight">50万円以上</span>で会社売却
-
-</h2>
-
-<a href="#form" class="btn">
-
-会社が売れるか無料チェック
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
+<!-- フォーム -->
 
 <section id="form">
 
@@ -401,13 +464,6 @@ h2{font-size:24px;}
 
 </form>
 
-<p>
-
-メール相談  
-info.houjinkaitori@gmail.com
-
-</p>
-
 </div>
 
 </div>
@@ -416,18 +472,14 @@ info.houjinkaitori@gmail.com
 
 
 <div class="scrollcta" id="scrollcta">
-
 <a href="#form">無料査定</a>
-
 </div>
 
 
 <div class="fixedcta">
 
 <a href="#form" class="cta1">無料査定</a>
-
-<a href="https://line.me" class="cta2">LINE</a>
-
+<a href="#" class="cta2">LINE</a>
 <a href="tel:05000000000" class="cta3">電話</a>
 
 </div>
@@ -452,6 +504,7 @@ clearInterval(interval)
 
 },20)
 
+
 let count=document.getElementById("count")
 let n=0
 
@@ -469,6 +522,7 @@ clearInterval(c)
 
 },20)
 
+
 window.addEventListener("scroll",function(){
 
 if(window.scrollY>800){
@@ -482,6 +536,47 @@ document.getElementById("scrollcta").style.display="none"
 }
 
 })
+
+
+let step=1
+
+function next(){
+
+let quiz=document.getElementById("quiz")
+
+if(step==1){
+
+quiz.innerHTML=`
+<p>Q2 売上はありますか？</p>
+<button onclick="next()" class="quizbtn">ある</button>
+<button onclick="next()" class="quizbtn">ない</button>
+`
+
+step++
+
+}
+
+else{
+
+quiz.innerHTML=`
+
+<h3 style="color:#ff6a00">
+
+売却できる可能性があります
+
+</h3>
+
+<a href="#form" class="btn">
+
+無料査定する
+
+</a>
+
+`
+
+}
+
+}
 
 </script>
 
