@@ -384,7 +384,7 @@ h2{font-size:24px;}
 
 </section>
 
-<!-- 買取事例 -->
+<!-- 売却事例 -->
 
 <section id="cases" class="fade">
 
@@ -418,6 +418,34 @@ h2{font-size:24px;}
 
 </section>
 
+<!-- お客様の声 -->
+
+<section class="fade">
+
+<div class="container">
+
+<h2>お客様の声</h2>
+
+<div class="grid3">
+
+<div class="card">
+<p>休眠会社を処分する予定でしたが、売却できて助かりました。</p>
+</div>
+
+<div class="card">
+<p>解散費用を払わずに済みました。</p>
+</div>
+
+<div class="card">
+<p>手続きも簡単で安心でした。</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- 比較 -->
 
 <section id="compare" class="fade">
@@ -428,7 +456,7 @@ h2{font-size:24px;}
 
 <h2>
 
-<span class="point">解散すると約7万円</span><br>
+<span class="point">解散すると約7万円</span>
 
 <img src="compare.JPG" style="max-width:400px;margin:20px auto;display:block;">
 
@@ -442,12 +470,14 @@ h2{font-size:24px;}
 
 </section>
 
-<!-- クイズ -->
+<!-- 診断 -->
 
 <section id="check" class="fade">
 
 <div class="container">
+
 <h2>あなたの会社は売却できる？</h2>
+
 <img src="疑問.PNG">
 
 <div class="card">
@@ -509,10 +539,8 @@ h2{font-size:24px;}
 /* menu */
 
 function toggleMenu(){
-
 let menu=document.getElementById("menu")
 menu.classList.toggle("show")
-
 }
 
 /* stats */
@@ -535,19 +563,23 @@ count.innerText=n
 if(n>=152) count.innerText="152社"
 },20)
 
-/* scroll CTA */
+/* scroll animation */
 
-window.addEventListener("scroll",function(){
+const fades=document.querySelectorAll(".fade")
 
-if(window.scrollY > 800){
+window.addEventListener("scroll",()=>{
 
-document.getElementById("scrollcta").style.display="block"
+fades.forEach(el=>{
 
-}else{
+const rect=el.getBoundingClientRect()
 
-document.getElementById("scrollcta").style.display="none"
+if(rect.top<window.innerHeight-100){
+
+el.classList.add("show")
 
 }
+
+})
 
 })
 
@@ -606,10 +638,6 @@ quiz.innerHTML = `
 </a>
 
 `;
-
-setTimeout(()=>{
-document.getElementById("form").scrollIntoView({behavior:"smooth"});
-},800)
 
 }
 
