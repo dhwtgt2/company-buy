@@ -587,6 +587,73 @@ el.classList.add("show")
 
 })
 
+/* クイズ */
+let step = 1;
+
+function next(){
+
+const quiz = document.getElementById("quiz");
+
+if(step === 1){
+
+quiz.innerHTML = `
+<p>Q2 売上はありますか？</p>
+
+<button onclick="next()" class="quizbtn">
+売上あり
+</button>
+
+<button onclick="next()" class="quizbtn">
+売上なし
+</button>
+`;
+
+step = 2;
+
+}
+
+else if(step === 2){
+
+quiz.innerHTML = `
+<p>Q3 法人口座はありますか？</p>
+
+<button onclick="next()" class="quizbtn">
+ある
+</button>
+
+<button onclick="next()" class="quizbtn">
+ない
+</button>
+`;
+
+step = 3;
+
+}
+
+else if(step === 3){
+
+quiz.innerHTML = `
+
+<h3 style="color:#ff6a00;font-size:28px;margin-bottom:10px;">
+売却できる可能性があります
+</h3>
+
+<p style="font-size:18px;">
+休眠会社でも売却できるケースがあります。<br>
+まずは無料査定をお試しください。
+</p>
+
+<br>
+
+<a href="#form" class="btn">
+無料査定する
+</a>
+
+`;
+
+}
+
+}
 </script>
 
 </body>
