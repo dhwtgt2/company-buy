@@ -38,22 +38,9 @@ width:100%;
 border-radius:14px;
 }
 
-h1{
-font-size:44px;
-line-height:1.4;
-}
-
-h2{
-font-size:34px;
-text-align:center;
-margin-bottom:40px;
-}
-
-h3{
-font-size:22px;
-}
-
-/* highlight */
+h1{font-size:42px;line-height:1.4;}
+h2{font-size:32px;text-align:center;margin-bottom:40px;}
+h3{font-size:22px;}
 
 .highlight{color:#ff6a00;font-weight:bold;}
 .point{color:#ff0000;font-weight:bold;}
@@ -62,33 +49,24 @@ font-size:22px;
 background:linear-gradient(transparent 60%, #fff3a0 60%);
 }
 
-.small{
-font-size:16px;
-color:#777;
-}
-
 /* button */
 
 .btn{
 background:#ff6a00;
-color:white;
-padding:18px 32px;
-border-radius:12px;
+padding:18px 28px;
+border-radius:10px;
 font-weight:bold;
 text-decoration:none;
+color:white;
 display:inline-block;
 font-size:20px;
+animation:pulse 2s infinite;
 }
 
-/* badges */
-
-.badge{
-background:#e8f5ff;
-padding:10px 16px;
-border-radius:8px;
-display:inline-block;
-margin:5px;
-font-size:14px;
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
 }
 
 /* grid */
@@ -106,7 +84,7 @@ grid-template-columns:repeat(3,1fr);
 gap:25px;
 }
 
-/* cards */
+/* card */
 
 .card{
 background:white;
@@ -128,16 +106,6 @@ color:#ff6a00;
 background:#fff3cd;
 padding:40px;
 border-radius:14px;
-text-align:center;
-}
-
-/* CTA */
-
-.cta{
-background:#ffe9e9;
-padding:40px;
-border-radius:14px;
-text-align:center;
 }
 
 /* quiz */
@@ -164,34 +132,7 @@ border:1px solid #ddd;
 margin-bottom:10px;
 }
 
-/* fixed CTA */
-
-.fixedcta{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-display:flex;
-gap:10px;
-padding:10px;
-background:white;
-box-shadow:0 -2px 10px rgba(0,0,0,0.1);
-}
-
-.fixedcta a{
-flex:1;
-text-align:center;
-padding:14px;
-border-radius:8px;
-font-weight:bold;
-text-decoration:none;
-}
-
-.cta1{background:#ffb400;color:black;}
-.cta2{background:#06c755;color:white;}
-.cta3{background:#ff6a00;color:white;}
-
-/* header */
+/* nav */
 
 .topnav{
 position:fixed;
@@ -243,6 +184,46 @@ font-weight:bold;
 display:none;
 }
 
+/* fixed CTA */
+
+.fixedcta{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+display:flex;
+gap:10px;
+padding:10px;
+background:white;
+box-shadow:0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.fixedcta a{
+flex:1;
+text-align:center;
+padding:14px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.cta1{background:#ffb400;color:black;}
+.cta2{background:#06c755;color:white;}
+.cta3{background:#ff6a00;color:white;}
+
+/* animation */
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
 /* mobile */
 
 @media(max-width:700px){
@@ -251,11 +232,7 @@ display:none;
 .grid3{grid-template-columns:1fr;}
 
 .menu{display:none;}
-
 .hamburger{display:block;}
-
-h1{font-size:30px;}
-h2{font-size:24px;}
 
 .menu.show{
 display:flex;
@@ -272,6 +249,9 @@ padding:16px;
 border-bottom:1px solid #eee;
 }
 
+h1{font-size:30px;}
+h2{font-size:24px;}
+
 }
 
 </style>
@@ -279,10 +259,9 @@ border-bottom:1px solid #eee;
 
 <body>
 
-<!-- NAV -->
+<!-- ナビ -->
 
 <div class="topnav">
-
 <div class="navwrap">
 
 <div><strong>法人買取</strong></div>
@@ -295,17 +274,17 @@ border-bottom:1px solid #eee;
 <a href="#results">実績</a>
 <a href="#cases">売却事例</a>
 <a href="#compare">比較</a>
+<a href="#check">診断</a>
 <a href="#form">無料査定</a>
 
 </div>
 
 </div>
-
 </div>
 
 <!-- HERO -->
 
-<section>
+<section class="fade">
 
 <div class="container">
 
@@ -315,14 +294,6 @@ border-bottom:1px solid #eee;
 <span class="highlight">50万円以上</span>で売却できる可能性
 
 </h1>
-
-<div>
-
-<span class="badge">年間買取実績 152社</span>
-<span class="badge">成約率 95.2%</span>
-<span class="badge">最低買取額 50万円</span>
-
-</div>
 
 <p>
 
@@ -352,7 +323,7 @@ border-bottom:1px solid #eee;
 
 <!-- 悩み -->
 
-<section id="worry">
+<section id="worry" class="fade">
 
 <div class="container grid2">
 
@@ -382,7 +353,7 @@ border-bottom:1px solid #eee;
 
 <!-- 実績 -->
 
-<section id="results">
+<section id="results" class="fade">
 
 <div class="container">
 
@@ -411,29 +382,9 @@ border-bottom:1px solid #eee;
 
 </section>
 
-<!-- 対象会社 -->
-
-<section>
-
-<div class="container">
-
-<h2>買取対象の会社</h2>
-
-<div class="grid3">
-
-<div class="card">休眠会社</div>
-<div class="card">赤字会社</div>
-<div class="card">売上ゼロ会社</div>
-
-</div>
-
-</div>
-
-</section>
-
 <!-- 売却事例 -->
 
-<section id="cases">
+<section id="cases" class="fade">
 
 <div class="container">
 
@@ -464,7 +415,7 @@ border-bottom:1px solid #eee;
 
 <!-- 比較 -->
 
-<section id="compare">
+<section id="compare" class="fade">
 
 <div class="container">
 
@@ -483,34 +434,22 @@ border-bottom:1px solid #eee;
 
 </section>
 
-<!-- お客様の声 -->
+<!-- クイズ -->
 
-<section>
+<section id="check" class="fade">
 
 <div class="container">
 
-<h2>お客様の声</h2>
-
-<div class="grid3">
+<h2>あなたの会社は売却できる？</h2>
 
 <div class="card">
 
-<p>休眠会社を60万円で売却できました</p>
-<p class="small">東京都 IT会社</p>
+<div id="quiz">
 
-</div>
+<p>Q1 会社は営業していますか？</p>
 
-<div class="card">
-
-<p>解散費用が不要で助かりました</p>
-<p class="small">大阪府 広告会社</p>
-
-</div>
-
-<div class="card">
-
-<p>スムーズに契約できました</p>
-<p class="small">福岡県 貿易会社</p>
+<button onclick="next()" class="quizbtn">営業中</button>
+<button onclick="next()" class="quizbtn">休眠会社</button>
 
 </div>
 
@@ -522,7 +461,7 @@ border-bottom:1px solid #eee;
 
 <!-- フォーム -->
 
-<section id="form">
+<section id="form" class="fade">
 
 <div class="container">
 
@@ -552,13 +491,9 @@ border-bottom:1px solid #eee;
 
 </section>
 
-<!-- scroll CTA -->
-
 <div class="scrollcta" id="scrollcta">
 <a href="#form">無料査定</a>
 </div>
-
-<!-- fixed CTA -->
 
 <div class="fixedcta">
 
@@ -589,7 +524,7 @@ document.getElementById("menu").classList.remove("show")
 
 })
 
-/* stats animation */
+/* stats */
 
 let rate=document.getElementById("rate")
 let i=0
@@ -625,19 +560,23 @@ clearInterval(c)
 
 },20)
 
-/* scroll CTA */
+/* scroll animation */
 
-window.addEventListener("scroll",function(){
+const fades=document.querySelectorAll(".fade")
 
-if(window.scrollY>800){
+window.addEventListener("scroll",()=>{
 
-document.getElementById("scrollcta").style.display="block"
+fades.forEach(el=>{
 
-}else{
+const rect=el.getBoundingClientRect()
 
-document.getElementById("scrollcta").style.display="none"
+if(rect.top<window.innerHeight-100){
+
+el.classList.add("show")
 
 }
+
+})
 
 })
 
