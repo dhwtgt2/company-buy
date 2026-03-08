@@ -586,51 +586,44 @@ el.classList.add("show")
 })
 
 })
+/* クイズ（安定版） */
 
-/* クイズ */
 let step = 1;
-
-function next(){
-
 const quiz = document.getElementById("quiz");
+
+function renderQuiz(){
 
 if(step === 1){
 
 quiz.innerHTML = `
-<p>Q2 売上はありますか？</p>
-
-<button onclick="next()" class="quizbtn">
-売上あり
-</button>
-
-<button onclick="next()" class="quizbtn">
-売上なし
-</button>
+<p>Q1 会社は営業していますか？</p>
+<button class="quizbtn" data-next>営業中</button>
+<button class="quizbtn" data-next>休眠会社</button>
 `;
-
-step = 2;
 
 }
 
 else if(step === 2){
 
 quiz.innerHTML = `
-<p>Q3 法人口座はありますか？</p>
-
-<button onclick="next()" class="quizbtn">
-ある
-</button>
-
-<button onclick="next()" class="quizbtn">
-ない
-</button>
+<p>Q2 売上はありますか？</p>
+<button class="quizbtn" data-next>売上あり</button>
+<button class="quizbtn" data-next>売上なし</button>
 `;
-
-step = 3;
 
 }
 
 else if(step === 3){
+
+quiz.innerHTML = `
+<p>Q3 法人口座はありますか？</p>
+<button class="quizbtn" data-next>ある</button>
+<button class="quizbtn" data-next>ない</button>
+`;
+
+}
+
+else{
 
 quiz.innerHTML = `
 
@@ -654,7 +647,16 @@ quiz.innerHTML = `
 }
 
 }
-</script>
 
-</body>
-</html>
+document.addEventListener("click",function(e){
+
+if(e.target.matches("[data-next]")){
+
+step++;
+renderQuiz();
+
+}
+
+});
+
+renderQuiz();
