@@ -53,13 +53,13 @@ background:linear-gradient(transparent 60%, #fff3a0 60%);
 
 .btn{
 background:#ff6a00;
-padding:18px 28px;
+padding:20px 32px;
 border-radius:10px;
 font-weight:bold;
 text-decoration:none;
 color:white;
 display:inline-block;
-font-size:20px;
+font-size:22px;
 animation:pulse 2s infinite;
 }
 
@@ -106,6 +106,7 @@ color:#ff6a00;
 background:#fff3cd;
 padding:40px;
 border-radius:14px;
+text-align:center;
 }
 
 /* quiz */
@@ -114,7 +115,7 @@ border-radius:14px;
 display:block;
 width:100%;
 margin:10px 0;
-padding:14px;
+padding:16px;
 font-size:18px;
 border:none;
 border-radius:8px;
@@ -178,7 +179,7 @@ position:fixed;
 right:20px;
 bottom:100px;
 background:#ffb400;
-padding:14px 20px;
+padding:16px 22px;
 border-radius:30px;
 font-weight:bold;
 display:none;
@@ -210,8 +211,6 @@ text-decoration:none;
 .cta1{background:#ffb400;color:black;}
 .cta2{background:#06c755;color:white;}
 .cta3{background:#ff6a00;color:white;}
-
-/* animation */
 
 .fade{
 opacity:0;
@@ -362,13 +361,13 @@ h2{font-size:24px;}
 <div class="grid3">
 
 <div class="card">
-<img src="price .JPG">
+<img src="price.JPG">
 <div class="stats">50万円〜</div>
 最低買取額
 </div>
 
 <div class="card">
-<img src="company .JPG">
+<img src="company.JPG">
 <div class="stats" id="rate">0%</div>
 成約率
 </div>
@@ -453,14 +452,7 @@ h2{font-size:24px;}
 
 <div class="card">
 
-<div id="quiz">
-
-<p>Q1 会社は営業していますか？</p>
-
-<button onclick="next()" class="quizbtn">営業中</button>
-<button onclick="next()" class="quizbtn">休眠会社</button>
-
-</div>
+<div id="quiz"></div>
 
 </div>
 
@@ -507,7 +499,7 @@ h2{font-size:24px;}
 <div class="fixedcta">
 
 <a href="#form" class="cta1">無料査定</a>
-<a href="#" class="cta2">LINE</a>
+<a href="https://line.me/" class="cta2">LINE</a>
 <a href="tel:05000000000" class="cta3">電話</a>
 
 </div>
@@ -523,72 +515,43 @@ menu.classList.toggle("show")
 
 }
 
-document.querySelectorAll("#menu a").forEach(link=>{
-
-link.addEventListener("click",function(){
-
-document.getElementById("menu").classList.remove("show")
-
-})
-
-})
-
 /* stats */
 
 let rate=document.getElementById("rate")
 let i=0
 
-let interval=setInterval(function(){
-
+setInterval(()=>{
 i++
 rate.innerText=i+"%"
-
-if(i>=95.2){
-
-rate.innerText="95.2%"
-clearInterval(interval)
-
-}
-
+if(i>=95.2) rate.innerText="95.2%"
 },20)
 
 let count=document.getElementById("count")
 let n=0
 
-let c=setInterval(function(){
-
+setInterval(()=>{
 n++
 count.innerText=n
-
-if(n>=152){
-
-count.innerText="152社"
-clearInterval(c)
-
-}
-
+if(n>=152) count.innerText="152社"
 },20)
 
-/* scroll animation */
+/* scroll CTA */
 
-const fades=document.querySelectorAll(".fade")
+window.addEventListener("scroll",function(){
 
-window.addEventListener("scroll",()=>{
+if(window.scrollY > 800){
 
-fades.forEach(el=>{
+document.getElementById("scrollcta").style.display="block"
 
-const rect=el.getBoundingClientRect()
+}else{
 
-if(rect.top<window.innerHeight-100){
-
-el.classList.add("show")
+document.getElementById("scrollcta").style.display="none"
 
 }
 
 })
 
-})
-/* クイズ（安定版） */
+/* quiz */
 
 let step = 1;
 const quiz = document.getElementById("quiz");
@@ -630,29 +593,23 @@ else{
 quiz.innerHTML = `
 
 <h3 style="color:#ff6a00;font-size:30px;">
-あなたの会社は<br>
 売却できる可能性があります
 </h3>
 
-<p style="font-size:18px;">
-条件次第で
-<strong style="color:#ff0000;">50万円以上</strong>
-で売却できる可能性があります。
+<p>
+<strong style="color:red;">50万円以上</strong>
+で売却できる可能性があります
 </p>
-
-
-<p style="font-size:18px;">
-休眠会社でも売却できるケースがあります。<br>
-まずは無料査定をお試しください。
-</p>
-
-<br>
 
 <a href="#form" class="btn">
-無料査定する
+無料査定はこちら
 </a>
 
 `;
+
+setTimeout(()=>{
+document.getElementById("form").scrollIntoView({behavior:"smooth"});
+},800)
 
 }
 
@@ -661,15 +618,14 @@ quiz.innerHTML = `
 document.addEventListener("click",function(e){
 
 if(e.target.matches("[data-next]")){
-
-step++;
-renderQuiz();
-
+step++
+renderQuiz()
 }
 
-});
+})
 
-renderQuiz();
+renderQuiz()
+
 </script>
 
 </body>
