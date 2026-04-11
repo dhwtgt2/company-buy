@@ -655,54 +655,135 @@ el.classList.add("show")
 
 })
 
-/* quiz */
+/* 分岐型クイズ（残り枠なし・信頼重視版） */
 
 let step = 1;
+let score = 0;
 const quiz = document.getElementById("quiz");
 
 function renderQuiz(){
 
+// Q1
 if(step === 1){
 
 quiz.innerHTML = `
 <p>Q1 会社は営業していますか？</p>
-<button class="quizbtn" data-next>営業中</button>
-<button class="quizbtn" data-next>休眠会社</button>
+<button class="quizbtn" data-score="2">営業中</button>
+<button class="quizbtn" data-score="3">休眠会社</button>
 `;
 
 }
 
+// Q2
 else if(step === 2){
 
 quiz.innerHTML = `
 <p>Q2 売上はありますか？</p>
-<button class="quizbtn" data-next>売上あり</button>
-<button class="quizbtn" data-next>売上なし</button>
+<button class="quizbtn" data-score="2">ある</button>
+<button class="quizbtn" data-score="3">ない</button>
 `;
 
 }
 
+// Q3 債務
 else if(step === 3){
 
 quiz.innerHTML = `
-<p>Q3 法人口座はありますか？</p>
-<button class="quizbtn" data-next>ある</button>
-<button class="quizbtn" data-next>ない</button>
+<p>Q3 債務（借入）はありますか？</p>
+<button class="quizbtn" data-score="3">ない</button>
+<button class="quizbtn" data-score="1">ある</button>
 `;
 
 }
 
-else{
+// Q4 税金
+else if(step === 4){
 
 quiz.innerHTML = `
+<p>Q4 税金の滞納はありますか？</p>
+<button class="quizbtn" data-score="3">ない</button>
+<button class="quizbtn" data-score="1">ある</button>
+`;
 
+}
+
+// Q5 決算
+else if(step === 5){
+
+quiz.innerHTML = `
+<p>Q5 決算は行っていますか？</p>
+<button class="quizbtn" data-score="3">している</button>
+<button class="quizbtn" data-score="1">していない</button>
+`;
+
+}
+
+// 結果
+else{
+
+let resultText = "";
+let level = "";
+
+// 高評価
+if(score >= 12){
+
+level = "◎ 非常に高い";
+
+resultText = `
+<h3 style="color:#ff6a00;font-size:32px;">
+売却できる可能性が非常に高いです
+</h3>
+
+<p style="font-size:20px;">
+条件が非常に良く、<br>
+<strong style="color:#ff0000;">高額査定</strong>になる可能性があります
+</p>
+`;
+
+}
+
+// 中評価
+else if(score >= 8){
+
+level = "○ 可能性あり";
+
+resultText = `
 <h3 style="color:#ff6a00;font-size:30px;">
 売却できる可能性があります
 </h3>
 
 <p>
-<strong style="color:red;">50万円以上</strong>
-で売却できる可能性があります
+条件次第で<br>
+買取対象となる可能性があります
+</p>
+`;
+
+}
+
+// 低評価
+else{
+
+level = "△ 要相談";
+
+resultText = `
+<h3 style="color:#ff0000;font-size:28px;">
+個別相談が必要です
+</h3>
+
+<p>
+状況によっては難しい場合もありますが、<br>
+対応できるケースもあります
+</p>
+`;
+
+}
+
+quiz.innerHTML = `
+
+${resultText}
+
+<p style="margin-top:10px;font-size:18px;">
+診断結果：<strong>${level}</strong>
 </p>
 
 <a href="#form" class="btn">
@@ -711,20 +792,35 @@ quiz.innerHTML = `
 
 `;
 
+/* 自動スクロール */
+
+setTimeout(()=>{
+document.getElementById("form").scrollIntoView({
+behavior:"smooth"
+})
+},1000)
+
 }
 
 }
+
+/* クリック処理 */
 
 document.addEventListener("click",function(e){
 
-if(e.target.matches("[data-next]")){
-step++
-renderQuiz()
+if(e.target.matches(".quizbtn")){
+
+score += Number(e.target.dataset.score);
+step++;
+renderQuiz();
+
 }
 
-})
+});
 
-renderQuiz()
+/* 初期表示 */
+
+renderQuiz();
 
 </script>
 
