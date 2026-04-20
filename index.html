@@ -27,7 +27,7 @@ img{width:100%;border-radius:14px;}
 h1{font-size:42px;line-height:1.4;}
 h2{font-size:32px;text-align:center;margin-bottom:40px;}
 h3{font-size:22px;}
-h4{font-size:40px;text-align:center;margin:20px 0;}
+h4{font-size:40px;text-align:center;}
 
 .highlight{color:#ff6a00;font-weight:bold;}
 .point{color:#ff0000;font-weight:bold;}
@@ -38,14 +38,13 @@ background:linear-gradient(transparent 60%, #fff3a0 60%);
 
 .btn{
 background:#ff6a00;
-padding:20px;
+padding:20px 32px;
 border-radius:10px;
 font-weight:bold;
 text-decoration:none;
 color:white;
-display:block;
+display:inline-block;
 font-size:22px;
-text-align:center;
 animation:pulse 2s infinite;
 }
 
@@ -82,6 +81,25 @@ font-weight:bold;
 color:#ff6a00;
 }
 
+.compare{
+background:#fff3cd;
+padding:40px;
+border-radius:14px;
+text-align:center;
+}
+
+.quizbtn{
+display:block;
+width:100%;
+margin:10px 0;
+padding:16px;
+font-size:18px;
+border:none;
+border-radius:8px;
+background:#ffb400;
+font-weight:bold;
+}
+
 .topnav{
 position:fixed;
 top:0;
@@ -115,7 +133,6 @@ padding:16px 22px;
 border-radius:30px;
 font-weight:bold;
 display:none;
-z-index:9999;
 }
 
 .fixedcta{
@@ -128,17 +145,15 @@ gap:10px;
 padding:10px;
 background:white;
 box-shadow:0 -2px 10px rgba(0,0,0,0.1);
-z-index:9999;
 }
 
 .fixedcta a{
 flex:1;
 text-align:center;
-padding:18px;
+padding:14px;
 border-radius:8px;
 font-weight:bold;
 text-decoration:none;
-display:block;
 }
 
 .cta1{background:#ffb400;color:black;}
@@ -186,24 +201,25 @@ h2{font-size:24px;}
 <div class="menu" id="menu">
 <a href="#worry">悩み</a>
 <a href="#results">実績</a>
+<a href="#cases">売却事例</a>
+<a href="#compare">比較</a>
+<a href="#check">診断</a>
 <a href="#form">無料査定</a>
 </div>
 
 </div>
 </div>
 
-<!-- HERO -->
 <section class="fade">
-<div class="container" style="text-align:center;">
+<div class="container">
 
 <h1>
-<span class="highlight">50万円以上</span><br>
-で売却できる可能性
+<span class="highlight">50万円以上</span>で売却できる可能性
 </h1>
 
-<p style="font-size:20px;">
+<p>
 使っていない会社を<br>
-<span class="point">今すぐ現金化できる可能性があります</span>
+<span class="point">現金化できる可能性があります</span>
 </p>
 
 <img src="hero.jpg">
@@ -212,18 +228,14 @@ h2{font-size:24px;}
 30秒で無料査定する
 </a>
 
-<a href="tel:090-4596-0041" class="btn" style="background:#ff6a00;margin-top:10px;">
-電話で相談する
-</a>
-
 <p style="margin-top:10px; font-size:16px; color:#666;">
-✓ 全国対応　✓ 完全無料　✓ 秘密厳守
+✓ 全国対応　✓ 完全無料　✓ 秘密厳守<br>
+最短即日対応
 </p>
 
 </div>
 </section>
 
-<!-- 悩み -->
 <section id="worry" class="fade">
 <div class="container grid2">
 
@@ -241,13 +253,10 @@ h2{font-size:24px;}
 
 </div>
 
-<div class="container">
-<h4><span class="highlight">その悩み、すべて解決できます</span></h4>
-</div>
+<h4><span class="highlight">しっかり解決！</span></h4>
 
 </section>
 
-<!-- 実績 -->
 <section id="results" class="fade">
 <div class="container">
 
@@ -274,7 +283,6 @@ h2{font-size:24px;}
 </div>
 </section>
 
-<!-- フォーム -->
 <section id="form" class="fade">
 <div class="container">
 
@@ -294,27 +302,22 @@ h2{font-size:24px;}
 </div>
 </section>
 
-<!-- スクロールCTA -->
 <div class="scrollcta" id="scrollcta">
-<a href="https://forms.gle/N735AwM6aMjmd77r9" target="_blank" style="color:black;text-decoration:none;">
+<a href="https://forms.gle/N735AwM6aMjmd77r9" style="color:black;text-decoration:none;">
 無料査定
 </a>
 </div>
 
-<!-- 固定CTA -->
 <div class="fixedcta">
-<a href="https://forms.gle/N735AwM6aMjmd77r9" target="_blank" class="cta1">
-無料査定
-</a>
-<a href="tel:090-4596-0041" class="cta3">
-電話する
-</a>
+<a href="https://forms.gle/N735AwM6aMjmd77r9" class="cta1">無料査定</a>
+<a href="tel:090-4596-0041" class="cta3">電話する</a>
 </div>
 
 <script>
 
 function toggleMenu(){
-document.getElementById("menu").classList.toggle("show")
+let menu=document.getElementById("menu")
+menu.classList.toggle("show")
 }
 
 window.addEventListener("scroll",()=>{
@@ -326,23 +329,25 @@ cta.style.display="none"
 }
 })
 
+let rate=document.getElementById("rate")
 let i=0
-let rate=setInterval(()=>{
+let rateTimer=setInterval(()=>{
 i++
-document.getElementById("rate").innerText=i+"%"
+rate.innerText=i+"%"
 if(i>=96){
-document.getElementById("rate").innerText="95.2%"
-clearInterval(rate)
+rate.innerText="95.2%"
+clearInterval(rateTimer)
 }
 },20)
 
+let count=document.getElementById("count")
 let n=0
-let count=setInterval(()=>{
+let countTimer=setInterval(()=>{
 n++
-document.getElementById("count").innerText=n
+count.innerText=n
 if(n>=152){
-document.getElementById("count").innerText="152社"
-clearInterval(count)
+count.innerText="152社"
+clearInterval(countTimer)
 }
 },20)
 
