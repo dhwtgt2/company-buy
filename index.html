@@ -8,6 +8,7 @@
 <title>休眠会社買取センター｜50万円以上で売却できる可能性</title>
 
 <style>
+
 *{box-sizing:border-box;}
 
 body{
@@ -20,21 +21,36 @@ font-size:18px;
 padding-top:70px;
 }
 
-.container{max-width:1100px;margin:auto;padding:24px;}
-section{padding:80px 20px;}
-img{width:100%;border-radius:14px;}
+/* layout */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:24px;
+}
+
+section{
+padding:80px 20px;
+}
+
+img{
+width:100%;
+border-radius:14px;
+}
 
 h1{font-size:42px;line-height:1.4;}
 h2{font-size:32px;text-align:center;margin-bottom:40px;}
 h3{font-size:22px;}
-h4{font-size:40px;text-align:center;}
-
+h4{font-size:55px;line-height:1.4;}
+  
 .highlight{color:#ff6a00;font-weight:bold;}
 .point{color:#ff0000;font-weight:bold;}
 
 .marker{
 background:linear-gradient(transparent 60%, #fff3a0 60%);
 }
+
+/* button */
 
 .btn{
 background:#ff6a00;
@@ -54,6 +70,8 @@ animation:pulse 2s infinite;
 100%{transform:scale(1)}
 }
 
+/* grid */
+
 .grid2{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -67,12 +85,23 @@ grid-template-columns:repeat(3,1fr);
 gap:25px;
 }
 
+/* card */
+
 .card{
 background:white;
 padding:30px;
 border-radius:16px;
 text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,0.08);
+overflow:hidden;
+}
+
+.form-scroll{
+overflow-x:auto;
+}
+
+.form-scroll iframe{
+min-width:600px;
 }
 
 .stats{
@@ -81,12 +110,16 @@ font-weight:bold;
 color:#ff6a00;
 }
 
+/* compare */
+
 .compare{
 background:#fff3cd;
 padding:40px;
 border-radius:14px;
 text-align:center;
 }
+
+/* quiz */
 
 .quizbtn{
 display:block;
@@ -99,6 +132,18 @@ border-radius:8px;
 background:#ffb400;
 font-weight:bold;
 }
+
+/* form */
+
+.form input,.form textarea{
+width:100%;
+padding:14px;
+border-radius:8px;
+border:1px solid #ddd;
+margin-bottom:10px;
+}
+
+/* nav */
 
 .topnav{
 position:fixed;
@@ -119,10 +164,25 @@ align-items:center;
 padding:12px 20px;
 }
 
-.menu{display:flex;gap:20px;}
-.menu a{text-decoration:none;color:#333;font-weight:bold;font-size:14px;}
+.menu{
+display:flex;
+gap:20px;
+}
 
-.hamburger{display:none;font-size:28px;cursor:pointer;}
+.menu a{
+text-decoration:none;
+color:#333;
+font-weight:bold;
+font-size:14px;
+}
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* scroll CTA */
 
 .scrollcta{
 position:fixed;
@@ -134,6 +194,8 @@ border-radius:30px;
 font-weight:bold;
 display:none;
 }
+
+/* fixed CTA */
 
 .fixedcta{
 position:fixed;
@@ -157,14 +219,27 @@ text-decoration:none;
 }
 
 .cta1{background:#ffb400;color:black;}
+.cta2{background:#06c755;color:white;}
 .cta3{background:#ff6a00;color:white;}
 
-.fade{opacity:0;transform:translateY(40px);transition:1s;}
-.fade.show{opacity:1;transform:translateY(0);}
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* mobile */
 
 @media(max-width:700px){
+
 .grid2{grid-template-columns:1fr;}
 .grid3{grid-template-columns:1fr;}
+
 .menu{display:none;}
 .hamburger{display:block;}
 
@@ -185,11 +260,15 @@ border-bottom:1px solid #eee;
 
 h1{font-size:30px;}
 h2{font-size:24px;}
+
 }
+
 </style>
 </head>
 
 <body>
+
+<!-- ナビ -->
 
 <div class="topnav">
 <div class="navwrap">
@@ -199,22 +278,30 @@ h2{font-size:24px;}
 <div class="hamburger" onclick="toggleMenu()">☰</div>
 
 <div class="menu" id="menu">
+
 <a href="#worry">悩み</a>
 <a href="#results">実績</a>
 <a href="#cases">売却事例</a>
 <a href="#compare">比較</a>
 <a href="#check">診断</a>
 <a href="#form">無料査定</a>
+
 </div>
 
 </div>
 </div>
+
+<!-- HERO -->
 
 <section class="fade">
+
 <div class="container">
 
 <h1>
+
+<span class="highlight">休眠会社買取センター</span><br>
 <span class="highlight">50万円以上</span>で売却できる可能性
+
 </h1>
 
 <p>
@@ -224,40 +311,57 @@ h2{font-size:24px;}
 
 <img src="hero.jpg">
 
-<a href="https://forms.gle/N735AwM6aMjmd77r9" target="_blank" class="btn">
-30秒で無料査定する
+<a href="#form" class="btn">
+
+無料査定する
+
 </a>
 
 <p style="margin-top:10px; font-size:16px; color:#666;">
 ✓ 全国対応　✓ 完全無料　✓ 秘密厳守<br>
-最短即日対応
+<span style="font-size:14px;">最短即日でご連絡します</span>
 </p>
-
+  
 </div>
+
 </section>
+
+<!-- 悩み -->
 
 <section id="worry" class="fade">
+
 <div class="container grid2">
 
-<div><img src="worry.jpg"></div>
+<div>
+<img src="worry.jpg">
+</div>
 
 <div>
+
 <h2>こんなお悩みありませんか？</h2>
+
 <ul>
+
 <li><span class="marker">休眠会社を放置している</span></li>
 <li>解散費用を払いたくない</li>
-<li>法人税がかかる</li>
 <li>会社整理したい</li>
+<li>法人税が毎年かかる</li>
+<li>手続きが難しい</li>
+
 </ul>
-</div>
 
 </div>
-
-<h4><span class="highlight">しっかり解決！</span></h4>
-
+<div class="container">
+<h4>
+<span class="highlight">しっかり解決！</span>
+</h4>
+</div>
 </section>
 
+<!-- 実績 -->
+
 <section id="results" class="fade">
+
 <div class="container">
 
 <h2>法人買取実績</h2>
@@ -265,91 +369,478 @@ h2{font-size:24px;}
 <div class="grid3">
 
 <div class="card">
+<img src="price.JPG">
 <div class="stats">50万円〜</div>
 最低買取額
 </div>
 
 <div class="card">
+<img src="company.JPG">
 <div class="stats" id="rate">0%</div>
 成約率
 </div>
 
 <div class="card">
+<img src="transfer.jpg">
 <div class="stats" id="count">0</div>
 年間買取実績
 </div>
 
 </div>
+
 </div>
+
 </section>
 
-<section id="form" class="fade">
+<!-- 売却事例 -->
+
+<section id="cases" class="fade">
+
 <div class="container">
 
-<h2>無料査定フォーム</h2>
+<h2>会社買取事例</h2>
+
+<div class="grid3">
+
+<div class="card">
+<img src="IT.PNG">
+<h3>IT会社</h3>
+<p>65万円で買取</p>
+</div>
+
+<div class="card">
+<img src="広告.PNG">
+<h3>広告会社</h3>
+<p>80万円で買取</p>
+</div>
+
+<div class="card">
+<img src="貿易.PNG">
+<h3>貿易会社</h3>
+<p>50万円で買取</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- お客様の声 -->
+
+<section class="fade">
+
+<div class="container">
+
+<h2>お客様の声</h2>
+
+<div class="grid3">
+
+<div class="card">
+<img src="お客様1.jpg">
+<p>休眠会社を処分する予定でしたが、売却できて助かりました。</p>
+</div>
+
+<div class="card">
+<img src="お客様2.jpg">
+<p>解散費用を払わずに済みました。</p>
+</div>
+
+<div class="card">
+<img src="お客様3.jpg">
+<p>手続きも簡単で安心でした。</p>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- 比較 -->
+
+<section id="compare" class="fade">
+
+<div class="container">
+
+<div class="compare">
+
+<h2>
+
+<span class="point">解散すると約7万円</span>
+
+<img src="compare.JPG" style="max-width:400px;margin:20px auto;display:block;">
+
+<span class="highlight">売却なら50万円以上の可能性</span>
+
+</h2>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- 安心訴求ブロック -->
+
+<section class="fade">
+
+<div class="container">
+
+<div class="card" style="background:#fff8f0">
+
+<h2>手続きはとても簡単です</h2>
+
+<p style="font-size:20px">
+
+<span class="highlight">スマホ1つ・メールで完結</span>
+
+</p>
+
+  <p class="point" style="font-size:22px">
+
+最短1日で現金化
+
+</p>
+  
+<br>
+
+<p>
+
+書類はスマホで撮影して送るだけ。<br>
+行政書士が全て対応致します。
+
+</p>
+
+<p>
+
+<span class="point">法務局や役所に行く必要はありません。</span><br>
+ご自宅にいながらすべて完了します。
+
+</p>
+
+<br>
+
+<hr>
+
+<br>
+
+<p>
+
+<span class="point">赤字・債務超過・売上ゼロの会社であっても</span><br>
+買い手が見つかる場合があります。
+
+</p>
+
+<p>
+
+どんな会社でも価値を見出し、<br>
+買取できる可能性があります。
+
+</p>
+
+<br>
+
+<p style="font-size:20px">
+
+<span class="highlight">廃業費用を払う前に</span><br>
+まずは無料査定をご利用ください。
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- 診断 -->
+
+<section id="check" class="fade">
+
+<div class="container">
+
+<h2>あなたの会社は売却できる？</h2>
+
+<img src="疑問.PNG">
+
+<div class="card">
+
+<div id="quiz"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- フォーム -->
+
+<section id="form" class="fade">
+
+<div class="container">
+
+<h2>無料相談フォーム</h2>
+
+<p style="margin-bottom:20px; font-size:18px;">
+最短即日で査定結果をご連絡いたします
+</p>
+
+<p style="margin-bottom:20px; font-size:14px; color:#666;">
+※営業目的のご連絡は一切行いません<br>
+※入力は30秒で完了します
+</p>
 
 <div class="card">
 
 <a href="https://forms.gle/N735AwM6aMjmd77r9" target="_blank" class="btn">
-無料で売却可能かチェックする
+無料査定フォームへ進む
 </a>
 
-<p style="margin-top:15px;font-size:14px;">
-※30秒で完了・完全無料
+<p style="margin-top:15px; font-size:14px; color:#666;">
+※タップ後にフォーム画面へ移動します
 </p>
 
 </div>
+
 </div>
+
 </section>
 
 <div class="scrollcta" id="scrollcta">
-<a href="https://forms.gle/N735AwM6aMjmd77r9" style="color:black;text-decoration:none;">
-無料査定
-</a>
+<a href="#form">無料査定</a>
 </div>
 
 <div class="fixedcta">
-<a href="https://forms.gle/N735AwM6aMjmd77r9" class="cta1">無料査定</a>
-<a href="tel:090-4596-0041" class="cta3">電話する</a>
+
+<a href="#form" class="cta1">無料査定</a>
+<a href="tel:090−4596-0041" class="cta3">電話</a>
+
 </div>
 
 <script>
+
+/* menu */
 
 function toggleMenu(){
 let menu=document.getElementById("menu")
 menu.classList.toggle("show")
 }
 
-window.addEventListener("scroll",()=>{
-const cta=document.getElementById("scrollcta")
-if(window.scrollY>400){
-cta.style.display="block"
-}else{
-cta.style.display="none"
-}
-})
+/* メニュークリックで自動閉じる */
+
+document.querySelectorAll("#menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("menu").classList.remove("show");
+  });
+});
+
+/* stats */
 
 let rate=document.getElementById("rate")
 let i=0
-let rateTimer=setInterval(()=>{
+
+setInterval(()=>{
 i++
 rate.innerText=i+"%"
-if(i>=96){
-rate.innerText="95.2%"
-clearInterval(rateTimer)
-}
+if(i>=95.2) rate.innerText="95.2%"
 },20)
 
 let count=document.getElementById("count")
 let n=0
-let countTimer=setInterval(()=>{
+
+setInterval(()=>{
 n++
 count.innerText=n
-if(n>=152){
-count.innerText="152社"
-clearInterval(countTimer)
-}
+if(n>=152) count.innerText="152社"
 },20)
+
+/* scroll animation */
+
+const fades=document.querySelectorAll(".fade")
+
+window.addEventListener("scroll",()=>{
+
+fades.forEach(el=>{
+
+const rect=el.getBoundingClientRect()
+
+if(rect.top<window.innerHeight-100){
+
+el.classList.add("show")
+
+}
+
+})
+
+})
+
+/* 分岐型クイズ（残り枠なし・信頼重視版） */
+
+let step = 1;
+let score = 0;
+const quiz = document.getElementById("quiz");
+
+function renderQuiz(){
+
+// Q1
+if(step === 1){
+
+quiz.innerHTML = `
+<p>Q1 会社は営業していますか？</p>
+<button class="quizbtn" data-score="2">営業中</button>
+<button class="quizbtn" data-score="3">休眠会社</button>
+`;
+
+}
+
+// Q2
+else if(step === 2){
+
+quiz.innerHTML = `
+<p>Q2 売上はありますか？</p>
+<button class="quizbtn" data-score="2">ある</button>
+<button class="quizbtn" data-score="3">ない</button>
+`;
+
+}
+
+// Q3 債務
+else if(step === 3){
+
+quiz.innerHTML = `
+<p>Q3 債務（借入）はありますか？</p>
+<button class="quizbtn" data-score="3">ない</button>
+<button class="quizbtn" data-score="1">ある</button>
+`;
+
+}
+
+// Q4 税金
+else if(step === 4){
+
+quiz.innerHTML = `
+<p>Q4 税金の滞納はありますか？</p>
+<button class="quizbtn" data-score="3">ない</button>
+<button class="quizbtn" data-score="1">ある</button>
+`;
+
+}
+
+// Q5 決算
+else if(step === 5){
+
+quiz.innerHTML = `
+<p>Q5 決算は行っていますか？</p>
+<button class="quizbtn" data-score="3">している</button>
+<button class="quizbtn" data-score="1">していない</button>
+`;
+
+}
+
+// 結果
+else{
+
+let resultText = "";
+let level = "";
+
+// 高評価
+if(score >= 12){
+
+level = "◎ 非常に高い";
+
+resultText = `
+<h3 style="color:#ff6a00;font-size:32px;">
+売却できる可能性が非常に高いです
+</h3>
+
+<p style="font-size:20px;">
+条件が非常に良く、<br>
+<strong style="color:#ff0000;">高額査定</strong>になる可能性があります
+</p>
+`;
+
+}
+
+// 中評価
+else if(score >= 8){
+
+level = "○ 可能性あり";
+
+resultText = `
+<h3 style="color:#ff6a00;font-size:30px;">
+売却できる可能性があります
+</h3>
+
+<p>
+条件次第で<br>
+買取対象となる可能性があります
+</p>
+`;
+
+}
+
+// 低評価
+else{
+
+level = "△ 要相談";
+
+resultText = `
+<h3 style="color:#ff0000;font-size:28px;">
+個別相談が必要です
+</h3>
+
+<p>
+状況によっては難しい場合もありますが、<br>
+対応できるケースもあります
+</p>
+`;
+
+}
+
+quiz.innerHTML = `
+
+${resultText}
+
+<p style="margin-top:10px;font-size:18px;">
+診断結果：<strong>${level}</strong>
+</p>
+
+<a href="#form" class="btn">
+無料査定はこちら
+</a>
+
+`;
+
+/* 自動スクロール */
+
+setTimeout(()=>{
+document.getElementById("form").scrollIntoView({
+behavior:"smooth"
+})
+},1000)
+
+}
+
+}
+
+/* クリック処理 */
+
+document.addEventListener("click",function(e){
+
+if(e.target.matches(".quizbtn")){
+
+score += Number(e.target.dataset.score);
+step++;
+renderQuiz();
+
+}
+
+});
+
+/* 初期表示 */
+
+renderQuiz();
 
 </script>
 
