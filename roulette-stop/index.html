@@ -1,171 +1,108 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#101720">
-<meta name="robots" content="noindex,nofollow">
-<title>成立役ルーレット｜STOP・針と役の一致版</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0d141c"><meta name="robots" content="noindex,nofollow">
+<title>成立役ルーレット v6｜確率比率・ランダム分散</title>
 <style>
-:root{color-scheme:dark;--bg:#0d141c;--card:#16212e;--line:#304153;--text:#f5f8fc;--muted:#adbac8;--accent:#96f0d3;--selected:#96f0d3}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans CJK JP",sans-serif;line-height:1.5}button,select,input{font:inherit}button,select{touch-action:manipulation}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}button:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:4px}[hidden]{display:none!important}.app{max-width:1050px;margin:auto;padding:22px 18px 30px}.header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px}.eyebrow{color:var(--accent);font-size:10px;letter-spacing:.21em;font-weight:800}.header h1{margin:3px 0 0;font-size:clamp(20px,4.8vw,27px);letter-spacing:.04em}.version{font-size:11px;color:var(--muted);white-space:nowrap}.layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.85fr);gap:18px}.card{border:1px solid var(--line);border-radius:22px;background:var(--card);padding:18px}.wheel-card{padding:16px 16px 18px}.status-row{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:12px}.status{display:flex;gap:7px;align-items:center;font-weight:700}.status-dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}.micro{color:var(--muted);font-size:11px}.stage{position:relative;width:100%;max-width:510px;margin:8px auto 0}.wheel{display:block;width:100%;height:auto;overflow:visible}.slice{stroke:#14212c;stroke-width:1.4;stroke-linejoin:round}.slice.chosen{stroke:#fff;stroke-width:4}.slice.faded{opacity:.54}.role-label{fill:white;font-weight:750;font-size:17px;pointer-events:none;text-anchor:middle;paint-order:stroke;stroke:#0003;stroke-width:2px;stroke-linejoin:round}.small-label{fill:white;opacity:.83;font-size:11px;font-weight:600;paint-order:stroke;stroke:#0003;stroke-width:1px}.hub-label{font-size:11px;fill:var(--muted);letter-spacing:.08em;text-anchor:middle}.hub-role{font-size:19px;fill:var(--text);font-weight:800;text-anchor:middle}.hub-small{font-size:10px;fill:var(--muted);text-anchor:middle}.pointer{filter:drop-shadow(0 2px 3px #0006);pointer-events:none}.result-line{min-height:53px;display:flex;flex-direction:column;align-items:center;margin:2px 0 9px}.result-line strong{font-size:21px;font-weight:800}.result-line span{font-size:11px;color:var(--muted)}.controls{display:grid;grid-template-columns:1fr 110px;gap:10px}.stop{border:0;border-radius:15px;background:var(--accent);color:#0b2922;min-height:62px;font-size:25px;letter-spacing:.16em;font-weight:900;box-shadow:0 4px 0 #3b8b76}.stop:active{transform:translateY(2px);box-shadow:0 2px 0 #3b8b76}.stop:disabled{background:#344c4c;color:#a9c2bd;box-shadow:none;transform:none}.restart{border:1px solid #607385;background:transparent;color:var(--text);border-radius:15px;font-size:14px;font-weight:700;min-height:62px}.hint{margin:14px 0 0;color:var(--muted);text-align:center;font-size:11px}.options{display:grid;grid-template-columns:1fr 112px;gap:10px;margin-top:16px}label{display:block;color:var(--muted);font-size:11px;margin-bottom:6px}select{width:100%;min-height:42px;border-radius:9px;background:#0e1822;color:var(--text);border:1px solid #425667;padding:8px;font-size:13px}.mode-note{border-left:3px solid var(--accent);padding:4px 0 4px 10px;font-size:11px;color:#d8e2eb;line-height:1.7;margin:12px 0 0}.side{display:flex;flex-direction:column;gap:14px}.section-head{font-size:13px;display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}.section-head b{font-weight:750}.legend{display:grid;grid-template-columns:1fr 1fr;gap:8px}.role-chip{border:1px solid #304556;border-radius:11px;background:#111e2b;display:flex;align-items:center;gap:8px;min-height:44px;padding:8px;font-size:12px}.role-chip.selected{border:2px solid var(--selected);background:#213d3b;padding:7px}.role-chip .dot{height:10px;width:10px;border-radius:50%;flex-shrink:0}.chip-percent{display:block;font-size:10px;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;text-align:center}.stat{padding:13px 2px;border:1px solid #304153;border-radius:12px;background:#101b26}.stat b{font-size:22px;display:block;font-variant-numeric:tabular-nums}.stat span{font-size:10px;color:var(--muted)}.history{margin-top:14px}.history-row{display:grid;grid-template-columns:31px 1fr auto;gap:7px;align-items:center;padding:9px 1px;border-bottom:1px solid #304153;font-size:12px}.history-row small{font-size:10px;color:var(--muted)}.empty{padding:12px 0;font-size:12px;color:var(--muted)}.toolbar{display:flex;gap:8px;margin-top:14px}.subbtn{border:1px solid #526577;background:transparent;color:var(--text);padding:10px 12px;border-radius:10px;min-height:42px;font-size:12px;flex:1}.footer{color:var(--muted);font-size:11px;margin:18px 0 0;line-height:1.8}.footer details{margin-top:8px}.footer summary{cursor:pointer;color:#d7e3ed}.footer p{margin:7px 0}.diagnostic{border:1px solid #dca474;background:#422e1b;color:#ffe4c5;padding:12px;font-size:12px;border-radius:10px;margin-bottom:14px}.toast{min-height:20px;font-size:11px;color:var(--accent);margin-top:6px}noscript{display:block;color:#ffe4c5;padding:20px}.footer a{color:#b9e6ff}.arrow-caption{font-size:10px;fill:var(--muted);text-anchor:middle}.atop{border-radius:8px;display:inline-block;background:#203342;padding:3px 7px;color:#cddfe9;font-size:10px}
-@media(max-width:740px){.app{max-width:520px;padding:15px 12px 24px}.header{margin-bottom:12px}.layout{display:block}.side{margin-top:14px}.card{padding:14px;border-radius:19px}.wheel-card{padding:13px 12px 16px}.version{font-size:10px}.stage{max-width:415px;margin-top:5px}.header h1{font-size:22px}.result-line{min-height:48px;margin-top:-3px}.controls{grid-template-columns:1fr 100px}.options{grid-template-columns:1fr 106px}.role-chip{min-height:43px}.legend{grid-template-columns:repeat(2,1fr)}.footer{font-size:10px}}@media(max-width:350px){.app{padding:10px 8px}.header h1{font-size:19px}.version{font-size:9px}.controls{grid-template-columns:1fr 88px}.options{grid-template-columns:1fr 90px}.role-label{font-size:18px}}
+:root{color-scheme:dark;--bg:#0d141c;--card:#16212e;--line:#33465a;--text:#f5f8fc;--muted:#b0bfce;--accent:#96f0d3}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",sans-serif;line-height:1.6}button,select{font:inherit;touch-action:manipulation}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}button:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}[hidden]{display:none!important}.app{max-width:1000px;margin:auto;padding:20px 16px 30px}header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px}.eyebrow{font-size:10px;letter-spacing:.2em;color:var(--accent);font-weight:800}h1{font-size:25px;margin:3px 0}.version{font-size:11px;color:var(--muted);text-align:right}.layout{display:grid;grid-template-columns:1.1fr 1fr;gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px}.row{display:flex;align-items:center;justify-content:space-between;gap:8px}.status{font-size:12px;font-weight:700}.status:before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:7px}.badge{background:#263948;padding:3px 8px;border-radius:8px;font-size:11px;color:#e4efed}.micro{font-size:11px;color:var(--muted)}.wheel{display:block;width:100%;height:auto;margin:5px auto;max-width:510px}.slice{stroke:none}.slice.faded{opacity:.48}.slice.chosen{opacity:1}.hub-role{font-size:18px;fill:var(--text);font-weight:800;text-anchor:middle}.hub-small{font-size:11px;fill:var(--muted);text-anchor:middle}.result{text-align:center;min-height:64px;margin:0 0 8px}.result strong{font-size:21px;display:block}.result span{display:block;font-size:11px;color:var(--muted)}.controls{display:grid;grid-template-columns:1fr 100px;gap:10px}button{border:1px solid #576e83;background:transparent;color:var(--text);border-radius:12px;min-height:46px;padding:9px;font-size:13px}.stop{border:0;background:var(--accent);color:#0c2d24;font-weight:900;font-size:26px;letter-spacing:.14em;min-height:62px;box-shadow:0 4px 0 #367d69}.stop:active{transform:translateY(2px);box-shadow:0 2px 0 #367d69}.stop:disabled{box-shadow:none}.restart{font-weight:700}.options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:17px}label{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}select{width:100%;min-height:42px;background:#0d1a27;color:var(--text);border:1px solid #40576d;border-radius:9px;font-size:13px;padding:7px}.shuffle{width:100%;margin-top:10px;background:#203746}.note{font-size:11px;color:var(--muted);margin:12px 0 0;line-height:1.7}.side{display:flex;flex-direction:column;gap:14px}.head{font-size:13px;font-weight:700;margin-bottom:10px}.legend{display:grid;grid-template-columns:1fr 1fr;gap:7px}.chip{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:11px;padding:9px 7px;min-height:58px;background:#111e2b;font-size:12px}.chip.selected{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:#203c36}.dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}.chip small{display:block;font-size:10px;color:var(--muted);font-variant-numeric:tabular-nums}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.stat{border:1px solid var(--line);border-radius:10px;padding:10px 2px;text-align:center;background:#101b26}.stat b{display:block;font-size:22px;font-variant-numeric:tabular-nums}.stat span{font-size:10px;color:var(--muted)}.history{margin-top:12px}.history-row{display:grid;grid-template-columns:28px 1fr auto;gap:6px;border-bottom:1px solid var(--line);font-size:12px;padding:8px 0}.history-row small{font-size:10px;color:var(--muted)}.empty{font-size:12px;color:var(--muted);padding:10px 0}.toolbar{display:flex;gap:8px;margin-top:12px}.toolbar button{flex:1;font-size:12px}.toast{font-size:11px;color:var(--accent);min-height:18px;margin-top:6px}footer{font-size:11px;color:var(--muted);margin-top:18px;line-height:1.85}details{margin-top:8px}summary{cursor:pointer;color:#e0eaf4}footer p{margin:6px 0}.diagnostic{padding:12px;border:1px solid #bd976b;background:#403021;border-radius:10px;font-size:12px;margin-bottom:12px}noscript{display:block;padding:20px;color:#ffcda2}
+@media(max-width:740px){.app{max-width:520px;padding:14px 12px 24px}.layout{display:block}.side{margin-top:14px}.card{padding:14px 12px}h1{font-size:22px}.version{font-size:10px}.wheel{max-width:425px}.result{min-height:57px}.result strong{font-size:20px}}@media(max-width:350px){.app{padding:10px 8px}h1{font-size:19px}.controls{grid-template-columns:1fr 86px}.chip{font-size:11px}}
 </style>
 </head>
 <body>
-<noscript>この表示ではプログラムが実行されていません。Web版をブラウザで開いてください。</noscript>
-<main class="app" id="app">
- <header class="header"><div><div class="eyebrow">TIMING WHEEL</div><h1>成立役ルーレット</h1></div><div class="version">STOP一致版 v5<br>2026.10.05</div></header>
- <div class="diagnostic" id="bootNotice">起動を確認しています。この表示が残る場合、この画面ではプログラムが実行されていません。</div>
- <div class="layout">
-  <section class="card wheel-card" aria-label="ルーレット">
-   <div class="status-row"><div class="status"><i class="status-dot" id="statusDot"></i><span id="status">起動中</span></div><span class="atop" id="modeTag">見やすい8等分</span></div>
-   <div class="stage">
-    <svg class="wheel" id="wheel" viewBox="0 0 480 480" role="img" aria-label="役名の付いた回転する円盤。上の針が停止結果を指します。">
-     <defs><radialGradient id="hub"><stop stop-color="#263b4e"/><stop offset="1" stop-color="#101b28"/></radialGradient></defs>
-     <circle cx="240" cy="240" r="221" fill="#0d1824" stroke="#536779" stroke-width="1"/>
-     <g id="disc"></g><g id="labels" aria-hidden="true"></g>
-     <circle cx="240" cy="240" r="78" fill="url(#hub)" stroke="#546d7d" stroke-width="2"/>
-     <circle cx="240" cy="240" r="70" fill="none" stroke="#9bddca" stroke-width=".8" opacity=".4"/>
-     <text x="240" y="216" class="hub-label" id="hubLabel">TIMING WHEEL</text>
-     <text x="240" y="247" class="hub-role" id="hubRole">回転中</text>
-     <text x="240" y="268" class="hub-small" id="hubSmall">上の針で判定</text>
-     <path class="pointer" d="M225 14 L255 14 L240 52 Z" fill="#f5fffb" stroke="#0d141c" stroke-width="2"/>
-     <path d="M240 49 L240 76" stroke="#f5fffb" stroke-width="2" pointer-events="none"/>
-    </svg>
-   </div>
-   <div class="result-line" aria-live="polite" aria-atomic="true"><strong id="result">好きなタイミングでSTOP</strong><span id="resultDetail">上の白い針が指す区画が、そのまま結果になります。</span></div>
-   <div class="controls"><button class="stop" id="stop" type="button">STOP</button><button class="restart" id="restart" type="button" disabled>再スタート</button></div>
-   <p class="hint">回転中に押す → その位置で即停止。止めた後の再抽選はありません。</p>
-   <div class="options"><div><label for="mode">円盤の表示</label><select id="mode"><option value="equal">役名を大きく・8等分</option><option value="reference">前版の参考比率</option></select></div><div><label for="speed">1周の時間</label><select id="speed"><option value="5000">5秒・ゆっくり</option><option value="2500" selected>2.5秒・標準</option><option value="820">0.82秒・速い</option></select></div></div>
-   <p class="mode-note" id="modeNote">各区画は45°です。役名と停止位置を見やすくした表示で、実機の役確率ではありません。</p>
-  </section>
-  <aside class="side">
-   <section class="card"><div class="section-head"><b>円盤の役</b><span class="micro">停止した役を強調</span></div><div class="legend" id="legend"></div></section>
-   <section class="card"><div class="section-head"><b>このルーレットの記録</b><span class="micro">実機データではありません</span></div><div class="stats"><div class="stat"><b id="total">0</b><span>停止回数</span></div><div class="stat"><b id="rare">0</b><span>レア役の回数</span></div><div class="stat"><b id="gap">—</b><span>前回STOPから ms</span></div></div><div class="history" id="history"><div class="empty">STOPすると履歴がここに並びます。</div></div><div class="toolbar"><button type="button" class="subbtn" id="csv">CSV保存</button><button type="button" class="subbtn" id="reset">履歴を消去</button></div><div id="toast" class="toast" role="status"></div></section>
-  </aside>
- </div>
- <footer class="footer"><strong>円盤上の区画と停止結果を、同じ描画角度から決めています。</strong><br>これはタイミングを楽しむルーレットです。実機の乱数・当選や、有利なレバー時刻を再現・予測するものではありません。
- <details><summary>参考比率・記録について</summary><p>「前版の参考比率」は、この会話の前版に入力されていた数値を引き継いでいます。リプレイ 1/7.3、チェリー・スイカ 各1/89.2、弱リコリス目 1/50.3、強リコリス目 1/728.2、中段チェリー 1/16,384、共通15枚ベル 1/95.8、残りは「ベル・ハズレ」です。実機資料との再照合は未実施です。</p><p>参考比率では、小さい区画の役名を無理に重ねず、下の全役一覧と停止結果で確認できます。ベル全体とハズレの内訳は確認できないため、このモードに限り合算しています。</p><p>記録はこの画面を開いている間のものです。時刻と間隔はブラウザの計測値で、実機の内部抽選時刻ではありません。画面更新で記録は消えるため、必要な記録はCSV保存してください。</p></details>
- <p>制作・確認日：2026年10月5日　／　出典：この会話の前版・本アプリの実装<br>出店・店舗：該当なし（シミュレーター）</p></footer>
+<noscript>プログラムが実行されていません。操作用リンクをブラウザで開いてください。</noscript>
+<main class="app">
+<header><div><div class="eyebrow">RANDOM FIELD · TIMING WHEEL</div><h1>成立役ルーレット</h1></div><div class="version">分散配置 v6<br>2026.10.05</div></header>
+<div id="boot" class="diagnostic">起動を確認しています。この表示が残る場合、プログラムが実行されていません。</div>
+<div class="layout">
+<section class="card">
+<div class="row"><span class="status" id="status">起動中</span><span class="badge" id="segmentCount">360°・比率固定</span></div>
+<svg id="wheel" class="wheel" viewBox="0 0 480 480" role="img" aria-label="各役の比率を保って細かくランダム配置した回転円盤。上の針で判定します。">
+<defs><radialGradient id="hub"><stop stop-color="#283e50"/><stop offset="1" stop-color="#101b28"/></radialGradient></defs>
+<circle cx="240" cy="240" r="220" fill="#0d1824" stroke="#51677a"/>
+<g id="disc"></g><g id="selection" pointer-events="none"></g>
+<circle cx="240" cy="240" r="77" fill="url(#hub)" stroke="#597387" stroke-width="1.5"/>
+<circle cx="240" cy="240" r="69" fill="none" stroke="#96f0d3" stroke-width=".7" opacity=".45"/>
+<text x="240" y="217" class="hub-small" id="hubLabel">360° / RANDOM</text>
+<text x="240" y="246" class="hub-role" id="hubRole">回転中</text>
+<text x="240" y="268" class="hub-small" id="hubSmall">押してSTOP</text>
+<path d="M228 11 L252 11 L240 39 Z" fill="#f5fffb" stroke="#0d141c" stroke-width="1.5" pointer-events="none"/>
+<path d="M240 39 L240 73" stroke="#f5fffb" stroke-width="1" pointer-events="none"/>
+</svg>
+<div class="result" aria-live="polite" aria-atomic="true"><strong id="result">好きなタイミングでSTOP</strong><span id="detail">白い針の区画が、そのまま結果になります。</span></div>
+<div class="controls"><button type="button" id="stop" class="stop">STOP</button><button type="button" id="restart" class="restart" disabled>再スタート</button></div>
+<div class="options"><div><label for="density">ベル・ハズレ領域の分割数</label><select id="density"><option value="60">60区画</option><option value="120" selected>120区画・標準</option><option value="240">240区画・細かい</option></select></div><div><label for="speed">1周の時間</label><select id="speed"><option value="5000">5秒</option><option value="2500">2.5秒</option><option value="820" selected>0.82秒</option></select></div></div>
+<button type="button" id="shuffle" class="shuffle">比率を変えずに再配置</button>
+<p class="note" id="layoutNote">区画の幅の合計を維持して、ランダムに並べ替えています。</p>
+</section>
+<div class="side">
+<section class="card"><div class="head row"><span>各役の合計配分</span><span class="micro">割合 / 合計角度 / 区画数</span></div><div class="legend" id="legend"></div><p class="note">灰色系の細片は、すべて同じ「ベル・ハズレ」枠です。内訳を推測して別々の確率にはしていません。</p></section>
+<section class="card"><div class="head">停止記録 <span class="micro">このルーレット内の記録</span></div><div class="stats"><div class="stat"><b id="count">0</b><span>STOP回数</span></div><div class="stat"><b id="rare">0</b><span>レア役</span></div><div class="stat"><b id="gap">—</b><span>前回STOPから ms</span></div></div><div id="history" class="history"><div class="empty">STOPすると結果が並びます。</div></div><div class="toolbar"><button type="button" id="csv">履歴CSV</button><button type="button" id="exportLayout">配置表JSON</button><button type="button" id="reset">履歴消去</button></div><div class="toast" id="toast" role="status"></div></section>
+</div></div>
+<footer><strong>維持しているのは、前版に入力された各役の円周配分です。</strong><br>停止位置を一様に選ぶ場合の理論比率で、目押し・停止間隔・描画周期により実測率は変わります。実機の抽選や有利なレバー時刻を再現・予測するものではありません。
+<details><summary>入力比率・停止処理・記録について</summary><p>前版から引き継いだ入力値：リプレイ1/7.3、チェリー・スイカ各1/89.2、弱リコリス目1/50.3、強リコリス目1/728.2、中段チェリー1/16,384、共通15枚ベル1/95.8。残りは「ベル・ハズレ」。実機資料との再照合はしていません。</p><p>区画は整数の度数に丸めません。小さい役にも最小幅を上乗せせず、合計360°になるよう計算します。細い区画は画面の解像度によって判別できない場合があります。</p><p>STOPは最後に描画した角度で凍結し、同じ角度から役を判定します。停止後の再抽選・位置補正はありません。再配置は区画順だけを変えます。再スタートでは停止位置から回転を再開します。</p><p>履歴はこの画面を開いている間だけ保持します。CSVと配置表は端末へ保存できます。時刻はブラウザの計測値です。別画面に移ると一時停止します。</p></details>
+<p>制作日：2026年10月5日 ／ 出典：前版の入力値・本アプリの実装<br>出店・店舗：該当なし（シミュレーター）</p></footer>
 </main>
 <script>
 (function(){
 'use strict';
-var NS='http://www.w3.org/2000/svg';
-function $(id){return document.getElementById(id);}
-var base={
- miss:{name:'ハズレ目',lines:['ハズレ目'],color:'#475870',rare:false},
- replay:{name:'リプレイ',lines:['リプレイ'],color:'#286597',rare:false},
- bell:{name:'ベル',lines:['ベル'],color:'#97711b',rare:false},
- cherry:{name:'チェリー',lines:['チェリー'],color:'#a73d56',rare:true},
- water:{name:'スイカ',lines:['スイカ'],color:'#267960',rare:true},
- weak:{name:'弱リコリス目',lines:['弱','リコリス目'],color:'#765199',rare:true},
- strong:{name:'強リコリス目',lines:['強','リコリス目'],color:'#aa542d',rare:true},
- middle:{name:'中段チェリー',lines:['中段','チェリー'],color:'#964e83',rare:true},
- common:{name:'共通15枚ベル',lines:['共通','15枚ベル'],color:'#92701f',rare:false},
- other:{name:'ベル・ハズレ',lines:['ベル・','ハズレ'],color:'#485a70',rare:false}
-};
-var segments=[],paths=[],labelGroups=[],mode='equal',angle=22.5,running=false,raf=0,lastFrame=null,lastPaintAt=0,lastStop=null,runStart=0,period=2500,logs=[],count=0,rareCount=0;
-function mod(n,m){return ((n%m)+m)%m;}
-function point(phase,r){var a=(phase*360-90)*Math.PI/180;return [240+r*Math.cos(a),240+r*Math.sin(a)];}
-function el(tag,attrs){var x=document.createElementNS(NS,tag);Object.keys(attrs||{}).forEach(function(k){x.setAttribute(k,String(attrs[k]));});return x;}
-function layout(which){
- var data;
- if(which==='reference'){
-  data=[['replay',1/7.3],['cherry',1/89.2],['water',1/89.2],['weak',1/50.3],['strong',1/728.2],['middle',1/16384],['common',1/95.8]];
-  var sum=data.reduce(function(s,x){return s+x[1];},0);data.push(['other',1-sum]);
- }else{data=['miss','replay','bell','cherry','water','weak','strong','middle'].map(function(k){return [k,1/8];});}
- var start=0;
- return data.map(function(x,i){var s={key:x[0],p:x[1],start:start,end:start+x[1],index:i};start=s.end;s.role=base[s.key];return s;});
-}
-// Both the SVG paths and the hit test share this same clockwise [0,1) layout.
-function roleAt(deg){var phase=mod(-deg,360)/360;for(var i=0;i<segments.length;i++){if(phase<segments[i].end)return segments[i];}return segments[segments.length-1];}
-function drawWheel(){
- segments=layout(mode);paths=[];labelGroups=[];$('disc').textContent='';$('labels').textContent='';$('legend').textContent='';
- segments.forEach(function(s){
-  var p1=point(s.start,211),p2=point(s.end,211);
-  var path=el('path',{d:'M240 240 L'+p1[0]+' '+p1[1]+' A211 211 0 '+(s.p>.5?1:0)+' 1 '+p2[0]+' '+p2[1]+' Z',fill:s.role.color,'class':'slice','data-role':s.key});
-  if(mode==='reference'&&s.p<.005)path.setAttribute('stroke-width','0');
-  path.appendChild(el('title',{})).textContent=s.role.name;paths.push(path);$('disc').appendChild(path);
-  // The full name fits inside each of the eight equal-sized sectors. Tiny reference sectors have a legend instead.
-  if(mode==='equal'||s.p>.075){
-   var at=point((s.start+s.end)/2,153),g=el('g',{});
-   var text=el('text',{'class':'role-label'}),lines=s.role.lines;
-   lines.forEach(function(line,i){var t=el('tspan',{x:0,y:(i-(lines.length-1)/2)*21+5});t.textContent=line;text.appendChild(t);});g.appendChild(text);
-   var little=el('text',{'class':'small-label',x:0,y:lines.length>1?36:28,'text-anchor':'middle'});little.textContent=mode==='equal'?'45°':(s.p*100).toFixed(2)+'%';g.appendChild(little);
-   $('labels').appendChild(g);labelGroups.push({node:g,at:at});
-  }
-  var chip=document.createElement('div');chip.className='role-chip';chip.dataset.role=s.key;
-  var dot=document.createElement('span');dot.className='dot';dot.style.backgroundColor=s.role.color;chip.appendChild(dot);
-  var txt=document.createElement('span');txt.textContent=s.role.name;
-  if(mode==='reference'){var sub=document.createElement('span');sub.className='chip-percent';sub.textContent=(s.p*100).toFixed(s.p<.001?4:2)+'%（参考）';txt.appendChild(sub);}
-  chip.appendChild(txt);$('legend').appendChild(chip);
+var NS='http://www.w3.org/2000/svg', $=function(id){return document.getElementById(id);};
+var roles=[
+ {key:'replay',name:'リプレイ',p:1/7.3,color:'#3187c1',rare:false},
+ {key:'cherry',name:'チェリー',p:1/89.2,color:'#f2607c',rare:true},
+ {key:'water',name:'スイカ',p:1/89.2,color:'#44bd8e',rare:true},
+ {key:'weak',name:'弱リコリス目',p:1/50.3,color:'#b68af4',rare:true},
+ {key:'strong',name:'強リコリス目',p:1/728.2,color:'#f49b50',rare:true},
+ {key:'middle',name:'中段チェリー',p:1/16384,color:'#ffb9e8',rare:true},
+ {key:'common',name:'共通15枚ベル',p:1/95.8,color:'#e3c25c',rare:false}
+];
+roles.push({key:'other',name:'ベル・ハズレ',p:1-roles.reduce(function(s,r){return s+r.p;},0),color:'#5e738e',rare:false});
+var pieces=[],paths=[],chips={},layoutId='',angle=0,period=820,density=120,running=false,raf=0,lastFrame=null,lastPaint=0,runStart=0,lastStop=null,logs=[];
+function mod(x,n){return ((x%n)+n)%n;}
+function random32(){if(window.crypto&&window.crypto.getRandomValues){var a=new Uint32Array(1);window.crypto.getRandomValues(a);return a[0];}return Math.floor(Math.random()*4294967296);}
+function randomInt(n){var limit=4294967296-(4294967296%n),v;do{v=random32();}while(v>=limit);return v%n;}
+function makeLayout(n){
+ var out=[];
+ roles.forEach(function(r){var k=r.key==='other'?n:Math.max(1,Math.ceil(r.p*360/3)),used=0;
+  for(var i=0;i<k;i++){var p=i===k-1?r.p-used:r.p/k;used+=p;out.push({key:r.key,role:r,p:p,part:i+1,parts:k});}
  });
- $('modeTag').textContent=mode==='equal'?'見やすい8等分':'前版の参考比率';
- $('modeNote').textContent=mode==='equal'?'各区画は45°です。役名と停止位置を見やすくした表示で、実機の役確率ではありません。':'前版の数値を引き継いだ参考比率です。実機の再現保証はありません。小さい区画の役名は全役一覧・停止結果で確認できます。';
- render();
+ for(var i=out.length-1;i>0;i--){var j=randomInt(i+1),t=out[i];out[i]=out[j];out[j]=t;}
+ var sum=0;out.forEach(function(s,i){s.start=sum;s.end=sum+s.p;s.index=i;sum=s.end;});
+ out[out.length-1].end=1;
+ return out;
 }
-function render(){
- $('disc').setAttribute('transform','rotate('+angle+' 240 240)');
- // Keep names upright while their sector position rotates.
- var r=angle*Math.PI/180,cs=Math.cos(r),sn=Math.sin(r);
- labelGroups.forEach(function(x){var dx=x.at[0]-240,dy=x.at[1]-240;x.node.setAttribute('transform','translate('+(240+dx*cs-dy*sn)+' '+(240+dx*sn+dy*cs)+')');});
- $('wheel').dataset.angle=String(angle);lastPaintAt=performance.now();
-}
-function tick(t){
- if(!running)return;
- if(lastFrame!==null){angle=mod(angle+Math.min(t-lastFrame,100)*360/period,360);}lastFrame=t;render();raf=requestAnimationFrame(tick);
-}
-function clearHighlight(){paths.forEach(function(p){p.setAttribute('class','slice');});document.querySelectorAll('.role-chip').forEach(function(n){n.classList.remove('selected');});}
-function highlight(s){paths.forEach(function(p,i){p.setAttribute('class',i===s.index?'slice chosen':'slice faded');});document.querySelectorAll('.role-chip').forEach(function(n){n.classList.toggle('selected',n.dataset.role===s.key);});}
-function resume(){
- if(running)return;clearHighlight();running=true;lastFrame=null;runStart=performance.now();
- $('stop').disabled=false;$('restart').disabled=true;$('status').textContent='回転中';$('statusDot').style.backgroundColor='var(--accent)';
- $('hubLabel').textContent='TIMING WHEEL';$('hubRole').textContent='回転中';$('hubSmall').textContent='上の針で判定';$('result').textContent='好きなタイミングでSTOP';$('resultDetail').textContent='上の白い針が指す区画が、そのまま結果になります。';
- raf=requestAnimationFrame(tick);
+function element(tag,attrs){var e=document.createElementNS(NS,tag);Object.keys(attrs||{}).forEach(function(k){e.setAttribute(k,String(attrs[k]));});return e;}
+function point(t,r){var a=(t*360-90)*Math.PI/180;return [240+r*Math.cos(a),240+r*Math.sin(a)];}
+function roleAt(deg,layout){var a=layout||pieces,phase=mod(-deg,360)/360,lo=0,hi=a.length-1;while(lo<hi){var mid=(lo+hi)>>1;if(phase<a[mid].end)hi=mid;else lo=mid+1;}return a[lo];}
+function clearHighlight(){paths.forEach(function(p){p.setAttribute('class','slice');});Object.keys(chips).forEach(function(k){chips[k].classList.remove('selected');});$('selection').textContent='';}
+function render(){var transform='rotate('+angle+' 240 240)';$('disc').setAttribute('transform',transform);$('selection').setAttribute('transform',transform);$('wheel').dataset.angle=String(angle);lastPaint=performance.now();}
+function draw(){
+ paths=[];chips={};$('disc').textContent='';$('legend').textContent='';$('selection').textContent='';
+ var shades=['#394b64','#536a83','#445971'];
+ pieces.forEach(function(s){var p1=point(s.start,211),p2=point(s.end,211),path=element('path',{d:'M240 240 L'+p1.join(' ')+' A211 211 0 '+(s.end-s.start>.5?1:0)+' 1 '+p2.join(' ')+' Z',fill:s.key==='other'?shades[(s.part-1)%3]:s.role.color,'class':'slice','data-index':s.index,'data-role':s.key});path.appendChild(element('title',{})).textContent=s.role.name+' / '+((s.end-s.start)*360).toFixed(8)+'°';paths.push(path);$('disc').appendChild(path);});
+ roles.forEach(function(r){var chip=document.createElement('div');chip.className='chip';chip.dataset.role=r.key;var dot=document.createElement('i');dot.className='dot';dot.style.backgroundColor=r.color;var text=document.createElement('span');text.textContent=r.name;var info=document.createElement('small'),k=pieces.filter(function(s){return s.key===r.key;}).length;info.textContent=(r.p*100).toFixed(4)+'% / '+(r.p*360).toFixed(5)+'° / '+k+'区画';text.appendChild(info);chip.appendChild(dot);chip.appendChild(text);chips[r.key]=chip;$('legend').appendChild(chip);});
+ $('segmentCount').textContent=pieces.length+'区画 / 360°';$('layoutNote').textContent='ベル・ハズレを'+density+'分割、円盤全体は'+pieces.length+'区画。各役の合計角度は固定。配置ID：'+layoutId;render();
 }
 function pause(){running=false;cancelAnimationFrame(raf);lastFrame=null;}
-function updateHistory(){
- $('total').textContent=String(count);$('rare').textContent=String(rareCount);
- $('gap').textContent=logs.length&&logs[logs.length-1].gapMs!==null?String(logs[logs.length-1].gapMs):'—';
- var box=$('history');box.textContent='';
- if(!logs.length){var empty=document.createElement('div');empty.className='empty';empty.textContent='STOPすると履歴がここに並びます。';box.appendChild(empty);return;}
- logs.slice(-6).reverse().forEach(function(x){var row=document.createElement('div');row.className='history-row';var num=document.createElement('small');num.textContent='#'+x.no;var name=document.createElement('span');name.textContent=x.role;var time=document.createElement('small');time.textContent=x.timeLocal;row.append(num,name,time);box.appendChild(row);});
-}
-function stop(){
- if(!running)return;var now=performance.now();pause();
- // Freeze the last drawn angle; do not sample a new random outcome or move to another sector.
- var s=roleAt(angle);highlight(s);count++;if(s.role.rare)rareCount++;
- var stamp=new Date(),gap=lastStop===null?null:Math.round(now-lastStop);lastStop=now;
- logs.push({no:count,role:s.role.name,key:s.key,mode:mode,angleDeg:angle,periodMs:period,gapMs:gap,runMs:Math.round(now-runStart),sinceLastDrawMs:+(now-lastPaintAt).toFixed(3),timeISO:stamp.toISOString(),timeLocal:stamp.toLocaleTimeString('ja-JP',{hour12:false})});
- $('hubLabel').textContent='停止した役';$('hubRole').textContent=s.role.name;$('hubRole').setAttribute('font-size',s.role.name.length>7?'15':'19');$('hubSmall').textContent='針の区画と一致';
- $('result').textContent=s.role.name;$('resultDetail').textContent='白い針の下の区画を選択しました。';$('status').textContent='停止';
- $('stop').disabled=true;$('restart').disabled=false;$('statusDot').style.backgroundColor='#e4b67b';updateHistory();
-}
-// Pointer-down handles touch immediately. Keyboard and assistive click events still work.
-function onImmediate(button,action){
- if('PointerEvent' in window){button.addEventListener('pointerdown',function(e){if(e.isPrimary===false||(e.pointerType==='mouse'&&e.button!==0))return;e.preventDefault();action();});button.addEventListener('click',function(e){if(e.detail===0)action();});}
- else{button.addEventListener('click',action);}
-}
-onImmediate($('stop'),stop);onImmediate($('restart'),resume);
-$('mode').addEventListener('change',function(){pause();mode=$('mode').value;drawWheel();resume();});
+function tick(t){if(!running)return;if(lastFrame!==null)angle=mod(angle+Math.min(t-lastFrame,100)*360/period,360);lastFrame=t;render();raf=requestAnimationFrame(tick);}
+function resume(){if(running)return;clearHighlight();running=true;lastFrame=null;runStart=performance.now();$('stop').disabled=false;$('restart').disabled=true;$('status').textContent='回転中';$('hubLabel').textContent='360° / RANDOM';$('hubRole').textContent='回転中';$('hubSmall').textContent='押してSTOP';$('result').textContent='好きなタイミングでSTOP';$('detail').textContent='白い針の区画が、そのまま結果になります。';raf=requestAnimationFrame(tick);}
+function highlight(s){paths.forEach(function(p,i){p.setAttribute('class',i===s.index?'slice chosen':'slice faded');});chips[s.key].classList.add('selected');var a=point(s.start,216),b=point(s.end,216);$('selection').textContent='';$('selection').appendChild(element('path',{d:'M'+a.join(' ')+' A216 216 0 '+(s.end-s.start>.5?1:0)+' 1 '+b.join(' '),fill:'none',stroke:'#ffffff','stroke-width':2,'stroke-linecap':'butt'}));}
+function history(){ $('count').textContent=logs.length;$('rare').textContent=logs.filter(function(x){return x.rare;}).length;var last=logs.length?logs[logs.length-1]:null;$('gap').textContent=last&&last.gapMs!==null?last.gapMs:'—';$('history').textContent='';if(!last){var empty=document.createElement('div');empty.className='empty';empty.textContent='STOPすると結果が並びます。';$('history').appendChild(empty);return;}logs.slice(-6).reverse().forEach(function(x){var row=document.createElement('div');row.className='history-row';var no=document.createElement('small'),name=document.createElement('span'),time=document.createElement('small');no.textContent='#'+x.no;name.textContent=x.role;time.textContent=x.local;row.appendChild(no);row.appendChild(name);row.appendChild(time);$('history').appendChild(row);});}
+function stop(){if(!running)return;var now=performance.now();pause();var s=roleAt(angle),d=new Date(),gap=lastStop===null?null:Math.round(now-lastStop);lastStop=now;highlight(s);logs.push({no:logs.length+1,key:s.key,role:s.role.name,rare:s.role.rare,layoutId:layoutId,segment:s.index,angleDeg:angle,referenceP:s.role.p,periodMs:period,gapMs:gap,runMs:Math.round(now-runStart),sinceDrawMs:+(now-lastPaint).toFixed(3),utc:d.toISOString(),local:d.toLocaleTimeString('ja-JP',{hour12:false})});$('status').textContent='停止';$('hubLabel').textContent='停止した役';$('hubRole').textContent=s.role.name;$('hubSmall').textContent='針の区画と一致';$('result').textContent=s.role.name;$('detail').textContent='区画 #'+(s.index+1)+' / '+pieces.length+' ・ 停止後の再抽選なし';$('stop').disabled=true;$('restart').disabled=false;history();}
+function shuffle(){var was=running;pause();pieces=makeLayout(density);layoutId=random32().toString(16).padStart(8,'0');draw();if(was)resume();else{$('status').textContent='再配置済み';$('hubLabel').textContent='新しい配置';$('hubRole').textContent='再配置済み';$('hubSmall').textContent='再スタートで回転';$('result').textContent='配置を変更しました';$('detail').textContent='各役の合計角度は変わりません。';$('stop').disabled=true;$('restart').disabled=false;}}
+function immediate(button,action){if('PointerEvent' in window){button.addEventListener('pointerdown',function(e){if(e.isPrimary===false||(e.pointerType==='mouse'&&e.button!==0))return;e.preventDefault();action();});button.addEventListener('click',function(e){if(e.detail===0)action();});}else button.addEventListener('click',action);}
+function download(text,type,name){var blob=new Blob([text],{type:type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(url);},60000);}
+immediate($('stop'),stop);immediate($('restart'),resume);$('shuffle').addEventListener('click',shuffle);
+$('density').addEventListener('change',function(){density=Number($('density').value);shuffle();});
 $('speed').addEventListener('change',function(){period=Number($('speed').value);lastFrame=null;});
-$('reset').addEventListener('click',function(){if(logs.length&&!confirm('この画面の停止履歴を消去しますか？'))return;logs=[];count=0;rareCount=0;lastStop=null;updateHistory();$('toast').textContent='履歴を消去しました。';});
-$('csv').addEventListener('click',function(){
- if(!logs.length){$('toast').textContent='先にSTOPして記録してください。';return;}
- var headers=['No','成立役','表示モード','停止角度deg','1周ms','前回STOPからms','再開からms','最終描画からms','記録UTC','データ種別'];
- var rows=logs.map(function(x){return [x.no,x.role,x.mode,x.angleDeg.toFixed(6),x.periodMs,x.gapMs===null?'':x.gapMs,x.runMs,x.sinceLastDrawMs,x.timeISO,'simulator'].join(',');});
- var blob=new Blob(['\ufeff'+headers.join(',')+'\r\n'+rows.join('\r\n')],{type:'text/csv;charset=utf-8'});
- var u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download='roulette_stop_log_20261005.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},60000);$('toast').textContent=logs.length+'件を書き出しました。';
-});
-document.addEventListener('visibilitychange',function(){if(document.hidden&&running){pause();$('status').textContent='一時停止';$('hubRole').textContent='一時停止';$('stop').disabled=true;$('restart').disabled=false;$('result').textContent='再スタートで続ける';$('resultDetail').textContent='別の画面に移動したため停止しました。履歴には追加していません。';}});
-try{if(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches){period=5000;$('speed').value='5000';}}
-catch(ignore){}
-drawWheel();$('bootNotice').hidden=true;resume();
-// Read-only diagnostics; the test setter is exposed only with an explicit ?test=1 flag.
-window.rouletteApp={getState:function(){return {mode:mode,angle:angle,running:running,total:count,role:roleAt(angle).role.name,key:roleAt(angle).key,period:period,last:logs.length?Object.assign({},logs[logs.length-1]):null};},roleAt:function(deg){return roleAt(deg).key;},getSegments:function(){return segments.map(function(s){return {key:s.key,start:s.start,end:s.end,p:s.p};});}};
-if(new URLSearchParams(location.search).get('test')==='1'){window.rouletteApp.test={setAngle:function(deg){pause();angle=mod(deg,360);clearHighlight();render();running=true;stop();},setMode:function(value){pause();mode=value;$('mode').value=value;drawWheel();},resume:resume,stop:stop};}
+$('reset').addEventListener('click',function(){if(logs.length&&!confirm('停止履歴を消去しますか？'))return;logs=[];lastStop=null;history();$('toast').textContent='履歴を消去しました。';});
+$('csv').addEventListener('click',function(){if(!logs.length){$('toast').textContent='先にSTOPしてください。';return;}var head='No,成立役,配置ID,区画番号0起点,停止角度deg,入力比率,1周ms,前回STOPからms,再開からms,最終描画からms,記録UTC,種別';var rows=logs.map(function(x){return [x.no,x.role,x.layoutId,x.segment,x.angleDeg.toFixed(12),x.referenceP,x.periodMs,x.gapMs===null?'':x.gapMs,x.runMs,x.sinceDrawMs,x.utc,'simulator'].join(',');});download('\ufeff'+head+'\r\n'+rows.join('\r\n'),'text/csv;charset=utf-8','roulette_v6_history.csv');$('toast').textContent=logs.length+'件を書き出しました。';});
+function snapshot(){return {version:6,layoutId:layoutId,reference:'previous-app-inputs-not-verified-machine-odds',rotationDeg:angle,segments:pieces.map(function(s){return {index:s.index,key:s.key,role:s.role.name,startTurn:s.start,endTurn:s.end,spanDeg:(s.end-s.start)*360};}),roles:roles.map(function(r){return {key:r.key,name:r.name,p:r.p};})};}
+$('exportLayout').addEventListener('click',function(){download(JSON.stringify(snapshot(),null,2),'application/json','roulette_v6_layout_'+layoutId+'.json');$('toast').textContent='現在の配置表を書き出しました。';});
+document.addEventListener('visibilitychange',function(){if(document.hidden&&running){pause();$('status').textContent='一時停止';$('hubRole').textContent='一時停止';$('result').textContent='再スタートで続ける';$('detail').textContent='画面を移動したため停止しました。';$('stop').disabled=true;$('restart').disabled=false;}});
+try{if(matchMedia('(prefers-reduced-motion: reduce)').matches){period=5000;$('speed').value='5000';}}catch(ignore){}
+pieces=makeLayout(density);layoutId=random32().toString(16).padStart(8,'0');angle=random32()/4294967296*360;draw();$('boot').hidden=true;resume();
+window.rouletteApp={getState:function(){return {version:6,running:running,angle:angle,key:roleAt(angle).key,total:logs.length,period:period,density:density,layoutId:layoutId,segmentCount:pieces.length,last:logs.length?Object.assign({},logs[logs.length-1]):null};},getLayout:snapshot};
+if(new URLSearchParams(location.search).get('test')==='1'){window.rouletteApp.test={makeLayout:makeLayout,roleAt:function(a,layout){return roleAt(a,layout).key;},setAngle:function(a){pause();clearHighlight();angle=mod(a,360);render();running=true;stop();},pause:pause,resume:resume,stop:stop,shuffle:shuffle};}
 })();
 </script>
-</body>
-</html>
+</body></html>
